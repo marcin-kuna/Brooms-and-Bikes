@@ -47,15 +47,87 @@ var map, markers = [], pointsDone = [], bounds, myInterval, startPoint, endPoint
                 '<div class="iw-bottom-gradient"></div>' +
                 '</div>'},
                 // {lat:51.0493753, lng:21.0660387, ico:'img/chimney6.png', content:'<h1>Starachowice – Wielki Piec</h1>'+'<img src=img/Wielkipiec.jpg class="info-image">'},
-                {lat:50.9585754, lng:21.2473663, ico:'img/bell6.png', content:'<h1>Kunów – Dzwonnica wg projektu W. Gersona</h1>'+'<img src=img/Kunow.jpg class="info-image">'},
-                {lat:51.0170261, lng:21.5465691, ico:'img/diplodocus6.png', content:'<h1>Bałtów – JuraPark</h1>'+'<img src=img/Baltow.jpg class="info-image">'},
-                {lat:50.886216, lng:21.5306813, ico:'img/vase6.png', content:'<h1>Ćmielów – Żywe Muzeum Porcelany</h1>'+'<img src=img/Cmielow.jpg class="info-image">'},
-                {lat:50.8026259, lng:21.4188986, ico:'img/church6.png', content:'<h1>Opatów – Kolegiata św. Marcina</h1>'+'<img src=img/Opatów.jpg class="info-image">'},
-                {lat:50.8590574, lng:21.0441959, ico:'img/crucifix6.png', content:'<h1>Święty Krzyż</h1>'+'<img src=img/SwietyKrzyz.jpg class="info-image">'},
-                {lat:50.8939812, lng:20.8757823, ico:'img/witch-face6.png', content:'<h1>Łysica</h1>'+'<img src=img/Lysica.jpg class="info-image">'},
-                {lat:50.8611445, lng:20.6153419, ico:'img/minerals6.png', content:'<h1>Kielce – Rezerwat Kadzielnia</h1>'+'<img src=img/Kadzielnia.jpg class="info-image">'},
+                {lat:50.9585754, lng:21.2473663, ico:'img/bell6.png', content:
+                '<div id="iw-container">' +
+                '<div class="iw-title1">Kunów<span class="iw-distance">(85. kilometr trasy)</span></div>' +
+                '<div class="iw-title2">Zabytkowa Dzwonnica</div>' +
+                '<div class="iw-content">' +
+                  '<img src=img/Kunów.jpg class="iw-img">' +
+                  '<p>Już w XII w. był tu ośrodek administracyjny dla części dóbr biskupów krakowskich. Od XVI stulecia Kunów znany jest w kraju jako ośrodek kamieniarski. Pierwsze wzmianki o parafii św. Władysława pochodzą z 1281 r. Obecny kościół wzniesiony został w stylu późnego renesansu w latach 1625-1637. W wyposażeniu uwagę zwracają ołtarze: XVII w. główny oraz XIX w. boczne, wykonane z piaskowca przez miejscowych kamieniarzy. Przy kościele stoi murowana dzwonnica wzniesiona w 1896 r. wg projektu znanego malarza Wojciecha Gersona.</p>' +
+                  '<a href="http://www.kunow.pl/art,362,historia.html" target="_blank" class="link">Więcej informacji...</a>' +
+                '<div class="iw-bottom-gradient"></div>' +
+                '</div>'},
+                {lat:51.0170261, lng:21.5465691, ico:'img/diplodocus6.png', content:
+                '<div id="iw-container">' +
+                '<div class="iw-title1">Bałtów<span class="iw-distance">(108. kilometr trasy)</span></div>' +
+                '<div class="iw-title2">JuraPark</div>' +
+                '<div class="iw-content">' +
+                  '<img src=img/Bałtów.jpg class="iw-img">' +
+                  '<p>Na terenie Bałtowa odkryto tropy górnojurajskich dinozaurów, takich jak m.in. allozaura, stegozaura, kamptozaura i kompsognata. Głównym elementem parku są rekonstrukcje dinozaurów – blisko 100 modeli oryginalnej wielkości, ręcznie wykonanych z wielką dbałością o szczegóły oraz w zgodzie z najnowszymi odkryciami i standardami obowiązującymi w paleontologii przy współpracy z paleoartystami.</p>' +
+                  '<a href="https://pl.wikipedia.org/wiki/JuraPark_Ba%C5%82t%C3%B3w" target="_blank" class="link">Więcej informacji...</a>' +
+                '<div class="iw-bottom-gradient"></div>' +
+                '</div>'},
+                {lat:50.886216, lng:21.5306813, ico:'img/vase6.png', content:
+                '<div id="iw-container">' +
+                '<div class="iw-title1">Ćmielów<span class="iw-distance">(130. kilometr trasy)</span></div>' +
+                '<div class="iw-title2">Żywe Muzeum Porcelany</div>' +
+                '<div class="iw-content">' +
+                  '<img src=img/Ćmielów.jpg class="iw-img">' +
+                  '<p>Żywe muzeum zostało otwarte w maju 2005 r. W ramach jego zwiedzania prezentowane są następujące wystawy i ekspozycje: warsztat garncarski wraz z informacjami o historii ćmielowskiego garncarstwa, hala fabryczna wraz z 22-metrowym piecem garncarskim (do niedawna jeszcze czynnym), kilkustanowiskowa prezentacja procesu produkcji porcelany (tworzenie masy porcelanowej, przygotowywanie modelu i formy, odlewanie, zdobienie), Sala Marmurowa z kolekcją współczesnej rzeźby porcelanowej (lata 50. i 60. XX wieku).</p>' +
+                  '<a href="https://pl.wikipedia.org/wiki/%C5%BBywe_Muzeum_Porcelany_w_%C4%86mielowie" target="_blank" class="link">Więcej informacji...</a>' +
+                '<div class="iw-bottom-gradient"></div>' +
+                '</div>'},
+                {lat:50.8026259, lng:21.4188986, ico:'img/church6.png', content:
+                '<div id="iw-container">' +
+                '<div class="iw-title1">Opatów<span class="iw-distance">(146. kilometr trasy)</span></div>' +
+                '<div class="iw-title2">Kolegiata św. Marcina<span class="iw-distance"><img src=img/camping-tent.png></span></div>' +
+                '<div class="iw-content">' +
+                  '<img src=img/Opatów.jpg class="iw-img">' +
+                  '<p>Świątynia w stylu romańskim pochodząca z II poł. XII w., w 2006 r. obchodząca 800-lecie nadania statusu kolegiaty; znajduje się w niej szereg unikatowych zabytków, np. odlany z brązu Lament Opatowski, przedstawiający rozpacz 41 mieszkańców Opatowa po śmierci Krzysztofa Szydłowieckiego. Obok nagrobka kanclerza znajduje się także nagrobek jego córki, a także płyty nagrobne dwóch jego synów. Ponadto na ścianach kolegiaty znajdują się malowidła przedstawiające sceny słynnych bitew – odsiecz wiedeńską, Psie Pole i Grunwald. Cenne są również XVIII-wieczne ławki i stalle, a także organy – dzieło sztuki organowej.</p>' +
+                  '<a href="https://pl.wikipedia.org/wiki/Opat%C3%B3w" target="_blank" class="link">Więcej informacji...</a>' +
+                '<div class="iw-bottom-gradient"></div>' +
+                '</div>'},
+                {lat:50.8590574, lng:21.0441959, ico:'img/crucifix6.png', content:
+                '<div id="iw-container">' +
+                '<div class="iw-title1">Święty Krzyż<span class="iw-distance">(186. kilometr trasy)</span></div>' +
+                '<div class="iw-title2">Sanktuarium Relikwii Drzewa Krzyża Świętego</div>' +
+                '<div class="iw-content">' +
+                  '<img src=img/ŚwiętyKrzyż.jpg class="iw-img">' +
+                  '<p>Najstarsze polskie sanktuarium, miejsce szczególnego kultu w wieku XV, znajdujące się na Świętym Krzyżu (Łysej Górze). Klasztor i romański kościół ufundowane zostały pomiędzy latami 1102-1138 przez Bolesława Krzywoustego. Początkowo pw. Świętej Trójcy, od XV wieku pw. Świętego Krzyża, po tym, gdy w 1306 książę Władysław Łokietek przekazał łysogórskim benedyktynom relikwie drzewa Krzyża Świętego (przechowywane od XVIII wieku w kaplicy Oleśnickich i wg legendy podarowane przez Emeryka, królewicza z Węgier).</p>' +
+                  '<a href="https://pl.wikipedia.org/wiki/Bazylika_na_%C5%9Awi%C4%99tym_Krzy%C5%BCu" target="_blank" class="link">Więcej informacji...</a>' +
+                '<div class="iw-bottom-gradient"></div>' +
+                '</div>'},
+                {lat:50.8939812, lng:20.8757823, ico:'img/witch-face6.png', content:
+                '<div id="iw-container">' +
+                '<div class="iw-title1">Łysica<span class="iw-distance">(206. kilometr trasy)</span></div>' +
+                '<div class="iw-title2">Najwyższy szczyt Gór Świętokrzyskich</div>' +
+                '<div class="iw-content">' +
+                  '<img src=img/Łysica.jpg class="iw-img">' +
+                  '<p>Szczyt o wysokości 614 m n.p.m. Znajduje się w zachodniej części Łysogór, na południowy wschód od wsi Święta Katarzyna. Należy do Korony Gór Polski. Znajduje się w obszarze ochrony ścisłej Świętokrzyskiego Parku Narodowego. Od strony północnej i południowej szczyt otaczają gołoborza. Łysica jest całkowicie porośnięta lasem. Podania mówią, że u podnóża Łysicy istniała kiedyś pogańska świątynia, na miejscu której obecnie znajduje się klasztor sióstr bernardynek.</p>' +
+                  '<a href="https://pl.wikipedia.org/wiki/%C5%81ysica_(G%C3%B3ry_%C5%9Awi%C4%99tokrzyskie)" target="_blank" class="link">Więcej informacji...</a>' +
+                '<div class="iw-bottom-gradient"></div>' +
+                '</div>'},
+                {lat:50.8611445, lng:20.6153419, ico:'img/minerals6.png', content:
+                '<div id="iw-container">' +
+                '<div class="iw-title1">Kielce<span class="iw-distance">(244. kilometr trasy)</span></div>' +
+                '<div class="iw-title2">Rezerwat przyrody Kadzielnia</div>' +
+                '<div class="iw-content">' +
+                  '<img src=img/Kadzielnia.jpg class="iw-img">' +
+                  '<p>Rezerwat ścisły przyrody nieożywionej znajdujący się na terenie miasta Kielce. Skalne wzgórze Kadzielni zbudowane jest z wapieni górnodewońskich, głównie franu, a w wyższej części także famenu. Występują tu liczne skamieniałości koralowców, stromatoporoidów, trylobitów, łodzikowatych i innych zwierząt morskich sprzed 350 mln lat. Do cenniejszych znalezisk paleontologicznych należą ryby pancerne. Można tu zaobserwować liczne zjawiska tektoniczne, mineralizacyjne i różne formy krasowe. Na terenie rezerwatu, w Skałce Geologów, znajduje się kilkanaście niewielkich jaskiń.</p>' +
+                  '<a href="https://pl.wikipedia.org/wiki/Rezerwat_przyrody_Kadzielnia" target="_blank" class="link">Więcej informacji...</a>' +
+                '<div class="iw-bottom-gradient"></div>' +
+                '</div>'},
                 // {lat:50.8253422, lng:20.4969425, ico:'img/cave-entrance6.png', content:'<h1>Jaskinia Raj</h1>'+'<img src=img/Jaskiniaraj.jpg class="info-image">'},
-                {lat:50.7975983, lng:20.4574498, ico:'img/castle6.png', content:'<h1>Chęciny – Zamek Królewski</h1>'+'<img src=img/Chęciny.jpg class="info-image">'},
+                {lat:50.7975983, lng:20.4574498, ico:'img/castle6.png', content:
+                '<div id="iw-container">' +
+                '<div class="iw-title1">Chęciny<span class="iw-distance">(256. kilometr trasy)</span></div>' +
+                '<div class="iw-title2">Zamek Królewski<span class="iw-distance"><img src=img/camping-tent.png></span></div>' +
+                '<div class="iw-content">' +
+                  '<img src=img/Chęciny.jpg class="iw-img">' +
+                  '<p>Budowę fortecy rozpoczęto prawdopodobnie około 1295-1300 roku. Wówczas została zbudowana górna część Zamku, składającą się z dwóch cylindrycznych baszt obronnych i dziedzińca. Zamek odegrał ważną rolę jako miejsce koncentracji wojsk wyruszających na wojnę z Krzyżakami. Właśnie z tego miejsca w 1331 roku wyruszono na bitwę pod Płowcami. Warownia dzieli się na dwie części: zamek górny, położony między dwiema basztami z murem o grubości 2 m oraz zamek dolny tzw. Przygródek, z obszernym dziedzińcem zakończonym skośną, czworokątną basztą z XV wieku i furtką sklepioną w gotycki łuk.</p>' +
+                  '<a href="https://pl.wikipedia.org/wiki/Ch%C4%99ciny" target="_blank" class="link">Więcej informacji...</a>' +
+                '<div class="iw-bottom-gradient"></div>' +
+                '</div>'},
             ];
 
             

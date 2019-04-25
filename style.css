@@ -1,3 +1,7 @@
+/* VARIABLES */
+
+/* GLOBAL */
+
 *{
     margin: 0;
     padding: 0;
@@ -5,8 +9,63 @@
 }
 
 body{
-    background-color: #769E72;
+    background-color: #769e72;
+    font-family: 'Lato', sans-serif;
 }
+
+/* NAV SECTION */
+
+.navbar {
+    font-size: 18px;
+    background-image: linear-gradient(260deg, #17c1bc 0%, #769e72 100%);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 10px;
+}
+.main-nav {
+    list-style-type: none;
+    display: none;
+}
+.nav-links, .logo {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.logo {
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+
+.navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer; 
+    color: rgba(255,255,255,0.8);
+    font-size: 24px;
+}
+
+.active {
+    display: block;
+  }
+
+/* HERO SECTION */
+
+#hero-section {
+    height: 100vh;
+    background-image: url('img/expeditions/bike7.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* MAP SECTION */
 
 #map-section{
     position: relative;
@@ -79,7 +138,7 @@ body{
     text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }
 
-/* INFOWINDOW */
+/* Infowindow */
 
 .gm-style-iw{
 	width: 350px !important;
@@ -112,7 +171,8 @@ body{
     padding-top: 0px;
     position: relative;
 }
-/* BOTTOM BORDERLINE */
+
+/* IW bottom borderline */
 .iw-title2:before{
     content: "";
     position: absolute;
@@ -178,4 +238,38 @@ body{
 #iw-container p{
     margin-bottom: 10px;
     font-size: 16px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+        background: transparent;
+    }
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .main-nav li {
+        margin: 0;
+    }
+    .nav-links {
+        margin-left: 40px;
+    }
+    .logo {
+        margin-top: 0;
+    }
+   .navbar-toggle {
+       display: none;
+    }
+    .logo:hover, .nav-links:hover {
+        color: rgba(255, 255, 255, 1);
+    }
 }

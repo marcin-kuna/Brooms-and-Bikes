@@ -15,34 +15,38 @@ body{
 
 /* NAV SECTION */
 
-.navbar {
+.navbar{
     font-size: 18px;
-    background-image: linear-gradient(260deg, #17c1bc 0%, #769e72 100%);
+    background-image: linear-gradient(0deg, #fd7400 0%, #fff 100%);
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding-bottom: 10px;
 }
-.main-nav {
+.main-nav{
     list-style-type: none;
     display: none;
 }
 .nav-links, .logo {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.7);
+    color: #fff;
 }
 
-.logo {
+.nav-links:hover {
+    color: #fd7400;
+}
+
+.logo{
     display: inline-block;
     font-size: 22px;
     margin-top: 10px;
     margin-left: 20px;
 }
 
-.main-nav li {
+.main-nav li{
     text-align: center;
     margin: 15px auto;
 }
 
-.navbar-toggle {
+.navbar-toggle{
     position: absolute;
     top: 10px;
     right: 20px;
@@ -51,18 +55,63 @@ body{
     font-size: 24px;
 }
 
-.active {
+.active{
     display: block;
   }
 
 /* HERO SECTION */
 
-#hero-section {
+#hero-section{
     height: 100vh;
-    background-image: url('img/expeditions/bike7.jpg');
+    background-image: url('img/expeditions/bike9.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center top;
+}
+
+/* #hero-info{
+    max-width: 400px;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    padding: 20px;
+} */
+
+#hero-info{
+    max-width: 40vw;
+    margin: 0 auto;
+    padding-top: 32vh;
+    text-align: center;
+    font-size: 22px;
+    color: #fd7400;
+}
+
+#hero-info h1{
+    padding: 10px;
+}
+
+#hero-btn{
+    margin-top: 15px;
+    width: 150px;
+    height: 40px;
+    font-weight: 700;   
+    color: #fd7400;
+    border: 1px solid #fd7400;
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+    transition: all 0.5s;
+}
+
+#hero-btn:hover{
+    background-color: #fff;
+    cursor: pointer;
+    color: #fd7400;
+    border: 1px solid #fd7400;
 }
 
 /* MAP SECTION */
@@ -249,27 +298,39 @@ body{
         padding-bottom: 0;
         height: 70px;
         align-items: center;
-        background: transparent;
+        background-image: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3));
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 2;
     }
+
     .main-nav {
         display: flex;
         margin-right: 30px;
         flex-direction: row;
         justify-content: flex-end;
     }
+
     .main-nav li {
         margin: 0;
     }
+
     .nav-links {
-        margin-left: 40px;
+        margin: 0 30px;
     }
+
     .logo {
         margin-top: 0;
+        margin-left: 60px;
     }
+
    .navbar-toggle {
        display: none;
     }
+
     .logo:hover, .nav-links:hover {
-        color: rgba(255, 255, 255, 1);
+        color: #fd7400;
     }
 }

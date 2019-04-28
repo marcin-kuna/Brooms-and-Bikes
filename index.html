@@ -22,13 +22,10 @@
 
           <ul class="main-nav" id="js-menu">
               <li>
-                  <a href="#" class="nav-links">Home</a>
-              </li>
-              <li>
                   <a href="#" class="nav-links">Wyprawy</a>
               </li>
               <li>
-                  <a href="#" class="nav-links">Mapa trasy</a>
+                  <a href="#map-section" class="nav-links">Mapa trasy</a>
               </li>
               <li>
                   <a href="#" class="nav-links">Galeria</a>
@@ -43,14 +40,15 @@
     <!-- HERO -->
 
     <section id="hero-section">
-      <h1>Miotły i rowery</h1>
-      <h2>Wybierz się z nami na rowerową wyprawę w tajemnicze Góry Świętokrzyskie!</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad illo rem consectetur odit perspiciatis obcaecati optio qui sapiente officiis minus. Laborum officiis earum ipsum facilis soluta repellendus itaque odit, eligendi reprehenderit. Magni, corporis id. Eveniet sint vitae error vero laborum.</p>
+      <div id="hero-info">
+        <h1>Odkryj z nami Góry Świętokrzyskie!</h1>
+        <button id="hero-btn">WIĘCEJ</button>
+      </div>
     </section>
       
     <!-- MAP -->
       <section id="map-section">
-          <h1 id="map-header">PLAN TRASY</h1>
+          <!-- <h1 id="map-header">PLAN TRASY</h1> -->
           <div id="map"></div>
           <button id="start">START!</button>
           <!-- <div id="distance">
@@ -58,6 +56,10 @@
               <div id="counter">0</div>
               <span>KM</span>
           </div> -->
+      </section>
+
+      <section id="gallery">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident odit facilis suscipit, iste, hic natus sint quas fuga explicabo voluptate dolore nisi aliquam debitis nulla repudiandae at necessitatibus esse aperiam ratione laboriosam. Obcaecati provident rem exercitationem cumque eaque, voluptatem sint quas excepturi magni mollitia autem alias ex dicta, consectetur, amet expedita nihil corporis velit eum neque? Excepturi alias porro, atque quos vitae suscipit, rem delectus, sequi autem ullam officiis fuga illum ipsum dolor iure quae eum eligendi. Maxime perferendis eum similique expedita obcaecati? Natus, earum quaerat rem reprehenderit debitis rerum culpa ipsa praesentium dolorum sunt ex vel unde non doloribus.</p>
       </section>
       
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrqOko7OU41qdzvGDBjySYL4YQA3iJmc&callback=initMap"

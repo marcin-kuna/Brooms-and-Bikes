@@ -1,5 +1,11 @@
 /* VARIABLES */
 
+/* pomarancz: #fd7400 rgb(253, 116, 0)
+fiolet: #a583ce
+zieleń tło: #abce83
+zieleń header: #60845c
+niebieski bieguni: #17c1bc; rgb(23, 193, 188)*/
+
 /* GLOBAL */
 
 *{
@@ -9,17 +15,19 @@
 }
 
 body{
-    background-color: #769e72;
+    /* background-color: #769e72; */
     font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
 }
 
 /* NAV SECTION */
 
 .navbar{
     font-size: 18px;
-    background-image: linear-gradient(0deg, #fd7400 0%, #fff 100%);
+    background-image: linear-gradient(0deg, #fd7400 0%, #ffcda3 100%);
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding-bottom: 10px;
+    width: 100vw;
 }
 .main-nav{
     list-style-type: none;
@@ -28,10 +36,6 @@ body{
 .nav-links, .logo {
     text-decoration: none;
     color: #fff;
-}
-
-.nav-links:hover {
-    color: #fd7400;
 }
 
 .logo{
@@ -63,48 +67,65 @@ body{
 
 #hero-section{
     height: 100vh;
-    background-image: url('img/expeditions/bike9.jpg');
+    width: 100vw;
+    background-image: url('img/expeditions/1.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center top;
+}
+
+#hero-info{
+    max-width: 400px;
+    position: absolute;
+    left: 5%;
+    top: 35%;
+    color: #fff;
+    text-align: center;
 }
 
 /* #hero-info{
-    max-width: 400px;
-    position: absolute;
-    left: 10%;
-    top: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    text-align: center;
-    padding: 20px;
-} */
-
-#hero-info{
     max-width: 40vw;
     margin: 0 auto;
     padding-top: 32vh;
     text-align: center;
     font-size: 22px;
     color: #fd7400;
-}
+} */
 
 #hero-info h1{
-    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 200px;
+}
+
+#star{
+    cursor: pointer;
+}
+
+#star-info{
+    color: #fff;
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+    display: none;
+}
+
+#star-info.active{
+    display: block;
 }
 
 #hero-btn{
     margin-top: 15px;
     width: 150px;
     height: 40px;
+    font-size: 16px;
     font-weight: 700;   
-    color: #fd7400;
-    border: 1px solid #fd7400;
+    color: #fff;
+    border: 1px solid #fff;
     border-radius: 5px;
     background: transparent;
     outline: none;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 #hero-btn:hover{
@@ -114,14 +135,138 @@ body{
     border: 1px solid #fd7400;
 }
 
+/* CHOICE SECTION */
+
+#choice-section{
+    padding-top: 30px;
+    height: 100vh;
+    color: #fff;
+    background-color: #2d677c;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around; */
+}
+
+#choice-section h2, #choice-section>p{
+    margin-left: 7%;
+    padding-top: 20px;
+}
+
+#choice-section h2{
+    font-size: 32px;
+}
+
+#choice-section>p{
+    max-width: 70%;
+}
+
+#choice-section-link{
+    text-decoration: none;
+    color: #fd7400;
+}
+
+#choice-container{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
+}
+
+#choice-section-hr{
+    margin-top: 20px;
+    margin-left: 5%;
+    background-color: #fd7400;
+    width: 72%;
+    height: 2px;
+    border: none;
+}
+
+/* sprawdzić align items center */
+.choice{                                    
+    width: 20%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 1s;
+}
+
+.choice:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+/* sprawdzić align items center */
+.choice img{
+    width: 50%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.choice-btn{
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    /* font-weight: 700;    */
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.choice-btn:hover{
+    cursor: pointer;
+}
+
+#choice-btn-1:hover{
+    color: #00ff00;
+    border: 1px solid #00ff00;
+}
+
+#choice-btn-2:hover{
+    color: #ffff00;
+    border: 1px solid #ffff00;
+}
+
+#choice-btn-3:hover{
+    color: #ff0000;
+    border: 1px solid #ff0000;
+}
+
+
+
+.choice-hr{
+    width: 100%;
+    height: 5px;
+    border: none;
+}
+
+#choice-1-hr{
+    background-color: #00ff00;
+}
+
+#choice-2-hr{
+    background-color: #ffff00;
+}
+
+#choice-3-hr{
+    background-color: #ff0000;
+}
+
 /* MAP SECTION */
 
 #map-section{
     position: relative;
-    margin: 30px;
+    width: 100vw;
+    height: 100vh;
 }
 
-#map-header{
+/* #map-header{
     position: absolute;
     top: 10px;
     left: 50%;
@@ -134,26 +279,21 @@ body{
     border-radius: 5px;
     color: #fff;
     border: 2px solid #17c1bc;
-    /* color: #28e0da; */
-    /* background-color: rgba(165, 131, 206, 0.8); */
-    /* background-color: rgba(36, 204, 199, 1); */
     background-color: rgba(23, 193, 188, 0.7);
     text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
-}
+} */
 
 #map{
-    height: 90vh;
+    height: 100%;
+    /* height: 90vh;
     width: 90vw;
     margin: 0 auto;
     border: 2px solid #17c1bc;
-    border-radius: 5px;
-}
-
-*{
-    font-family: 'Lato', sans-serif;
+    border-radius: 5px; */
 }
 
 #start{
+    font-family: 'Lato', sans-serif;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -167,11 +307,11 @@ body{
     outline: none;
     border-radius: 8px;
     color: #fff;
-    background-color: rgba(23, 193, 188, 0.7);
-    text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    background-color: #2d677c;
+    /* text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; */
 }
 
-#distance{
+/* #distance{
     position: absolute;
     left: 40%;
     transform: translateX(-40%);
@@ -185,7 +325,7 @@ body{
     color: #fff;
     background-color: #60845c;
     text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
-}
+} */
 
 /* Infowindow */
 
@@ -298,7 +438,7 @@ body{
         padding-bottom: 0;
         height: 70px;
         align-items: center;
-        background-image: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3));
+        background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
         position: fixed;
         top: 0;
         left: 0;

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Miotły i rowery</title>
@@ -22,13 +23,16 @@
 
           <ul class="main-nav" id="js-menu">
               <li>
-                  <a href="#" class="nav-links">Wyprawy</a>
+                  <a href="#choice-section" class="nav-links">Wyprawy</a>
               </li>
               <li>
-                  <a href="#map-section" class="nav-links">Mapa trasy</a>
+                  <a href="#map-section" class="nav-links">Mapa</a>
               </li>
               <li>
                   <a href="#" class="nav-links">Galeria</a>
+              </li>
+              <li>
+                  <a href="#" class="nav-links">Kalendarz</a>
               </li>
               <li>
                   <a href="#" class="nav-links">Kontakt</a>
@@ -37,16 +41,49 @@
         </nav>
       </header>
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
 
     <section id="hero-section">
       <div id="hero-info">
-        <h1>Odkryj z nami Góry Świętokrzyskie!</h1>
-        <button id="hero-btn">WIĘCEJ</button>
+        <h1>RPG<span id="star">*</span></h1>
+        <p>Odkryj z nami tajemnicze Góry Świętokrzyskie! Wybierz się na rowerową przygodę – zwiedzaj, ruszaj się, odpoczywaj.</p>
+        <button id="hero-btn">Więcej</button>
+      </div>
+      <p id="star-info">*Rowerem Przez Góry</p>
+    </section>
+
+    <!-- CHOICE SECTION -->
+
+    <section id="choice-section">
+      <h2>Wybierz swoją przygodę</h2>
+      <hr id="choice-section-hr">
+      <p>Dobierz trasę zgodnie ze swoimi możliwościami. Przed podjęciem decyzji uważnie przyjrzyj się naszej <a href="#map-section" id="choice-section-link">MAPIE</a>. Długość trasy zależy od Twoich preferencji (maksymalnie 256 kilometrów). Podróżujesz zawsze pod opieką licencjonowanego przewodnika. Noclegi w miejscach oznaczonych na mapie ikoną <img src="img/icons/camping-tent.png" alt="">.</p>
+      <div id="choice-container">
+        <div class="choice" id="choice-1">
+          <img src="img/icons/baby-face.png">
+          <h3>Początkujący</h3>
+          <p>Wyprawa 1-dniowa + nocleg.<br> Obejmuje 4 kolejne punkty na mapie.<br>Cena: 200 zł / os.</p>
+          <button class="choice-btn" id="choice-btn-1">Rezerwuj</button>
+          <hr class="choice-hr" id="choice-1-hr">
+        </div>
+        <div class="choice" id="choice-2">
+          <img src="img/icons/biceps.png">
+          <h3>Doświadczony</h3>
+          <p>Wyprawa 2-dniowa + 2 noclegi.<br> Obejmuje 8 kolejnych punktów na mapie.<br>Cena: 400 zł / os.</p>
+          <button class="choice-btn" id="choice-btn-2">Rezerwuj</button>
+          <hr class="choice-hr" id="choice-2-hr">
+        </div>
+        <div class="choice" id="choice-3">
+          <img src="img/icons/mighty-force.png">
+          <h3>Ekspert</h3>
+          <p>Wyprawa 3-dniowa + 3 noclegi.<br> Pełna trasa (256 km)<br>Cena: 600 zł / os.</p>
+          <button class="choice-btn" id="choice-btn-3">Rezerwuj</button>
+          <hr class="choice-hr" id="choice-3-hr">
+        </div>
       </div>
     </section>
       
-    <!-- MAP -->
+    <!-- MAP SECTION -->
       <section id="map-section">
           <!-- <h1 id="map-header">PLAN TRASY</h1> -->
           <div id="map"></div>
@@ -57,11 +94,9 @@
               <span>KM</span>
           </div> -->
       </section>
-
-      <section id="gallery">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident odit facilis suscipit, iste, hic natus sint quas fuga explicabo voluptate dolore nisi aliquam debitis nulla repudiandae at necessitatibus esse aperiam ratione laboriosam. Obcaecati provident rem exercitationem cumque eaque, voluptatem sint quas excepturi magni mollitia autem alias ex dicta, consectetur, amet expedita nihil corporis velit eum neque? Excepturi alias porro, atque quos vitae suscipit, rem delectus, sequi autem ullam officiis fuga illum ipsum dolor iure quae eum eligendi. Maxime perferendis eum similique expedita obcaecati? Natus, earum quaerat rem reprehenderit debitis rerum culpa ipsa praesentium dolorum sunt ex vel unde non doloribus.</p>
-      </section>
-      
+    
+   
+     
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrqOko7OU41qdzvGDBjySYL4YQA3iJmc&callback=initMap"
     async defer></script>
       <script src="main.js"></script>

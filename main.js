@@ -1,13 +1,20 @@
-// HAMBURGER MENU
+// RESPONSIVE MENU
 
-let mainNav = document.getElementById("js-menu");
-let navBarToggle = document.getElementById("js-navbar-toggle");
+const mainNav = document.getElementById("js-menu");
+const navBarToggle = document.getElementById("js-navbar-toggle");
 
-navBarToggle.addEventListener('click', function () {
-    mainNav.classList.toggle('active');
-});
+navBarToggle.addEventListener('click', () =>
+    mainNav.classList.toggle('active')
+);
 
+// RPG STAR
 
+const starInfo = document.getElementById('star-info');
+const star = document.getElementById('star');
+
+star.addEventListener('click', () =>
+    starInfo.classList.toggle('active')
+)
 
 // MAP
 

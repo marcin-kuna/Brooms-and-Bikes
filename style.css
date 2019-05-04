@@ -429,6 +429,12 @@ body{
     font-size: 16px;
 }
 
+/* BOOKING SECTION */
+  
+    #booking-section{
+        height: 100vh;
+    }
+
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 768px) {
@@ -474,3 +480,4 @@ body{
         color: #fd7400;
     }
 }
+

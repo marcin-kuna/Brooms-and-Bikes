@@ -471,3 +471,7 @@ var map, markers = [], pointsDone = [], bounds, myInterval, startPoint, endPoint
                 pathAnimation(0);
                 kilometres();
             });
+
+
+// BOOKING SECTION
+

@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calendar.css">
     <title>Miotły i rowery</title>
   </head>
   <body>
@@ -32,7 +33,7 @@
                   <a href="#" class="nav-links">Galeria</a>
               </li>
               <li>
-                  <a href="#" class="nav-links">Kalendarz</a>
+                  <a href="#booking-section" class="nav-links">Kalendarz</a>
               </li>
               <li>
                   <a href="#" class="nav-links">Kontakt</a>
@@ -63,21 +64,21 @@
           <img src="img/icons/baby-face.png">
           <h3>Początkujący</h3>
           <p>Wyprawa 1-dniowa + nocleg.<br> Obejmuje 4 kolejne punkty na mapie.<br>Cena: 200 zł / os.</p>
-          <button class="choice-btn" id="choice-btn-1">Rezerwuj</button>
+          <a href="#booking-section"><button class="choice-btn" id="choice-btn-1">Rezerwuj</button></a>
           <hr class="choice-hr" id="choice-1-hr">
         </div>
         <div class="choice" id="choice-2">
           <img src="img/icons/biceps.png">
           <h3>Doświadczony</h3>
           <p>Wyprawa 2-dniowa + 2 noclegi.<br> Obejmuje 8 kolejnych punktów na mapie.<br>Cena: 400 zł / os.</p>
-          <button class="choice-btn" id="choice-btn-2">Rezerwuj</button>
+          <a href="#booking-section"><button class="choice-btn" id="choice-btn-2">Rezerwuj</button></a>
           <hr class="choice-hr" id="choice-2-hr">
         </div>
         <div class="choice" id="choice-3">
           <img src="img/icons/mighty-force.png">
           <h3>Ekspert</h3>
           <p>Wyprawa 3-dniowa + 3 noclegi.<br> Pełna trasa (256 km)<br>Cena: 600 zł / os.</p>
-          <button class="choice-btn" id="choice-btn-3">Rezerwuj</button>
+          <a href="#booking-section"><button class="choice-btn" id="choice-btn-3">Rezerwuj</button></a>
           <hr class="choice-hr" id="choice-3-hr">
         </div>
       </div>
@@ -95,10 +96,27 @@
           </div> -->
       </section>
     
-   
-     
+    <!-- BOOKING SECTION -->
+    
+    <section id="booking-section">
+
+      <div id="calendar"></div>
+    
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor eum illo magni, cupiditate sed magnam. Voluptatum perspiciatis assumenda similique eveniet?</p>
+      </div>
+    </footer>
+    
+
+    <!-- GOOGLE MAP API + JS -->
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrqOko7OU41qdzvGDBjySYL4YQA3iJmc&callback=initMap"
     async defer></script>
       <script src="main.js"></script>
+      <script src="calendar.js"></script>
 </body>
 </html>

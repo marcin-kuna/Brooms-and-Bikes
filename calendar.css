@@ -25,19 +25,20 @@
   } */
   
   .container {
-    margin: 0 10% 5em 11%;
+    padding: 0 5% 5% 5%;
+    /* margin: 0 10% 5em 11%; */
   }
   
   .title {
     font-size: 12vw;
-    color: var(--title-color);
+    color: rgba(0, 0, 0, 0.3);
     font-family: var(--font-family);
     font-weight: 600;
     margin-top: -0.43em;
     position: relative;
     top: 0.43em;
     left: 10vw;
-    z-index: -1;
+    /* z-index: -1; */
   }
   
   .calendar {
@@ -80,8 +81,7 @@
     z-index: 10;
   }
    */
-  .cell:empty,
-  .cell.header {
+  .cell:empty,.cell.header {
     border: 0;
   }
   
@@ -92,14 +92,14 @@
   
   .cell.header {
     font-weight: 600;
-    color: var(--weekday-label-color);
+    color: #fff;
   }
   
   .month {
     position: absolute;
     right: 3em;
     font-weight: 600;
-    color: var(--month-label-color);
+    color: #fff;
   }
   
   .cell.today {

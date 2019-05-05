@@ -238,8 +238,6 @@ body{
     border: 1px solid #ff0000;
 }
 
-
-
 .choice-hr{
     width: 100%;
     height: 5px;
@@ -310,22 +308,6 @@ body{
     background-color: #2d677c;
     /* text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; */
 }
-
-/* #distance{
-    position: absolute;
-    left: 40%;
-    transform: translateX(-40%);
-    bottom: 10%;
-    width: 100px;
-    height: 50px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    border-radius: 10px;
-    color: #fff;
-    background-color: #60845c;
-    text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
-} */
 
 /* Infowindow */
 
@@ -431,9 +413,92 @@ body{
 
 /* BOOKING SECTION */
   
-    #booking-section{
-        height: 100vh;
-    }
+#booking-section{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    background-color: #2d677c;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* FORM SECTION */
+#form-container{
+    border: 1px solid #fff;
+    padding: .5rem;
+    color: #fff;
+}
+
+#form-container h3{
+    text-align: center;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    padding: .3rem;
+}
+
+#booking-form > * {
+    font-size: 1.2em;
+}
+#booking-form{
+    display: grid;
+    grid-template-columns: [labels] auto [controls] 1fr;
+    grid-auto-flow: row;
+    grid-gap: .8em .5em;
+    background: transparent;
+    padding: 1.2em;
+}
+#booking-form label, #booking-form fieldset{
+    grid-column: labels;
+}
+#booking-form input, #booking-form select, #booking-form textarea, #booking-form button{
+    grid-column: controls;
+    padding: .4em;
+    border: 0;
+}
+#booking-form fieldset{
+    grid-column: span 2;
+    text-align: center;
+    padding: .3rem;
+}
+
+#booking-form fieldset label{
+    padding: .2rem;
+}
+
+#booking-form textarea{
+        min-height: 3em;
+}
+
+/* #booking-info{
+    background-color: #f00;
+    text-align: center;
+}
+
+#booking-info ul{
+    text-align: left;
+    list-style-type: none;
+} */
+
+
+/* SVG */
+
+svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+    background-color: #2d677c;
+  }
+
 
 /* MEDIA QUERIES */
 

@@ -89,18 +89,87 @@
           <!-- <h1 id="map-header">PLAN TRASY</h1> -->
           <div id="map"></div>
           <button id="start">START!</button>
-          <!-- <div id="distance">
-              <p>DISTANCE</p>
-              <div id="counter">0</div>
-              <span>KM</span>
-          </div> -->
       </section>
     
     <!-- BOOKING SECTION -->
     
     <section id="booking-section">
-
+      <section id="calendar-section">
       <div id="calendar"></div>
+    </section>
+    
+    <section id="form-section">
+      <!-- <h2>Formularz rezerwacji</h2>
+      <div id="booking-container">
+          <div id="booking-info">
+              <h3>Zarezerwuj przygodę!</h3>
+              <p>Cena zawiera:</p>
+              <ul>
+                  <li>opiekę przewodnika</li>
+                  <li>nocleg w domach prywatnych</li>
+                  <li>pomoc techniczną</li>
+                  <li>ubezpieczenie</li>
+                  <li>posiłki</li>
+                  <li>bilety wstępu</li>
+              </ul>
+              <p>Każdy dodatek: +50zł/os./dzień</p>
+          </div> -->
+          <div id="form-container">
+              <h3>Uzupełnij dane</h3>
+              <form id="booking-form">
+                  <label for="customer_name"><i class="fas fa-user"></i>Imię i nazwisko</label>
+                  <input type="text" name="customer_name" placeholder="Imię i nazwisko" required>
+                
+                  <label for="phone_number"><i class="fas fa-phone"></i>Telefon</label>
+                  <input type="tel" name="phone_number" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" placeholder="555777999" required>
+                
+                  <label for="email_address"><i class="fas fa-envelope"></i>Email</label>
+                  <input type="email" name="email_address" placeholder="email@email.com" required>
+                
+                  <fieldset>
+                    <legend>Którą przygodę wybierasz?</legend>
+                    <label><input type="radio" name="expedition" value="beginner" required>Początkujący</label>
+                    <label><input type="radio" name="expedition" value="advanced" required>Zaawansowany</label>
+                    <label><input type="radio" name="expedition" value="expert" required>Ekspert</label>
+                  </fieldset>
+                
+                  <fieldset>
+                    <legend>Dodatki</legend>
+                    <label><input type="checkbox" name="extras" value="regional_cuisine">Kuchnia regionalna</label>
+                    <label><input type="checkbox" name="extras" value="photo">Foto/Video</label>
+                    <label><input type="checkbox" name="extras" value="bonfire">Ognisko</label>
+                  </fieldset>
+                
+                  <label for="starting_date"><i class="far fa-calendar-alt"></i>Rozpoczęcie</label>
+                  <input type="date" name="starting_date" min="" max="2019-12-31" id="starting-date" required>
+                
+                  <label for="starting_place"><i class="fas fa-map-marker-alt"></i>Start</label>
+                  <select name="starting_place" required>
+                    <option value="" selected="selected">Wybierz:</option>
+                    <option value="oblegorek">Oblęgorek</option>
+                    <option value="wachock">Wąchock</option>
+                    <option value="opatow">Opatów</option>
+                    <option value="checiny">Chęciny</option>
+                  </select>
+                
+                  <label for="finish"><i class="fas fa-map-marker-alt"></i>Meta</label>
+                  <select name="finish" required>
+                          <option value="" selected="selected">Wybierz:</option>
+                          <option value="wachock">Wąchock</option>
+                          <option value="opatow">Opatów</option>
+                          <option value="checiny">Chęciny</option>
+                  </select>
+                
+                  <label for="comments"><i class="far fa-comment-dots"></i>Komentarz</label>
+                  <textarea name="comments" maxlength="300"></textarea>
+
+                  <button>REZERWUJ</button>
+                </form>
+
+                
+          </div>
+      </div>
+  </section>
     
     </section>
 
@@ -112,6 +181,11 @@
       </div>
     </footer>
     
+    <div id="svg-container">
+      <svg viewBox="0 0 1000 1000" preserveAspectRatio="xMinYMin meet">
+        <path d="M 50 150 L 100 50 L 150 200 L 200 100 L 250 250 L 350 0 L 400 150 L 450 50 L 500 150 L 550 100 L 600 200 L 700 0 L 800 250 " style="stroke: none; fill:rgba(0,0,0,.3);"></path>
+      </svg>
+    </div>
 
     <!-- GOOGLE MAP API + JS -->
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrqOko7OU41qdzvGDBjySYL4YQA3iJmc&callback=initMap"

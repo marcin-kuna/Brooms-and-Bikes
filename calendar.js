@@ -6,20 +6,20 @@
   ) {
     const time = {
       constants: {
-        days: ["S", "M", "T", "W", "T", "F", "S"],
+        days: ["N", "P", "W", "Ś", "C", "Pt", "S"],
         months: [
-          "Jan",
-          "Feb",
+          "Sty",
+          "Lut",
           "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct",
-          "Nov",
-          "Dec"
+          "Kwi",
+          "Maj",
+          "Cze",
+          "Lip",
+          "Sie",
+          "Wrz",
+          "Paź",
+          "Lis",
+          "Gru"
         ]
       }
     };
@@ -91,8 +91,6 @@
       calDiv.appendChild(row);
     }
 
-     
-  
     function drawRow(month, totalCellsInEachRow, crossOutPastDays) {
       const row = document.createElement("tr");
       row.className = "row";

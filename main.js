@@ -9,7 +9,9 @@ navBarToggle.addEventListener('click', () =>
 
 // SMOOTH SCROLL
 
-const navbarLinks = document.querySelectorAll(".navbar a");
+const navbarLinks = document.querySelectorAll(".nav-links");
+
+console.log(navbarLinks); 
 
 navbarLinks.forEach(elem => elem.addEventListener('click', navbarLinkClick));
 
@@ -200,194 +202,52 @@ var map, markers = [], pointsDone = [], bounds, myInterval, startPoint, endPoint
                     lng: 20.9227805
                 },
                 styles: [
-    {
-        "featureType": "water",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#aee2e0"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#abce83"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#769e72"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#7B8758"
-            }
-        ]
-    },
-    {
-        "featureType": "poi",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "color": "#EBF4A4"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.park",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "color": "#8dab68"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#5B5B3F"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "color": "#ABCE83"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "road.local",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#A4C67D"
-            }
-        ]
-    },
-    {
-        "featureType": "road.arterial",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#9BBF72"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry",
-        "stylers": [
-            {
-                "color": "#EBF4A4"
-            }
-        ]
-    },
-    {
-        "featureType": "transit",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#87ae79"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#7f2200"
-            },
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            },
-            {
-                "visibility": "on"
-            },
-            {
-                "weight": 4.1
-            }
-        ]
-    },
-    {
-        "featureType": "administrative",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#495421"
-            }
-        ]
-    },
-    {
-        "featureType": "administrative.neighborhood",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    }
+                    {
+                        "featureType": "all",
+                        "stylers": [
+                            {
+                                "saturation": 0
+                            },
+                            {
+                                "hue": "#155f99"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "stylers": [
+                            {
+                                "saturation": -70
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "stylers": [
+                            {
+                                "visibility": "simplified"
+                            },
+                            {
+                                "saturation": -60
+                            }
+                        ]
+                    }
 ]
             
             }
@@ -512,6 +372,8 @@ var map, markers = [], pointsDone = [], bounds, myInterval, startPoint, endPoint
                 kilometres();
             });
 
+// podobno ma zapobiec niezaładowaniu mapy
+document.addEventListener('DOMContentLoaded', initMap());
 
 // BOOKING SECTION
 

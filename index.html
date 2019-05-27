@@ -20,7 +20,7 @@
               <i class="fas fa-bars"></i>
           </span>
 
-          <a href="#" class="logo">LOGO</a>
+          <a href="#" class="logo nav-links">LOGO</a>
 
           <ul class="main-nav" id="js-menu">
               <li>
@@ -30,13 +30,13 @@
                   <a href="#map-section" class="nav-links">Mapa</a>
               </li>
               <li>
-                  <a href="#" class="nav-links">Galeria</a>
+                  <a href="#gallery-section" class="nav-links">Galeria</a>
               </li>
               <li>
                   <a href="#booking-section" class="nav-links">Kalendarz</a>
               </li>
               <li>
-                  <a href="#" class="nav-links">Kontakt</a>
+                  <a href="#footer" class="nav-links">Kontakt</a>
               </li>
           </ul>
         </nav>
@@ -48,7 +48,7 @@
       <div id="hero-info">
         <h1>RPG<span id="star">*</span></h1>
         <p>Odkryj z nami tajemnicze Góry Świętokrzyskie! Wybierz się na rowerową przygodę – zwiedzaj, ruszaj się, odpoczywaj.</p>
-        <button id="hero-btn">Więcej</button>
+        <a href="#choice-section" class="nav-links"><button id="hero-btn">Więcej</button></a>
       </div>
       <p id="star-info">*Rowerem Przez Góry</p>
     </section>
@@ -64,21 +64,21 @@
           <img src="img/icons/baby-face.png">
           <h3>Początkujący</h3>
           <p>Wyprawa 1-dniowa + nocleg.<br> Obejmuje 4 kolejne punkty na mapie.<br>Cena: 200 zł / os.</p>
-          <a href="#booking-section"><button class="choice-btn" id="choice-btn-1">Rezerwuj</button></a>
+          <a href="#booking-section" class="nav-links"><button class="choice-btn" id="choice-btn-1">Rezerwuj</button></a>
           <hr class="choice-hr" id="choice-1-hr">
         </div>
         <div class="choice" id="choice-2">
           <img src="img/icons/biceps.png">
           <h3>Doświadczony</h3>
           <p>Wyprawa 2-dniowa + 2 noclegi.<br> Obejmuje 8 kolejnych punktów na mapie.<br>Cena: 400 zł / os.</p>
-          <a href="#booking-section"><button class="choice-btn" id="choice-btn-2">Rezerwuj</button></a>
+          <a href="#booking-section" class="nav-links"><button class="choice-btn" id="choice-btn-2">Rezerwuj</button></a>
           <hr class="choice-hr" id="choice-2-hr">
         </div>
         <div class="choice" id="choice-3">
           <img src="img/icons/mighty-force.png">
           <h3>Ekspert</h3>
           <p>Wyprawa 3-dniowa + 3 noclegi.<br> Pełna trasa (256 km)<br>Cena: 600 zł / os.</p>
-          <a href="#booking-section"><button class="choice-btn" id="choice-btn-3">Rezerwuj</button></a>
+          <a href="#booking-section" class="nav-links"><button class="choice-btn" id="choice-btn-3">Rezerwuj</button></a>
           <hr class="choice-hr" id="choice-3-hr">
         </div>
       </div>
@@ -94,26 +94,13 @@
     <!-- BOOKING SECTION -->
     
     <section id="booking-section">
+
       <section id="calendar-section">
-      <div id="calendar"></div>
-    </section>
-    
-    <section id="form-section">
-      <!-- <h2>Formularz rezerwacji</h2>
-      <div id="booking-container">
-          <div id="booking-info">
-              <h3>Zarezerwuj przygodę!</h3>
-              <p>Cena zawiera:</p>
-              <ul>
-                  <li>opiekę przewodnika</li>
-                  <li>nocleg w domach prywatnych</li>
-                  <li>pomoc techniczną</li>
-                  <li>ubezpieczenie</li>
-                  <li>posiłki</li>
-                  <li>bilety wstępu</li>
-              </ul>
-              <p>Każdy dodatek: +50zł/os./dzień</p>
-          </div> -->
+        <div id="calendar"></div>
+        <p>Dni oznaczone tym <span id="calendar-span">kolorem</span> są już zarezerwowane!</p>
+      </section>
+
+      <section id="form-section">
           <div id="form-container">
               <h3>Uzupełnij dane</h3>
               <form id="booking-form">
@@ -164,28 +151,30 @@
                   <textarea name="comments" maxlength="300"></textarea>
 
                   <button>REZERWUJ</button>
-                </form>
-
-                
+                </form>  
           </div>
       </div>
-  </section>
-    
     </section>
+    
+  </section>
+
+  <!-- GALLERY SECTION -->
+
+  <section id="gallery-section">
+    <img src="img/expeditions/bike3.jpg" alt="">
+  </section>
 
     <!-- FOOTER -->
 
-    <footer>
-      <div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor eum illo magni, cupiditate sed magnam. Voluptatum perspiciatis assumenda similique eveniet?</p>
+    <footer id="footer">
+      <div id="footer-container">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor eum illo magni, cupiditate sed magnam. Voluptatum perspiciatis assumenda similique eveniet? Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur repellendus eveniet inventore atque eum esse, fugiat velit ea. Nihil fugiat dolores, nemo fuga ipsam, quis voluptas dignissimos ea excepturi quasi, aperiam unde.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur repellendus eveniet inventore atque eum esse, fugiat velit ea. Nihil fugiat dolores, nemo fuga ipsam, quis voluptas dignissimos ea excepturi quasi.</p>
       </div>
     </footer>
     
-    <div id="svg-container">
-      <svg viewBox="0 0 1000 1000" preserveAspectRatio="xMinYMin meet">
-        <path d="M 50 150 L 100 50 L 150 200 L 200 100 L 250 250 L 350 0 L 400 150 L 450 50 L 500 150 L 550 100 L 600 200 L 700 0 L 800 250 " style="stroke: none; fill:rgba(0,0,0,.3);"></path>
-      </svg>
-    </div>
+    
 
     <!-- GOOGLE MAP API + JS -->
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrqOko7OU41qdzvGDBjySYL4YQA3iJmc&callback=initMap"

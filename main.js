@@ -1,19 +1,36 @@
 // RESPONSIVE MENU
 
-const mainNav = document.getElementById("js-menu");
-const navBarToggle = document.getElementById("js-navbar-toggle");
+const navbarToggler = document.querySelector(".navbar-toggler");
+const navbarMenu = document.querySelector(".navbar ul");
+const navbarLinks = document.querySelectorAll(".navbar a");
 
-navBarToggle.addEventListener('click', () =>
-    mainNav.classList.toggle('active')
-);
+navbarToggler.addEventListener("click", navbarTogglerClick);
+
+function navbarTogglerClick() {
+  navbarToggler.classList.toggle("open-navbar-toggler");
+  navbarMenu.classList.toggle("open");
+}
+
+navbarLinks.forEach(elem => elem.addEventListener("click", navLinkClick));
+
+function navLinkClick() {
+  if(navbarMenu.classList.contains("open")) {
+    navbarToggler.click();
+  }
+}
+
+// const mainNav = document.getElementById("js-menu");
+// const navBarToggle = document.getElementById("js-navbar-toggle");
+
+// navBarToggle.addEventListener('click', () =>
+//     mainNav.classList.toggle('active')
+// );
 
 // SMOOTH SCROLL
 
-const navbarLinks = document.querySelectorAll(".nav-links");
+const navLinks = document.querySelectorAll(".nav-links");
 
-console.log(navbarLinks); 
-
-navbarLinks.forEach(elem => elem.addEventListener('click', navbarLinkClick));
+navLinks.forEach(elem => elem.addEventListener('click', navbarLinkClick));
 
 function navbarLinkClick(event){
     smoothScroll(event);
@@ -279,12 +296,14 @@ var map, markers = [], pointsDone = [], bounds, myInterval, startPoint, endPoint
                     visible: false,
                     icon: iconImage,
                 });
-                markers.push(marker);
 
+            
+                markers.push(marker);
+            
                 marker.addListener('click', function(){
                 infoWindow.open(map, this); // zmieniając 'this' na 'marker', wszystkie iw wyświetlą się na ostatnich coords, więc możliwe jest łatwy oofset jw.
             });
-            
+        
                 //add to bounds and path
                 bounds.extend(myLatLng);
             });
@@ -298,7 +317,7 @@ var map, markers = [], pointsDone = [], bounds, myInterval, startPoint, endPoint
        }
 
        
-
+       
       //Following function gets called one polyline at a time
         function pathAnimation(point) {
             
@@ -307,7 +326,13 @@ var map, markers = [], pointsDone = [], bounds, myInterval, startPoint, endPoint
 
             //Set start & end point for this polyline
             startPoint = pointsDone[point];
+            
+            // if potrzebne, by nie było dodatkowego pustego endpoint i błędu js
+            if(pointsDone.length<markers.length){
             endPoint = new google.maps.LatLng(mapPoints[point+1].lat, mapPoints[point+1].lng);
+            }
+            // console.log(pointsDone.length); 
+            // console.log(markers.length);
 
             // Create Symbol
             var lineSymbol = {
@@ -332,7 +357,7 @@ var map, markers = [], pointsDone = [], bounds, myInterval, startPoint, endPoint
 
             //Add this point to the array keeping points that have already been animated to
             pointsDone.push(endPoint);
-
+            
             //Animation loop
             step = 0;
             myInterval = setInterval(function() {
@@ -351,29 +376,92 @@ var map, markers = [], pointsDone = [], bounds, myInterval, startPoint, endPoint
                     myPath.setPath([startPoint, progress]);
                 }
             }, stepTime);
-
-          
-            // setTimeout(function(){ alert("Hello"); }, 15000);
         }
-
-        function kilometres(){
-            setTimeout(function(){
-                let distance = 0;
-                theLabel = document.getElementById("counter");
-                let interval = setInterval(function(){ 
-                    if (distance === 200) clearInterval(interval);
-                    theLabel.innerHTML = distance; 
-                    distance++;
-                    }, 65);}, 1500);
-        }
+    
+        // function kilometres(){
+        //     setTimeout(function(){
+        //         let distance = 0;
+        //         theLabel = document.getElementById("counter");
+        //         let interval = setInterval(function(){ 
+        //             if (distance === 200) clearInterval(interval);
+        //             theLabel.innerHTML = distance; 
+        //             distance++;
+        //             }, 65);}, 1500);
+        // }
         
         document.getElementById("start").addEventListener('click', function() {
                 pathAnimation(0);
-                kilometres();
+                // kilometres();
             });
 
 // podobno ma zapobiec niezaładowaniu mapy
-document.addEventListener('DOMContentLoaded', initMap());
+// document.addEventListener('DOMContentLoaded', initMap());
 
 // BOOKING SECTION
 
+
+// GALLERY SECTION
+
+const slides = document.querySelectorAll('.slide');
+const next = document.querySelector('#next');
+const prev = document.querySelector('#prev');
+const auto = false; // Auto scroll
+const intervalTime = 5000;
+let slideInterval;
+
+console.log(slides); 
+
+const nextSlide = () => {
+  // Get current class
+  const current = document.querySelector('.current');
+  // Remove current class
+  current.classList.remove('current');
+  // Check for next slide
+  if (current.nextElementSibling) {
+    // Add current to next sibling
+    current.nextElementSibling.classList.add('current');
+  } else {
+    // Add current to start
+    slides[0].classList.add('current');
+  }
+  setTimeout(() => current.classList.remove('current'));
+};
+
+const prevSlide = () => {
+  // Get current class
+  const current = document.querySelector('.current');
+  // Remove current class
+  current.classList.remove('current');
+  // Check for prev slide
+  if (current.previousElementSibling) {
+    // Add current to prev sibling
+    current.previousElementSibling.classList.add('current');
+  } else {
+    // Add current to last
+    slides[slides.length - 1].classList.add('current');
+  }
+  setTimeout(() => current.classList.remove('current'));
+};
+
+// Button events
+next.addEventListener('click', e => {
+  nextSlide();
+  if (auto) {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }
+});
+
+prev.addEventListener('click', e => {
+  prevSlide();
+  if (auto) {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }
+});
+
+// Auto slide
+if (auto) {
+    // Run next slide at interval time
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }

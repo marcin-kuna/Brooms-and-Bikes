@@ -16,11 +16,8 @@
     <!-- NAV -->
       <header id="header">
         <nav class="navbar">
-          <span class="navbar-toggle" id="js-navbar-toggle">
-              <i class="fas fa-bars"></i>
-          </span>
-
-          <a href="#" class="logo nav-links">LOGO</a>
+          
+          <a href="#" class="navbar-brand nav-links">LOGO</a>
 
           <ul class="main-nav" id="js-menu">
               <li>
@@ -30,15 +27,19 @@
                   <a href="#map-section" class="nav-links">Mapa</a>
               </li>
               <li>
-                  <a href="#gallery-section" class="nav-links">Galeria</a>
+                  <a href="#booking-section" class="nav-links">Kalendarz</a>
               </li>
               <li>
-                  <a href="#booking-section" class="nav-links">Kalendarz</a>
+                <a href="#gallery-section" class="nav-links">Galeria</a>
               </li>
               <li>
                   <a href="#footer" class="nav-links">Kontakt</a>
               </li>
           </ul>
+
+          <button class="navbar-toggler">
+            <span></span>
+          </button>
         </nav>
       </header>
 
@@ -58,27 +59,27 @@
     <section id="choice-section">
       <h2>Wybierz swoją przygodę</h2>
       <hr id="choice-section-hr">
-      <p>Dobierz trasę zgodnie ze swoimi możliwościami. Przed podjęciem decyzji uważnie przyjrzyj się naszej <a href="#map-section" id="choice-section-link">MAPIE</a>. Długość trasy zależy od Twoich preferencji (maksymalnie 256 kilometrów). Podróżujesz zawsze pod opieką licencjonowanego przewodnika. Noclegi w miejscach oznaczonych na mapie ikoną <img src="img/icons/camping-tent.png" alt="">.</p>
+      <p>Dobierz trasę zgodnie ze swoimi możliwościami. Przed podjęciem decyzji uważnie przyjrzyj się naszej <a href="#map-section" id="choice-section-link" class="nav-links">MAPIE</a>. Długość trasy zależy od Twoich preferencji (maksymalnie 256 kilometrów). Podróżujesz zawsze pod opieką licencjonowanego przewodnika. Noclegi w miejscach oznaczonych na mapie ikoną <img src="img/icons/camping-tent.png" alt="">.</p>
       <div id="choice-container">
         <div class="choice" id="choice-1">
           <img src="img/icons/baby-face.png">
           <h3>Początkujący</h3>
           <p>Wyprawa 1-dniowa + nocleg.<br> Obejmuje 4 kolejne punkty na mapie.<br>Cena: 200 zł / os.</p>
-          <a href="#booking-section" class="nav-links"><button class="choice-btn" id="choice-btn-1">Rezerwuj</button></a>
+          <a href="#booking-section" class="nav-links choice-btn" id="choice-btn-1">Rezerwuj</a>
           <hr class="choice-hr" id="choice-1-hr">
         </div>
         <div class="choice" id="choice-2">
           <img src="img/icons/biceps.png">
           <h3>Doświadczony</h3>
           <p>Wyprawa 2-dniowa + 2 noclegi.<br> Obejmuje 8 kolejnych punktów na mapie.<br>Cena: 400 zł / os.</p>
-          <a href="#booking-section" class="nav-links"><button class="choice-btn" id="choice-btn-2">Rezerwuj</button></a>
+          <a href="#booking-section" class="nav-links choice-btn" id="choice-btn-2">Rezerwuj</a>
           <hr class="choice-hr" id="choice-2-hr">
         </div>
         <div class="choice" id="choice-3">
           <img src="img/icons/mighty-force.png">
           <h3>Ekspert</h3>
           <p>Wyprawa 3-dniowa + 3 noclegi.<br> Pełna trasa (256 km)<br>Cena: 600 zł / os.</p>
-          <a href="#booking-section" class="nav-links"><button class="choice-btn" id="choice-btn-3">Rezerwuj</button></a>
+          <a href="#booking-section" class="nav-links choice-btn" id="choice-btn-3">Rezerwuj</a>
           <hr class="choice-hr" id="choice-3-hr">
         </div>
       </div>
@@ -160,8 +161,55 @@
 
   <!-- GALLERY SECTION -->
 
-  <section id="gallery-section">
-    <img src="img/expeditions/bike3.jpg" alt="">
+  <section id="gallery-section" class="slider">
+    <div class="slide-container">
+
+      <div class="slide current">
+        <div class="content">
+          <h3>Slide One</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem dicta tempora reiciendis corrupti ipsum voluptas.</p>
+        </div>
+      </div>
+    
+    
+      <div class="slide">
+        <div class="content">
+          <h3>Slide Two</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem dicta tempora reiciendis corrupti ipsum voluptas.</p>
+        </div>
+      </div>
+   
+    
+      <div class="slide">
+        <div class="content">
+          <h3>Slide Three</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem dicta tempora reiciendis corrupti ipsum voluptas.</p>
+        </div>
+      </div>
+    
+    
+      <div class="slide">
+        <div class="content">
+          <h3>Slide Four</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem dicta tempora reiciendis corrupti ipsum voluptas.</p>
+        </div>
+      </div>
+    
+    
+      <div class="slide">
+        <div class="content">
+          <h3>Slide Five</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem dicta tempora reiciendis corrupti ipsum voluptas.</p>
+        </div>
+      </div>
+    
+    </div>
+
+    <div class="slider-btns">
+      <button id="prev"><i class="fas fa-arrow-left"></i></button>
+      <button id="next"><i class="fas fa-arrow-right"></i></button>
+    </div>
+  
   </section>
 
     <!-- FOOTER -->
@@ -177,9 +225,11 @@
     
 
     <!-- GOOGLE MAP API + JS -->
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrqOko7OU41qdzvGDBjySYL4YQA3iJmc&callback=initMap"
+    <script src="main.js"></script>
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrqOko7OU41qdzvGDBjySYL4YQA3iJmc&libraries=geometry&callback=initMap"
     async defer></script>
-      <script src="main.js"></script>
+      
       <script src="calendar.js"></script>
 </body>
 </html>

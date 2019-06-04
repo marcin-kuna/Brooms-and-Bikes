@@ -23,7 +23,7 @@ body{
 /* NAV SECTION */
 
 .navbar {
-    background-color: #000;
+    background-color: rgba(0,0,0,0.75);
     color: #fff;
     border-bottom: 1px solid rgba(255,255,255,0.2);
     width: 100%;
@@ -70,9 +70,11 @@ body{
     min-width: 120px;
     padding: 0 30px;
   }
-  .navbar ul li a:hover {
-    background-color: rgba(255,255,255,0.15);
+  .navbar ul li a:hover, .navbar a.navbar-brand:hover {
+    /* background-color: rgba(255,255,255,0.15); */
+    color: #FD7400;
   }
+
   .navbar .navbar-toggler {
     display: none;
   }
@@ -695,6 +697,88 @@ input{
     background-repeat: no-repeat;
 }
 
+/* BACK TO TOP BUTTON */
+
+#back-to-top-btn{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #1F4857;
+    cursor: pointer;
+    outline: none;
+    border: 3px solid #1F4857;
+    border-radius: 50%;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+    z-index: 2;
+}
+
+#back-to-top-btn:hover, #back-to-top-btn:focus{
+    background-color: #1F4857;
+    color: #fff;
+}
+
+.btnEntrance {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: btnEntrance;
+  }
+  /* zoomIn */
+  /* @keyframes btnEntrance { 
+    from {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+    to {
+      opacity: 1;
+    }    
+  } */
+  
+  /* fadeInUp */
+  @keyframes btnEntrance {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .btnExit {
+    animation-duration: 0.25s;
+    animation-fill-mode: both;  
+    animation-name: btnExit;
+  }
+  /* zoomOut */
+  /* @keyframes btnExit {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  } */
+  
+  /* fadeOutDown */
+  @keyframes btnExit {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+
 /* SVG */
 
 svg {
@@ -715,6 +799,10 @@ svg {
 
 
 /* MEDIA QUERIES */
+
+@media(max-width: 992px){
+    #back-to-top-btn { font-size: 22px; width: 40px; height: 40px; bottom: 15px; right: 15px; }
+}
 
 @media (max-width: 767px) {
     .navbar {
@@ -740,6 +828,11 @@ svg {
     .navbar ul li a {
       padding: 0;
     }
+
+    .navbar ul li a:hover {
+        background-color: rgba(255,255,255,0.15);
+      }
+
     .navbar .navbar-toggler {
       display: block;
       position: absolute;
@@ -786,6 +879,9 @@ svg {
       /* transform: translateY(-3px) rotate(-45deg); */
       transform: translateY(-3px) scale(0.75) rotate(-45deg);
     }
+
+    /* BACK TO TOP BUTTON */
+    #back-to-top-btn { font-size: 18px; width: 32px; height: 32px; bottom: 6px; right: 6px; }
   }
 
     /* .navbar{

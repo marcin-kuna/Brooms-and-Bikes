@@ -26,6 +26,29 @@ function navLinkClick() {
 //     mainNav.classList.toggle('active')
 // );
 
+
+// PARALLAX HERO
+
+function parallax(element, distance, speed){
+  const item = document.querySelector(element);
+
+  item.style.transform = `translateY(-${distance * speed}px)`;
+
+}
+
+window.addEventListener('scroll', function(){
+  // parallax('#hero-section', window.scrollY, .1);
+  // parallax('#choice-section', window.scrollY, .1);
+  // parallax('#map-section', window.scrollY, .1);
+  // parallax('#booking-section', window.scrollY, .1);
+  // parallax('#gallery-section', window.scrollY, .1);
+  // parallax('#footer', window.scrollY, .1);
+  parallax('#img1', window.scrollY, .1);
+  parallax('#img2', window.scrollY, .5);
+  parallax('#hero-info', window.scrollY, .2);
+})
+
+
 // SMOOTH SCROLL
 
 const navLinks = document.querySelectorAll(".nav-links");
@@ -275,6 +298,7 @@ var map, markers = [], pointsDone = [], bounds, myInterval, startPoint, endPoint
           map = new google.maps.Map(document.getElementById('map'), options);
           bounds = new google.maps.LatLngBounds();
 
+          
 
             
 
@@ -301,7 +325,7 @@ var map, markers = [], pointsDone = [], bounds, myInterval, startPoint, endPoint
                 markers.push(marker);
             
                 marker.addListener('click', function(){
-                infoWindow.open(map, this); // zmieniając 'this' na 'marker', wszystkie iw wyświetlą się na ostatnich coords, więc możliwe jest łatwy oofset jw.
+                infoWindow.open(map, this); // zmieniając 'this' na 'marker', wszystkie iw wyświetlą się na ostatnich coords, więc możliwe jest łatwy offset jw.
             });
         
                 //add to bounds and path
@@ -321,6 +345,7 @@ var map, markers = [], pointsDone = [], bounds, myInterval, startPoint, endPoint
       //Following function gets called one polyline at a time
         function pathAnimation(point) {
             
+
             //Make marker visible once path has reached that point
             markers[point].setVisible(true);
 
@@ -367,7 +392,7 @@ var map, markers = [], pointsDone = [], bounds, myInterval, startPoint, endPoint
                     clearInterval(myInterval);
                     if(pointsDone.length-1 < mapPoints.length) {
                         pathAnimation(pointsDone.length-1);
-                    }  
+                    }
                 } 
                 
                 else {
@@ -376,24 +401,38 @@ var map, markers = [], pointsDone = [], bounds, myInterval, startPoint, endPoint
                     myPath.setPath([startPoint, progress]);
                 }
             }, stepTime);
+
+            // changing refresh button to 'active'
+            if(pointsDone.length-1 == markers.length){
+              refreshActive();
+            }
+            
         }
-    
-        // function kilometres(){
-        //     setTimeout(function(){
-        //         let distance = 0;
-        //         theLabel = document.getElementById("counter");
-        //         let interval = setInterval(function(){ 
-        //             if (distance === 200) clearInterval(interval);
-        //             theLabel.innerHTML = distance; 
-        //             distance++;
-        //             }, 65);}, 1500);
-        // }
         
         document.getElementById("start").addEventListener('click', function() {
+                // 'if' necessary to prevent button spam & crash
+                if(pointsDone.length<=1){
                 pathAnimation(0);
-                // kilometres();
+                }
+                
             });
 
+        const refreshMap = document.getElementById('refresh-map');
+
+        function refreshActive(){
+          refreshMap.style.backgroundColor = "#fd7400";
+        }
+
+        refreshMap.addEventListener('click', function() {
+          if(pointsDone.length-1 == markers.length){
+                refreshMap.style.backgroundColor = "#2D677C";
+                markers = [];
+                pointsDone = [];
+                initMap();
+          }                 
+            });
+
+        
 // podobno ma zapobiec niezaładowaniu mapy
 // document.addEventListener('DOMContentLoaded', initMap());
 

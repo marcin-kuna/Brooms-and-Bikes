@@ -25,7 +25,7 @@ body{
 .navbar {
     background-color: rgba(0,0,0,0.3);
     color: #fff;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    /* border-bottom: 1px solid rgba(255,255,255,0.2); */
     width: 100%;
     height: 80px;
     line-height: 80px;
@@ -181,10 +181,13 @@ body{
     background: transparent;
     outline: none;
     transition: all 0.3s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
 }
 
 #hero-btn:hover{
-    background-color: #2D677C;
+    background-color: #fd7400;
     cursor: pointer;
     color: #fff;
     border: 1px solid #fff;
@@ -268,6 +271,16 @@ body{
     width: 50%;
     height: auto;
     margin-top: 10px;
+}
+
+.choice h3{
+    font-size: 22px;
+}
+
+.choice p{
+    line-height: 1.5;
+    font-size: 17px;
+    padding: 5px;
 }
 
 .choice-btn{
@@ -521,7 +534,7 @@ body{
 }
 
 #calendar-span{
-    color: #f76767;
+    color: #FD7400;
 }
 
 /* FORM SECTION */
@@ -585,7 +598,9 @@ input{
     border-radius: 5px;
     background: transparent;
     outline: none;
-    transition: all 0.3s;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
 }
 
 #booking-form button:hover{
@@ -633,12 +648,16 @@ input{
     left: -500px;
     opacity: 0;
     width: 500px;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(45, 103, 124, .8);
     padding: 35px;
+    color: #fff;
+    line-height: 1.6;
+    font-size: 17px;
 }
 
 .slide .content h3{
     margin-bottom: 10px;
+    font-size: 25px;
 }
 
 .slide.current .content{
@@ -667,28 +686,31 @@ input{
     padding: 13px 15px;
     border-radius: 50%;
     outline: none;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
 }
 
 .slider-btns button:hover{
-    background-color: #fff;
-    color: #000;
+    background-color: #2D677C;
+    color: #fff;
 }
 
 .slide:first-child{
-    background: url("img/expeditions/slide1.jpg") no-repeat center center/cover;
+    background: url("../img/expeditions/slide1.jpg") no-repeat center center/cover;
 }
 .slide:nth-child(2){
-    background: url("img/expeditions/slide2.jpg") no-repeat center bottom/cover;
+    background: url("../img/expeditions/slide2.jpg") no-repeat center bottom/cover;
 }
 .slide:nth-child(3){
-    background: url("img/expeditions/slide3.jpg") no-repeat center bottom/cover;
+    background: url("../img/expeditions/slide3.jpg") no-repeat center bottom/cover;
 }
 .slide:nth-child(4){
-    background: url("img/expeditions/slide4.jpg") no-repeat center center/cover;
+    background: url("../img/expeditions/slide4.jpg") no-repeat center center/cover;
 }
-.slide:nth-child(5){
+/* .slide:nth-child(5){
     background: url("img/expeditions/slide5.jpg") no-repeat center bottom/cover;
-}
+} */
 
 
 /* FOOTER */
@@ -699,14 +721,46 @@ input{
     position: relative;
     background-color: #2D677C;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    /* align-items: center; */
 }
 
-#footer-container p{
+.footer-div{
     color: #fff;
     z-index: 1;
     padding: 20px;
+    padding-top: 50px;
+}
+
+.footer-div p{
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.footer-div ul{
+    list-style-type: none;
+}
+
+.footer-div ul li{
+    padding: 5px;
+    font-size: 17px;
+}
+
+.footer-div a{
+    text-decoration: none;
+    color: #FD7400;
+}
+
+.media-icons{
+    font-size: 50px;
+}
+
+#footer-media{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 #copyrights{
@@ -724,7 +778,7 @@ input{
     left: 0;
     width: 100%;
     height: 300px;
-    background: url(img/mountains-blue.png);
+    background: url(../img/mountains-blue.png);
     background-size: cover;
     background-repeat: no-repeat;
 }

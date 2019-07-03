@@ -4,33 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="calendar.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Raleway:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a578317cc7.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/calendar.css">
     <title>Miotły i rowery</title>
   </head>
   <body>
       
     <!-- NAV -->
-      <header id="header">
+      <header id="header" class="slide-section">
         <nav class="navbar">
           
-          <a href="#" class="navbar-brand nav-links">LOGO</a>
+          <a href="#" class="navbar-brand nav-links"><img src="img/logo.png" alt=""></a>
 
           <ul class="main-nav" id="js-menu">
               <li>
-                  <a href="#choice-section" class="nav-links">Wyprawy</a>
+                  <a href="#choice" class="nav-links">Wyprawy</a>
               </li>
               <li>
-                  <a href="#map-section" class="nav-links">Mapa</a>
+                  <a href="#map" class="nav-links">Mapa</a>
               </li>
               <li>
-                  <a href="#booking-section" class="nav-links">Kalendarz</a>
+                  <a href="#booking" class="nav-links">Kalendarz</a>
               </li>
               <li>
-                <a href="#gallery-section" class="nav-links">Galeria</a>
+                <a href="#gallery" class="nav-links">Galeria</a>
               </li>
               <li>
                   <a href="#footer" class="nav-links">Kontakt</a>
@@ -45,63 +44,69 @@
 
     <!-- HERO SECTION -->
 
-    <section id="hero-section">
-      <div id="hero-bg">
-          <img src="img/1.png" alt="" id="img1">
-          <img src="img/2.png" alt="" id="img2">
+    <section id="hero">
+
+      <div id="hero-bg" class="show-on-scroll"></div>
+
+      <div id="hero-container">
+        <h1 class="show-on-scroll slide-right">R</h1>
+        <h1 class="show-on-scroll slide-left">P</h1>
+        <h1 class="show-on-scroll slide-right">G</h1>
+        
+        <p class="hero-info show-on-scroll fade-in">Rowerem Przez Góry! Odkryj z nami tajemnicze Góry Świętokrzyskie! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, molestiae. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+        <div class="video-div">
+          <hr class="show-on-scroll video-hr">
+          <div class="video-p-div show-on-scroll">
+          <p class="video-info show-on-scroll">Sprawdź trasę!</p>
+          </div>
+          <button class="show-on-scroll bounce-in"><i class="fas fa-biking"></i></button>
         </div>
-      <div id="hero-info">
-        <h1>RPG<span id="star">*</span></h1>
-        <p>Odkryj z nami tajemnicze Góry Świętokrzyskie!</p>
-        <!-- <p>Wybierz się na rowerową przygodę:</p>
-        <p>zwiedzaj, ruszaj się, odpoczywaj.</p> -->
-        <a href="#choice-section" class="nav-links"><button id="hero-btn">Więcej</button></a>
       </div>
-      <p id="star-info">*Rowerem Przez Góry</p>
     </section>
 
     <!-- CHOICE SECTION -->
 
-    <section id="choice-section">
+    <section id="choice" class="slide-section">
       <h2>Wybierz swoją przygodę</h2>
-      <hr id="choice-section-hr">
-      <p>Dobierz trasę zgodnie ze swoimi możliwościami. Przed podjęciem decyzji uważnie przyjrzyj się naszej <a href="#map-section" id="choice-section-link" class="nav-links">MAPIE</a>. Długość trasy zależy od Twoich preferencji (maksymalnie 256 kilometrów). Podróżujesz zawsze pod opieką licencjonowanego przewodnika. Noclegi w miejscach oznaczonych na mapie ikoną <img src="img/icons/camping-tent.png" alt="" id="choice-section-img">.</p>
+      <hr id="choice-hr">
+      <p>Dobierz trasę zgodnie ze swoimi możliwościami. Przed podjęciem decyzji uważnie przyjrzyj się naszej <a href="#map" id="choice-map-link" class="nav-links">MAPIE</a>. Długość trasy zależy od Twoich preferencji (maksymalnie 256 kilometrów). Podróżujesz zawsze pod opieką licencjonowanego przewodnika. Noclegi w miejscach oznaczonych na mapie ikoną <img src="img/icons/camping-tent.png" alt="" id="choice-tent">.</p>
       <div id="choice-container">
-        <div class="choice" id="choice-1">
+        <div class="choice-div">
           <img src="img/icons/baby-face.png">
           <h3>Początkujący</h3>
-          <p>Wyprawa 1-dniowa + nocleg.<br> Obejmuje 4 kolejne punkty na mapie.<br>Cena: 200 zł / os.</p>
-          <a href="#booking-section" class="nav-links choice-btn" id="choice-btn-1">Rezerwuj</a>
-          <hr class="choice-hr" id="choice-1-hr">
+          <p>Wyprawa 1 dzień + nocleg.<br> Obejmuje 4 punkty na mapie.<br>Cena: 200 zł / os.</p>
+          <a href="#booking" class="nav-links choice-btn choice-btn-1">Rezerwuj</a>
+          <hr class="choice-div-hr choice-div-hr-1">
         </div>
-        <div class="choice" id="choice-2">
+        <div class="choice-div">
           <img src="img/icons/biceps.png">
           <h3>Doświadczony</h3>
-          <p>Wyprawa 2-dniowa + 2 noclegi.<br> Obejmuje 8 kolejnych punktów na mapie.<br>Cena: 400 zł / os.</p>
-          <a href="#booking-section" class="nav-links choice-btn" id="choice-btn-2">Rezerwuj</a>
-          <hr class="choice-hr" id="choice-2-hr">
+          <p>Wyprawa 2 dni + 2 noclegi.<br> Obejmuje 8 punktów na mapie.<br>Cena: 400 zł / os.</p>
+          <a href="#booking" class="nav-links choice-btn choice-btn-2">Rezerwuj</a>
+          <hr class="choice-div-hr choice-div-hr-2">
         </div>
-        <div class="choice" id="choice-3">
+        <div class="choice-div">
           <img src="img/icons/mighty-force.png">
           <h3>Ekspert</h3>
-          <p>Wyprawa 3-dniowa + 3 noclegi.<br> Pełna trasa (256 km)<br>Cena: 600 zł / os.</p>
-          <a href="#booking-section" class="nav-links choice-btn" id="choice-btn-3">Rezerwuj</a>
-          <hr class="choice-hr" id="choice-3-hr">
+          <p>Wyprawa 3 dni + 3 noclegi.<br> Pełna trasa (256 km)<br>Cena: 600 zł / os.</p>
+          <a href="#booking" class="nav-links choice-btn choice-btn-3">Rezerwuj</a>
+          <hr class="choice-div-hr choice-div-hr-3">
         </div>
       </div>
     </section>
       
     <!-- MAP SECTION -->
-      <section id="map-section">
+      <section id="map" class="slide-section">
           <!-- <h1 id="map-header">PLAN TRASY</h1> -->
-            <div id="map"></div>
+            <div id="map-container"></div>
             <button id="start">START!</button>
             <button id="refresh-map"><i class="fas fa-sync-alt"></i></button>
       </section>
     
     <!-- BOOKING SECTION -->
     
-    <section id="booking-section">
+    <section id="booking" class="slide-section">
 
       <section id="calendar-section">
         <div id="calendar"></div>
@@ -168,47 +173,47 @@
 
   <!-- GALLERY SECTION -->
 
-  <section id="gallery-section" class="slider">
+  <section id="gallery-section" class="slider slide-section">
     <div class="slide-container">
 
       <div class="slide current">
         <div class="content">
-          <h3>Slide One</h3>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem dicta tempora reiciendis corrupti ipsum voluptas.</p>
+          <h3>Przygoda</h3>
+          <p>Niezapomniane wrażenia z jazdy mało uczęszczanymi trasami. Pokonaj własne słabości w walce z górami!</p>
         </div>
       </div>
     
     
       <div class="slide">
         <div class="content">
-          <h3>Slide Two</h3>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem dicta tempora reiciendis corrupti ipsum voluptas.</p>
+          <h3>Relaks</h3>
+          <p>Odpocznij z dala od zgiełku miasta. Sam na sam z przyrodą i własnymi myślami...</p>
         </div>
       </div>
    
     
       <div class="slide">
         <div class="content">
-          <h3>Slide Three</h3>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem dicta tempora reiciendis corrupti ipsum voluptas.</p>
+          <h3>Piękno</h3>
+          <p>Góry Świętokrzyskie to najstarsze góry Polski. Większość trasy obejmuje teren urokliwego Świętokrzyskiego Parku Narodowego.</p>
         </div>
       </div>
     
     
       <div class="slide">
         <div class="content">
-          <h3>Slide Four</h3>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem dicta tempora reiciendis corrupti ipsum voluptas.</p>
+          <h3>Tajemnica</h3>
+          <p>W Górach Świętokrzyskich panuje niezwykła atmosfera. Pełne są miejsc owianych tajemniczymi legendami. Odkryj je!</p>
         </div>
       </div>
     
     
-      <div class="slide">
+      <!-- <div class="slide">
         <div class="content">
           <h3>Slide Five</h3>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem dicta tempora reiciendis corrupti ipsum voluptas.</p>
         </div>
-      </div>
+      </div> -->
     
     </div>
 
@@ -221,11 +226,51 @@
 
     <!-- FOOTER -->
 
-    <footer id="footer">
+    <footer id="footer" class="slide-section">
       <div id="footer-container">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor eum illo magni, cupiditate sed magnam. Voluptatum perspiciatis assumenda similique eveniet? Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur repellendus eveniet inventore atque eum esse, fugiat velit ea. Nihil fugiat dolores, nemo fuga ipsam, quis voluptas dignissimos ea excepturi quasi, aperiam unde.</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur repellendus eveniet inventore atque eum esse, fugiat velit ea. Nihil fugiat dolores, nemo fuga ipsam, quis voluptas dignissimos ea excepturi quasi.</p>
+        <div class="footer-div">
+          <p>O nas</p>
+            <ul>
+                <li>
+                  Miotły i rowery
+                </li>
+                <li>
+                  Starachowice, ul. Na Szlakowisku 1
+                </li>
+                <li>
+                  Tel.: 555 666 777
+                </li>
+                <li>
+                  E-mail: <a href="mailto:miotly@rpg.com">miotly@rpg.com</a>
+                </li>
+              </ul>
+        </div>
+        <div class="footer-div">
+          <p>Dokumenty</p>
+            <ul>
+                <li>
+                  <a href="#" target="_blank">Regulamin</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">Cennik szczegółowy</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">Ubezpieczenie</a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">Umowa ze Świętokrzyskim Parkiem Narodowym</a>
+                </li>
+              </ul>
+        </div>
+        <div class="footer-div">
+          <p>Media</p>
+              <div id="footer-media">
+                <a href="#" target="_blank"><i class="fab fa-twitter-square media-icons"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook-square media-icons"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram media-icons"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube-square media-icons"></i></a>
+              </div>
+        </div>
       </div>
       <p id="copyrights">&copy; Marcin Kuna 2019 | Wszelkie prawa zastrzeżone</p>
     </footer>
@@ -233,11 +278,12 @@
     <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
 
     <!-- GOOGLE MAP API + JS -->
-    <script src="main.js"></script>
+    <script src="/js/main.js"></script>
 
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrqOko7OU41qdzvGDBjySYL4YQA3iJmc&libraries=geometry&callback=initMap"
-    async defer></script>
+      <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrqOko7OU41qdzvGDBjySYL4YQA3iJmc&libraries=geometry&callback=initMap"
+    async defer></script> -->
       
-      <script src="calendar.js"></script>
+      <script src="js/calendar.js"></script>
+      <script src="js/animation.js"></script>
 </body>
 </html>

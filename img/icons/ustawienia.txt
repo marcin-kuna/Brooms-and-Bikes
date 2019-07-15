@@ -1,0 +1,3 @@
+shadow - blur 10/0/0
+stroke - black 2
+size - 30px

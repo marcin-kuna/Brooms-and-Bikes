@@ -65,165 +65,109 @@
       </div>
     </section>
 
-    <!-- CHOICE SECTION -->
+    <!-- GALLERY SECTION -->
 
-    <section id="choice" class="slide-section">
-      <h2>Wybierz swoją przygodę</h2>
-      <hr id="choice-hr">
-      <p>Dobierz trasę zgodnie ze swoimi możliwościami. Przed podjęciem decyzji uważnie przyjrzyj się naszej <a href="#map" id="choice-map-link" class="nav-links">MAPIE</a>. Długość trasy zależy od Twoich preferencji (maksymalnie 256 kilometrów). Podróżujesz zawsze pod opieką licencjonowanego przewodnika. Noclegi w miejscach oznaczonych na mapie ikoną <img src="img/icons/camping-tent.png" alt="" id="choice-tent">.</p>
-      <div id="choice-container">
-        <div class="choice-div">
-          <img src="img/icons/baby-face.png">
-          <h3>Początkujący</h3>
-          <p>Wyprawa 1 dzień + nocleg.<br> Obejmuje 4 punkty na mapie.<br>Cena: 200 zł / os.</p>
-          <a href="#booking" class="nav-links choice-btn choice-btn-1">Rezerwuj</a>
-          <hr class="choice-div-hr choice-div-hr-1">
-        </div>
-        <div class="choice-div">
-          <img src="img/icons/biceps.png">
-          <h3>Doświadczony</h3>
-          <p>Wyprawa 2 dni + 2 noclegi.<br> Obejmuje 8 punktów na mapie.<br>Cena: 400 zł / os.</p>
-          <a href="#booking" class="nav-links choice-btn choice-btn-2">Rezerwuj</a>
-          <hr class="choice-div-hr choice-div-hr-2">
-        </div>
-        <div class="choice-div">
-          <img src="img/icons/mighty-force.png">
-          <h3>Ekspert</h3>
-          <p>Wyprawa 3 dni + 3 noclegi.<br> Pełna trasa (256 km)<br>Cena: 600 zł / os.</p>
-          <a href="#booking" class="nav-links choice-btn choice-btn-3">Rezerwuj</a>
-          <hr class="choice-div-hr choice-div-hr-3">
-        </div>
+    <section id="gallery">
+
+      <div class="side-heading">
+          <h4><span>01</span> / Galeria</h4>
       </div>
-    </section>
+
+      <div class="section-container">
+
+          <div class="top-heading">
+              <hr class="long-hr">
+                  <h4><span>01</span> / Galeria</h4>
+              </div>
+
+      <!-- <h2>Góry & Rowery</h2> -->
+
+      <div id="gallery-info">
+
+          <div class="gallery-info-div">
+              <h1 class="gallery-number">01</h1>
+              <h4>Przygoda</h4>
+              <hr class="short-hr">
+              <p>Niezapomniane wrażenia z jazdy mało uczęszczanymi trasami. Pokonaj własne słabości w walce z górami.</p>
+          </div>
+          <div class="gallery-info-div">
+              <h1 class="gallery-number">02</h1>
+              <h4>Piękno</h4>
+              <hr class="short-hr">
+              <p>Większość trasy obejmuje teren urokliwego Świętokrzyskiego Parku Narodowego.</p>
+          </div>
+          <div class="gallery-info-div">
+              <h1 class="gallery-number">03</h1>
+              <h4>Tajemnica</h4>
+              <hr class="short-hr">
+              <p>W Górach Świętokrzyskich panuje niezwykła atmosfera. Pełne są miejsc owianych tajemniczymi legendami.</p>
+          </div>
+          </div>
+        </div>    
+    
+      <div id="gallery-container">
+          <div class="slide backdoor">
+              <img src="img/gallery/0.jpg" alt="">
+              <hr class="slideHr">
+          </div>
+          <div class="slide left-left-left">
+              <img src="img/gallery/1.jpg" alt="">
+              <hr class="slideHr">
+          </div>
+          <div class="slide left-left">
+              <img src="img/gallery/2.jpg" alt="">
+              <hr class="slideHr">
+          </div>
+          <div class="slide left">
+              <img src="img/gallery/3.jpg" alt="">
+              <hr class="slideHr">
+          </div>
+          <div class="slide center">
+              <img src="img/gallery/4.jpg" alt="">
+              <hr class="slideHr">
+          </div>
+          <div class="slide right">
+              <img src="img/gallery/5.jpg" alt="">
+              <hr class="slideHr">
+          </div>
+          <div class="slide right-right">
+              <img src="img/gallery/6.jpg" alt="">
+              <hr class="slideHr">
+          </div>
+          <div class="slide right-right-right">
+              <img src="img/gallery/7.jpg" alt="">
+              <hr class="slideHr">
+          </div>
+      </div>
+
+    
+  </section>
+    
       
     <!-- MAP SECTION -->
       <section id="map" class="slide-section">
-          <!-- <h1 id="map-header">PLAN TRASY</h1> -->
-            <div id="map-container"></div>
-            <button id="start">START!</button>
-            <button id="refresh-map"><i class="fas fa-sync-alt"></i></button>
-      </section>
-    
-    <!-- BOOKING SECTION -->
-    
-    <section id="booking" class="slide-section">
-
-      <section id="calendar-section">
-        <div id="calendar"></div>
-        <p>Dni oznaczone tym <span id="calendar-span">kolorem</span> są już zarezerwowane!</p>
-      </section>
-
-      <section id="form-section">
-          <div id="form-container">
-              <h3>Uzupełnij dane</h3>
-              <form id="booking-form">
-                  <label for="customer_name"><i class="fas fa-user"></i>Imię i nazwisko</label>
-                  <input type="text" name="customer_name" placeholder="Imię i nazwisko" required>
-                
-                  <label for="phone_number"><i class="fas fa-phone"></i>Telefon</label>
-                  <input type="tel" name="phone_number" pattern="[0-9]{3}[0-9]{3}[0-9]{3}" placeholder="555777999" required>
-                
-                  <label for="email_address"><i class="fas fa-envelope"></i>Email</label>
-                  <input type="email" name="email_address" placeholder="email@email.com" required>
-                
-                  <fieldset>
-                    <legend>Którą przygodę wybierasz?</legend>
-                    <label><input type="radio" name="expedition" value="beginner" required>Początkujący</label>
-                    <label><input type="radio" name="expedition" value="advanced" required>Zaawansowany</label>
-                    <label><input type="radio" name="expedition" value="expert" required>Ekspert</label>
-                  </fieldset>
-                
-                  <fieldset>
-                    <legend>Dodatki</legend>
-                    <label><input type="checkbox" name="extras" value="regional_cuisine">Kuchnia regionalna</label>
-                    <label><input type="checkbox" name="extras" value="photo">Foto/Video</label>
-                    <label><input type="checkbox" name="extras" value="bonfire">Ognisko</label>
-                  </fieldset>
-                
-                  <label for="starting_date"><i class="far fa-calendar-alt"></i>Rozpoczęcie</label>
-                  <input type="date" name="starting_date" min="" max="2019-12-31" id="starting-date" required>
-                
-                  <label for="starting_place"><i class="fas fa-map-marker-alt"></i>Start</label>
-                  <select name="starting_place" required>
-                    <option value="" selected="selected">Wybierz:</option>
-                    <option value="oblegorek">Oblęgorek</option>
-                    <option value="wachock">Wąchock</option>
-                    <option value="opatow">Opatów</option>
-                    <option value="checiny">Chęciny</option>
-                  </select>
-                
-                  <label for="finish"><i class="fas fa-map-marker-alt"></i>Meta</label>
-                  <select name="finish" required>
-                          <option value="" selected="selected">Wybierz:</option>
-                          <option value="wachock">Wąchock</option>
-                          <option value="opatow">Opatów</option>
-                          <option value="checiny">Chęciny</option>
-                  </select>
-                
-                  <label for="comments"><i class="far fa-comment-dots"></i>Komentarz</label>
-                  <textarea name="comments" maxlength="300"></textarea>
-
-                  <button>REZERWUJ</button>
-                </form>  
+          <div class="side-heading">
+              <h4><span>03</span> / Trasa</h4>
           </div>
-      </div>
-    </section>
-    
-  </section>
+          
+          <div class="section-container">
 
-  <!-- GALLERY SECTION -->
+            <div id="iw-container"></div>
 
-  <section id="gallery-section" class="slider slide-section">
-    <div class="slide-container">
+              <div class="top-heading">
+                  <hr class="long-hr">
+                      <h4><span>03</span> / Trasa</h4>
+                  </div>
+            <div id="map-container"></div>
 
-      <div class="slide current">
-        <div class="content">
-          <h3>Przygoda</h3>
-          <p>Niezapomniane wrażenia z jazdy mało uczęszczanymi trasami. Pokonaj własne słabości w walce z górami!</p>
-        </div>
-      </div>
-    
-    
-      <div class="slide">
-        <div class="content">
-          <h3>Relaks</h3>
-          <p>Odpocznij z dala od zgiełku miasta. Sam na sam z przyrodą i własnymi myślami...</p>
-        </div>
-      </div>
-   
-    
-      <div class="slide">
-        <div class="content">
-          <h3>Piękno</h3>
-          <p>Góry Świętokrzyskie to najstarsze góry Polski. Większość trasy obejmuje teren urokliwego Świętokrzyskiego Parku Narodowego.</p>
-        </div>
-      </div>
-    
-    
-      <div class="slide">
-        <div class="content">
-          <h3>Tajemnica</h3>
-          <p>W Górach Świętokrzyskich panuje niezwykła atmosfera. Pełne są miejsc owianych tajemniczymi legendami. Odkryj je!</p>
-        </div>
-      </div>
-    
-    
-      <!-- <div class="slide">
-        <div class="content">
-          <h3>Slide Five</h3>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem dicta tempora reiciendis corrupti ipsum voluptas.</p>
-        </div>
-      </div> -->
-    
-    </div>
+            <button id="start" class="show-on-scroll"><i class="fas fa-biking"></i></button>
 
-    <div class="slider-btns">
-      <button id="prev"><i class="fas fa-arrow-left"></i></button>
-      <button id="next"><i class="fas fa-arrow-right"></i></button>
-    </div>
-  
-  </section>
-
+            <!-- <button id="start">START!</button> -->
+            <!-- <button id="refresh-map"><i class="fas fa-sync-alt"></i></button> -->
+        </div>
+      </section>
+    
+    
     <!-- FOOTER -->
 
     <footer id="footer" class="slide-section">
@@ -283,7 +227,7 @@
       <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrqOko7OU41qdzvGDBjySYL4YQA3iJmc&libraries=geometry&callback=initMap"
     async defer></script> -->
       
-      <script src="js/calendar.js"></script>
+      <!-- <script src="js/fullpagescroll.js"></script> -->
       <script src="js/animation.js"></script>
 </body>
 </html>

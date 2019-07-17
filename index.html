@@ -7,8 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Raleway:400,700&display=swap&subset=latin-ext" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a578317cc7.js"></script>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/calendar.css">
-    <title>Miotły i rowery</title>
+    <title>RPG – Rowerem Przez Góry</title>
   </head>
   <body>
       
@@ -16,20 +15,17 @@
       <header id="header" class="slide-section">
         <nav class="navbar">
           
-          <a href="#" class="navbar-brand nav-links"><img src="img/logo.png" alt=""></a>
-
-          <ul class="main-nav" id="js-menu">
+          <a href="#" class="navbar-brand nav-links show-on-scroll"><img src="img/logo.png" alt=""></a>
+          
+          <ul class="main-nav show-on-scroll" id="js-menu">
+              <li>
+                <a href="#gallery" class="nav-links">Galeria</a>
+              </li>
               <li>
                   <a href="#choice" class="nav-links">Wyprawy</a>
               </li>
               <li>
                   <a href="#map" class="nav-links">Mapa</a>
-              </li>
-              <li>
-                  <a href="#booking" class="nav-links">Kalendarz</a>
-              </li>
-              <li>
-                <a href="#gallery" class="nav-links">Galeria</a>
               </li>
               <li>
                   <a href="#footer" class="nav-links">Kontakt</a>
@@ -44,7 +40,7 @@
 
     <!-- HERO SECTION -->
 
-    <section id="hero">
+    <section id="hero" class="slide-section">
 
       <div id="hero-bg" class="show-on-scroll"></div>
 
@@ -55,19 +51,19 @@
         
         <p class="hero-info show-on-scroll fade-in">Rowerem Przez Góry! Odkryj z nami tajemnicze Góry Świętokrzyskie! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, molestiae. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
 
-        <div class="video-div">
-          <hr class="show-on-scroll video-hr">
-          <div class="video-p-div show-on-scroll">
-          <p class="video-info show-on-scroll">Sprawdź trasę!</p>
+        <div class="action-div">
+          <hr class="show-on-scroll action-hr">
+          <div class="action-p-div show-on-scroll">
+          <p class="action-info show-on-scroll">Ruszamy w trasę!</p>
           </div>
-          <button class="show-on-scroll bounce-in"><i class="fas fa-biking"></i></button>
+          <a href="#gallery" class="show-on-scroll bounce-in nav-links"><i class="fas fa-caret-right"></i></a>
         </div>
       </div>
     </section>
 
     <!-- GALLERY SECTION -->
 
-    <section id="gallery">
+    <section id="gallery" class="slide-section">
 
       <div class="side-heading">
           <h4><span>01</span> / Galeria</h4>
@@ -76,7 +72,7 @@
       <div class="section-container">
 
           <div class="top-heading">
-              <hr class="long-hr">
+              <hr class="top-heading-hr">
                   <h4><span>01</span> / Galeria</h4>
               </div>
 
@@ -142,6 +138,133 @@
 
     
   </section>
+
+  <!-- CHOICE SECTION -->
+
+  <section id="choice" class="slide-section">
+
+    <div class="side-heading">
+        <h4><span>02</span> / Wyprawy</h4>
+    </div>
+
+    
+
+
+<div class="section-container">
+
+        <div class="top-heading">
+            <hr class="long-hr">
+                <h4><span>02</span> / Wyprawy</h4>
+            </div>
+
+<div id="choice-container">
+        <div id="choice-container-part1">
+            <div id="choice-container-info">
+                <h2>Poziom trudności</h2>
+                <h3>Czas</h3>
+                <h3>Długość</h3>
+                <h3>Cena</h3>
+            </div>
+        </div>
+
+        <div id="choice-container-part2">
+                <hr id="choice-middle-hr">
+
+            <div id="choices-container">
+                <div class="choice-div choice-1-slide">
+
+                    <div class="choice-card">
+                        <div class="choice-card-info">
+                            <h2>Początkujący</h2>
+                            <h3>1 dzień + nocleg.</h3>
+                            <h3>4 kolejne punkty na mapie.</h3>
+                            <h3>200 zł / os.</h3>
+                        </div>
+                        <img src="img/icons/baby-face.png">
+                    </div>
+
+                    <div class="bg"></div>
+
+                    <div class="choice-btns">
+                        <button class="green-btn"></button>
+                        <button class="yellow-btn"></button>
+                        <button class="red-btn"></button>
+                    </div>
+
+                    <div id="choice-1-flag" class="choice-flag choice-1-slide">
+                        <hr id="choice-1-flag-hr" class="choice-flag-hr">
+                    </div>
+                </div>
+
+                <div class="choice-div choice-2-slide">
+
+                        <div class="choice-card">
+                                <div class="choice-card-info">
+                                    <h2>Zaawansowany</h2>
+                                    <h3>1 dzień + nocleg.</h3>
+                                    <h3>4 kolejne punkty na mapie.</h3>
+                                    <h3>200 zł / os.</h3>
+                                </div>
+                                <img src="img/icons/biceps.png">
+                            </div>
+
+                    <div class="bg"></div>
+
+                    <div class="choice-btns">
+                        <button class="green-btn"></button>
+                        <button class="yellow-btn"></button>
+                        <button class="red-btn"></button>
+                    </div>
+
+                    <div id="choice-2-flag" class="choice-flag choice-2-slide">
+                        <hr id="choice-2-flag-hr" class="choice-flag-hr">
+                    </div>
+                </div>
+                
+                <div class="choice-div choice-3-slide">
+
+                        <div class="choice-card">
+                                <div class="choice-card-info">
+                                    <h2>Ekspert</h2>
+                                    <h3>1 dzień + nocleg.</h3>
+                                    <h3>4 kolejne punkty na mapie.</h3>
+                                    <h3>200 zł / os.</h3>
+                                </div>
+                                <img src="img/icons/mighty-force.png">
+                            </div>
+
+                    <div class="bg"></div>
+
+                    <div class="choice-btns">
+                        <button class="green-btn"></button>
+                        <button class="yellow-btn"></button>
+                        <button class="red-btn"></button>
+                    </div>
+
+                    <div id="choice-3-flag" class="choice-flag choice-3-slide">
+                        <hr id="choice-3-flag-hr" class="choice-flag-hr">
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+    </div>
+
+<div id="choice-info">
+    <hr class="short-hr">
+
+    <h2>Wybierz<br> swoją<br> przygodę</h2>
+    
+    <p>Dobierz trasę zgodnie ze swoimi możliwościami. Przed podjęciem decyzji uważnie przyjrzyj się naszej mapie. Długość trasy zależy od Twoich preferencji (maksymalnie 256 kilometrów). Podróżujesz zawsze pod opieką licencjonowanego przewodnika.</p>
+    <button id="choice-btn">Sprawdź</button>
+    
+</div>
+
+</div>
+
+</section>
     
       
     <!-- MAP SECTION -->
@@ -155,7 +278,7 @@
             <div id="iw-container"></div>
 
               <div class="top-heading">
-                  <hr class="long-hr">
+                  <hr class="top-heading-hr">
                       <h4><span>03</span> / Trasa</h4>
                   </div>
             <div id="map-container"></div>
@@ -219,7 +342,7 @@
       <p id="copyrights">&copy; Marcin Kuna 2019 | Wszelkie prawa zastrzeżone</p>
     </footer>
     
-    <button id="back-to-top-btn"><i class="fas fa-angle-double-up"></i></button>
+    <a id="back-to-top-btn" class="nav-links" href="#header"><i class="fas fa-angle-double-up"></i></a>
 
     <!-- GOOGLE MAP API + JS -->
     <script src="/js/main.js"></script>

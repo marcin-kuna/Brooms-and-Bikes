@@ -40,7 +40,7 @@ window.addEventListener("wheel", event => {
         showslide(slideIndex);
 
         // console.log("scroll down"); 
-        // console.log(slideIndex);
+        console.log(slideIndex);
         // console.log(slideElems[slideIndex].id);
     }else if (event.deltaY < 0 && scrolling == false){
         slideIndex--;
@@ -48,7 +48,7 @@ window.addEventListener("wheel", event => {
         showslide(slideIndex);
 
         // console.log("scroll up");
-        // console.log(slideIndex);
+        console.log(slideIndex);
         // console.log(slideElems[slideIndex].id);  
     }
 });
@@ -101,3 +101,34 @@ function smoothPageScroll(){
 //         };
 //     });
 // }
+
+
+// FULLPAGE SCROLL 1.0
+// function smoothFullPageScroll(){
+
+//   window.addEventListener('wheel', (e)=>{
+//     let delta = e.wheelDelta;
+//     const startPosition = window.pageYOffset;
+//     let distance = 0;
+//     const duration = 1000;
+//     let start = null;
+
+//     if (delta<1){
+//       distance = window.innerHeight;
+//     } else{
+//       distance = -window.innerHeight;
+//     }
+  
+//   window.requestAnimationFrame(step);
+
+//   function step(timestamp){
+//       if(!start) start = timestamp;
+//       const progress = timestamp - start;
+//       // window.scrollTo(0, distance*(progress/duration) + startPosition);    //linear
+//       window.scrollTo(0, easeInOutQuad(progress, startPosition, distance, duration));
+//       if(progress < duration) window.requestAnimationFrame(step);
+//   }
+//   })
+// }
+
+// smoothFullPageScroll();

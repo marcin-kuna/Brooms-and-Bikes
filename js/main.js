@@ -1,3 +1,191 @@
+// FULLPAGE SCROLL
+
+let slideElems = document.querySelectorAll('.slide-section');
+let slideIndex = 0;
+let scrolling = false;
+let waitTimeinMS = 1000;
+
+
+window.addEventListener("wheel", event => {
+    if(event.deltaY > 0 && scrolling == false){
+        slideIndex++;
+        restrictSlideIndex();
+        showslide(slideIndex);
+
+        // console.log("scroll down"); 
+        // console.log(slideIndex);
+        // console.log(slideElems[slideIndex].id);
+    }else if (event.deltaY < 0 && scrolling == false){
+        slideIndex--;
+        restrictSlideIndex();
+        showslide(slideIndex);
+
+        // console.log("scroll up");
+        // console.log(slideIndex);
+        // console.log(slideElems[slideIndex].id);  
+    }
+});
+
+function restrictSlideIndex(){
+    if (slideIndex >= slideElems.length){
+        slideIndex = slideElems.length - 1;
+    }
+    if (slideIndex <= -1){
+        slideIndex = 0;
+    }
+}
+
+function showslide(){
+    scrolling = true;
+    setTimeout(() => {
+        scrolling = false;
+    }, waitTimeinMS);
+    smoothPageScroll();
+}
+
+
+function smoothPageScroll(){ 
+  const targetId = slideElems[slideIndex].id;
+  const targetPosition = document.querySelector(`#${targetId}`).offsetTop; 
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  const duration = 1000;
+  let start = null;
+
+  window.requestAnimationFrame(step);
+
+  function step(timestamp){
+      if(!start) start = timestamp;
+      const progress = timestamp - start;
+      // window.scrollTo(0, distance*(progress/duration) + startPosition);    //linear
+      window.scrollTo(0, easeInOutQuad(progress, startPosition, distance, duration));
+      if(progress < duration) window.requestAnimationFrame(step);
+  }
+}
+
+// SMOOTH SCROLL
+
+const navLinks = document.querySelectorAll(".nav-links");
+
+navLinks.forEach(elem => elem.addEventListener('click', navbarLinkClick));
+
+function navbarLinkClick(event){
+    // slideIndex = ( Array.from(navLinks).indexOf(event.target) +1);  //would work if only navbar links would be used
+    smoothScroll(event);
+}
+
+function smoothScroll(event){
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute("href") === "#" ? "header" : event.currentTarget.getAttribute("href");
+
+    // navbar + other nav btns slideIndex unify /w pagescroll
+    switch(targetId){
+      case "#header": slideIndex = 1;
+      break;
+      case "#gallery": slideIndex = 2;
+      break;
+      case "#choice": slideIndex = 3;
+      break;
+      case "#map": slideIndex = 4;
+      break;
+      case "#footer": slideIndex = 5;
+      break;
+    }
+  
+    const targetPosition = document.querySelector(targetId).offsetTop; 
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 1000;
+    let start = null;
+
+    window.requestAnimationFrame(step);
+
+    function step(timestamp){
+        if(!start) start = timestamp;
+        const progress = timestamp - start;
+        // window.scrollTo(0, distance*(progress/duration) + startPosition);    //linear
+        window.scrollTo(0, easeInOutQuad(progress, startPosition, distance, duration));
+        if(progress < duration) window.requestAnimationFrame(step);
+    }
+}
+
+// EASING FOR SMOOTH SCROLL
+
+function easeInOutQuad(t, b, c, d) {
+	t /= d/2;
+	if (t < 1) return c/2*t*t + b;
+	t--;
+	return -c/2 * (t*(t-2) - 1) + b;
+};
+
+// BACK TO TOP BUTTON
+
+const backToTopButton = document.querySelector("#back-to-top-btn");
+
+window.addEventListener("scroll", scrollFunction);
+
+function scrollFunction() {
+  if (window.pageYOffset > 300) { // Show backToTopButton
+    if(!backToTopButton.classList.contains("btnEntrance")) {
+      backToTopButton.classList.remove("btnExit");
+      backToTopButton.classList.add("btnEntrance");
+      backToTopButton.style.display = "block";
+    }
+  }
+  else { // Hide backToTopButton
+    if(backToTopButton.classList.contains("btnEntrance")) {
+      backToTopButton.classList.remove("btnEntrance");
+      backToTopButton.classList.add("btnExit");
+      setTimeout(function() {
+        backToTopButton.style.display = "none";
+      }, 250);
+    }
+  }
+}
+
+// NEW CHOICE
+
+const choiceBtn = document.getElementById('choice-btn');
+
+const choice1Slide = document.querySelectorAll('.choice-1-slide'); 
+const choice2Slide = document.querySelectorAll('.choice-2-slide'); 
+const choice3Slide = document.querySelectorAll('.choice-3-slide'); 
+
+function showChoice(){ 
+  choice1Slide.forEach(element => {element.classList.add('slider');})
+  choiceBtn.removeEventListener('click', showChoice); 
+}
+
+choiceBtn.addEventListener('click', showChoice);
+
+let greenBtns = document.querySelectorAll('.green-btn');
+let yellowBtns = document.querySelectorAll('.yellow-btn');
+let redBtns = document.querySelectorAll('.red-btn');
+
+greenBtns.forEach(element => {
+  element.addEventListener('click', ()=>{
+    choice1Slide.forEach(element => {element.classList.add('slider');})
+    choice2Slide.forEach(element => {element.classList.remove('slider');})
+    choice3Slide.forEach(element => {element.classList.remove('slider');})
+  })
+});
+
+yellowBtns.forEach(element => {
+  element.addEventListener('click', ()=>{
+    choice1Slide.forEach(element => {element.classList.remove('slider');})
+    choice2Slide.forEach(element => {element.classList.add('slider');})
+    choice3Slide.forEach(element => {element.classList.remove('slider');})
+  })
+});
+
+redBtns.forEach(element => {
+  element.addEventListener('click', ()=>{
+    choice1Slide.forEach(element => {element.classList.remove('slider');})
+    choice2Slide.forEach(element => {element.classList.remove('slider');})
+    choice3Slide.forEach(element => {element.classList.add('slider');})
+  })
+});
+
 // NEW GALLERY
 
 let slides = document.querySelectorAll('.slide');
@@ -104,89 +292,7 @@ function navLinkClick() {
 // );
 
 
-// PARALLAX HERO
 
-// function parallax(element, distance, speed){
-//   const item = document.querySelector(element);
-
-//   item.style.transform = `translateY(-${distance * speed}px)`;
-
-// }
-
-// window.addEventListener('scroll', function(){
-//   parallax('#hero-img1', window.scrollY, .1);
-//   parallax('#hero-img2', window.scrollY, .5);
-//   parallax('#hero-info', window.scrollY, .1);
-// })
-
-// FULLPAGE SCROLL 1.0
-// function smoothFullPageScroll(){
-
-//   window.addEventListener('wheel', (e)=>{
-//     let delta = e.wheelDelta;
-//     const startPosition = window.pageYOffset;
-//     let distance = 0;
-//     const duration = 1000;
-//     let start = null;
-
-//     if (delta<1){
-//       distance = window.innerHeight;
-//     } else{
-//       distance = -window.innerHeight;
-//     }
-  
-//   window.requestAnimationFrame(step);
-
-//   function step(timestamp){
-//       if(!start) start = timestamp;
-//       const progress = timestamp - start;
-//       // window.scrollTo(0, distance*(progress/duration) + startPosition);    //linear
-//       window.scrollTo(0, easeInOutQuad(progress, startPosition, distance, duration));
-//       if(progress < duration) window.requestAnimationFrame(step);
-//   }
-//   })
-// }
-
-// smoothFullPageScroll();
-
-// SMOOTH SCROLL
-
-const navLinks = document.querySelectorAll(".nav-links");
-
-navLinks.forEach(elem => elem.addEventListener('click', navbarLinkClick));
-
-function navbarLinkClick(event){
-    smoothScroll(event);
-}
-
-function smoothScroll(event){
-    event.preventDefault();
-    const targetId = event.currentTarget.getAttribute("href") === "#" ? "header" : event.currentTarget.getAttribute("href");
-    const targetPosition = document.querySelector(targetId).offsetTop; 
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    const duration = 1000;
-    let start = null;
-
-    window.requestAnimationFrame(step);
-
-    function step(timestamp){
-        if(!start) start = timestamp;
-        const progress = timestamp - start;
-        // window.scrollTo(0, distance*(progress/duration) + startPosition);    //linear
-        window.scrollTo(0, easeInOutQuad(progress, startPosition, distance, duration));
-        if(progress < duration) window.requestAnimationFrame(step);
-    }
-}
-
-// EASING FOR SMOOTH SCROLL
-
-function easeInOutQuad(t, b, c, d) {
-	t /= d/2;
-	if (t < 1) return c/2*t*t + b;
-	t--;
-	return -c/2 * (t*(t-2) - 1) + b;
-};
 
 
 // MAP
@@ -540,57 +646,4 @@ const iwContainer = document.getElementById('iw-container');
         //   }                 
         //     });
 
-// BACK TO TOP BUTTON
 
-const backToTopButton = document.querySelector("#back-to-top-btn");
-
-window.addEventListener("scroll", scrollFunction);
-
-function scrollFunction() {
-  if (window.pageYOffset > 300) { // Show backToTopButton
-    if(!backToTopButton.classList.contains("btnEntrance")) {
-      backToTopButton.classList.remove("btnExit");
-      backToTopButton.classList.add("btnEntrance");
-      backToTopButton.style.display = "block";
-    }
-  }
-  else { // Hide backToTopButton
-    if(backToTopButton.classList.contains("btnEntrance")) {
-      backToTopButton.classList.remove("btnEntrance");
-      backToTopButton.classList.add("btnExit");
-      setTimeout(function() {
-        backToTopButton.style.display = "none";
-      }, 250);
-    }
-  }
-}
-
-backToTopButton.addEventListener("click", smoothScrollBackToTop);
-
-// function backToTop() {
-//   window.scrollTo(0, 0);
-// }
-
-function smoothScrollBackToTop() {
-  const targetPosition = 0;
-  const startPosition = window.pageYOffset;
-  const distance = targetPosition - startPosition;
-  const duration = 750;
-  let start = null;
-  
-  window.requestAnimationFrame(step);
-
-  function step(timestamp) {
-    if (!start) start = timestamp;
-    const progress = timestamp - start;
-    window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
-    if (progress < duration) window.requestAnimationFrame(step);
-  }
-}
-
-function easeInOutCubic(t, b, c, d) {
-	t /= d/2;
-	if (t < 1) return c/2*t*t*t + b;
-	t -= 2;
-	return c/2*(t*t*t + 2) + b;
-};

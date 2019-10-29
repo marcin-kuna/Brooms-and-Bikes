@@ -77,66 +77,59 @@ body{
 /* NAV SECTION */
 
 .navbar{
-    color: #fff;
     width: 100%;
-    display: flex;
-    align-items: center;
     height: 80px;
     font-size: 18px;
-    // padding: 0 30px;
     z-index: 99;
     position: absolute;
-    top: 15px;
-    left: 5%;
-    /* border-bottom: 1px solid rgba(255,255,255,.2); */
+    top: 0;
+    left: 0;
 
-        &-brand{
+    &__container{
+        margin: 15px 0 0 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo{
+        opacity: 0;
+        width: 70px;
+        height: 70px;
+
+        &.is-visible{
+            animation: pop .3s linear .3s forwards;
+        }
+    }
+
+    ul{
+        display: flex;
+        list-style: none;
+        padding: 0 50px;
             opacity: 0;
+            transform: translateX(-300px);
+            transition: transform 1.5s .25s cubic-bezier(0,1,.3,1),
+                        opacity .5s .5s ease-out;
 
-            &.is-visible{
-                animation: pop .3s linear .3s forwards;
-            }
+        &.is-visible{
+            opacity: 1;
+            transform: translateX(0);
         }
 
         a{
+            text-align: center;
+            padding: 0 30px;
             text-decoration: none;
             color: #fff;
-
-            img{
-                width: 70px;
-                height: 70px;
-            }
             
-        }
-        
-        ul{
-            display: flex;
-            list-style: none;
-            padding: 0 50px;
-                opacity: 0;
-                transform: translateX(-300px);
-                transition: transform 1.5s .25s cubic-bezier(0,1,.3,1),
-                            opacity .5s .5s ease-out;
-
-            &.is-visible{
-                opacity: 1;
-                transform: translateX(0);
+            &:hover{
+                color: #FD7400;
             }
-
-            a{
-                text-align: center;
-                padding: 0 30px;
-                
-                &:hover{
-                    color: #FD7400;
-                }
-            }
-            
         }
+    }
 
-        .navbar-toggler{
-            display: none;
-        }
+    &__toggler{
+        display: none;
+    }
 }
 
 /* HERO SECTION */
@@ -168,7 +161,6 @@ body{
     }
 }
 
-
 #hero {
     height: 100vh;
     width: 100vw;
@@ -198,8 +190,6 @@ body{
         z-index: -1; 
 
         &.is-visible{
-            // top: -100px; 
-            // left: -100px;
             bottom: 0;
             right: 0;
         }
@@ -371,6 +361,36 @@ body{
     padding-bottom: 10px;
 }
 
+.slider-btns button#next{
+    position: absolute;
+    top: 40%;
+    right: 35px;
+}
+
+.slider-btns button#prev{
+    position: absolute;
+    top: 40%;
+    left: 15px;
+}
+
+.slider-btns button{
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding: 13px 15px;
+    border-radius: 50%;
+    outline: none;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+}
+
+.slider-btns button:hover {
+    background-color: #fff;
+    color: #1f4857;
+  }
+
 
 /* GALLERY IMAGES */
 
@@ -389,7 +409,7 @@ body{
 
 .slide{
     top: 12%;
-
+    // cursor: pointer;
     position: absolute;
     transition: transform .5s, left .5s;
 }
@@ -1117,8 +1137,8 @@ body{
 #back-to-top-btn{
     display: none;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
     // font-size: 26px;
     width: 50px;
     height: 50px;
@@ -1128,7 +1148,10 @@ body{
     // outline: none;
     border: 3px solid #1F4857;
     border-radius: 50%;
-    transition: color .3s ease-in-out;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+    // transition: color .3s ease-in-out;
     z-index: 5;
 
     i{
@@ -1141,6 +1164,7 @@ body{
 #back-to-top-btn:hover, #back-to-top-btn:focus{
     background-color: #1f4857;
     color: #fff;
+    border: 3px solid #fff;
 }
 
 .btnEntrance {
@@ -1242,13 +1266,6 @@ body{
         // background-color: rgba(253, 116, 0, .5);
       }
 
-      .navbar-brand {
-          position: absolute;
-          padding: 0;
-          top: 10px;
-          left: 0;
-      }
-
       .navbar ul {
         width: 100%;
         
@@ -1285,7 +1302,7 @@ body{
           background-color: rgba(255,255,255,0.15);
         }
   
-      .navbar .navbar-toggler {
+      .navbar .navbar__toggler {
         display: block;
         position: absolute;
         height: 40px;
@@ -1300,9 +1317,9 @@ body{
         padding: 0 5px;
         cursor: pointer;
       }
-      .navbar .navbar-toggler span,
-      .navbar .navbar-toggler span::before,
-      .navbar .navbar-toggler span::after {
+      .navbar .navbar__toggler span,
+      .navbar .navbar__toggler span::before,
+      .navbar .navbar__toggler span::after {
         display: block;
         content: '';
         background-color: #fff;
@@ -1311,23 +1328,23 @@ body{
         border-radius: 4px;
         transition: all ease-in-out 0.3s;
       }
-      .navbar .navbar-toggler span::before {
+      .navbar .navbar__toggler span::before {
         transform: translateY(-8px);
       }
-      .navbar .navbar-toggler span::after {
+      .navbar .navbar__toggler span::after {
         transform: translateY(5px);
       }
       
-      .navbar .navbar-toggler.open-navbar-toggler span {
+      .navbar .navbar__toggler.navbar__toggler--open span {
         /* transform: rotate(90deg); */
         background-color: transparent;
         transform: scale(0.85) rotate(270deg);
       }
-      .navbar .navbar-toggler.open-navbar-toggler span::before {
+      .navbar .navbar__toggler.navbar__toggler--open span::before {
         /* transform: translateY(0px) rotate(45deg); */
         transform: translateY(0px) scale(0.75) rotate(45deg);
       }
-      .navbar .navbar-toggler.open-navbar-toggler span::after {
+      .navbar .navbar__toggler.navbar__toggler--open span::after {
         /* transform: translateY(-3px) rotate(-45deg); */
         transform: translateY(-3px) scale(0.75) rotate(-45deg);
       }

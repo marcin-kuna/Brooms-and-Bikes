@@ -8,197 +8,181 @@
     <script src="https://kit.fontawesome.com/a578317cc7.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>RPG – Rowerem Przez Góry</title>
-  </head>
-  <body>
-      
-    <!-- NAV -->
-      <header id="header" class="slide-section">
-        <nav class="navbar">
-          
-          <a href="#" class="navbar-brand nav-links show-on-scroll"><img src="img/logo.png" alt=""></a>
-          
-          <ul class="main-nav show-on-scroll" id="js-menu">
-              <li>
-                <a href="#gallery" class="nav-links">Galeria</a>
-              </li>
-              <li>
-                  <a href="#choice" class="nav-links">Wyprawy</a>
-              </li>
-              <li>
-                  <a href="#map" class="nav-links">Mapa</a>
-              </li>
-              <li>
-                  <a href="#footer" class="nav-links">Kontakt</a>
-              </li>
-          </ul>
+</head>
 
-          <button class="navbar-toggler">
-            <span></span>
-          </button>
+<body>
+    <!-- NAV -->
+    <header id="header" class="slide-section">
+        <nav class="navbar">
+            <div class="navbar__container">
+                <img class="navbar__logo nav-links show-on-scroll" src="img/logo.png" alt="Company logo">
+                <ul class="main-nav show-on-scroll">
+                    <li>
+                        <a href="#gallery" class="nav-links">Galeria</a>
+                    </li>
+                    <li>
+                        <a href="#choice" class="nav-links">Wyprawy</a>
+                    </li>
+                    <li>
+                        <a href="#map" class="nav-links">Mapa</a>
+                    </li>
+                    <li>
+                        <a href="#footer" class="nav-links">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="navbar__toggler"><span></span></button>
         </nav>
-      </header>
+    </header>
 
     <!-- HERO SECTION -->
 
     <section id="hero" class="slide-section">
+        <div id="hero-bg" class="show-on-scroll"></div>
+        <div id="hero-container">
+            <h1 class="show-on-scroll slide-right">R</h1>
+            <h1 class="show-on-scroll slide-left">P</h1>
+            <h1 class="show-on-scroll slide-right">G</h1>
+            <p class="show-on-scroll fade-in">Rowerem Przez Góry! Odkryj z nami tajemnicze Góry Świętokrzyskie! O wszystko zadbamy. Przejrzyj naszą ofertę, zarezerwuj termin i ciesz się niezapomnianymi przeżyciami!</p>
 
-      <div id="hero-bg" class="show-on-scroll"></div>
-
-      <div id="hero-container">
-        <h1 class="show-on-scroll slide-right">R</h1>
-        <h1 class="show-on-scroll slide-left">P</h1>
-        <h1 class="show-on-scroll slide-right">G</h1>
-        
-        <p class="hero-info show-on-scroll fade-in">Rowerem Przez Góry! Odkryj z nami tajemnicze Góry Świętokrzyskie! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, molestiae. Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-
-        <div class="action-div">
-          <hr class="show-on-scroll action-hr">
-          <div class="action-p-div show-on-scroll">
-          <p class="action-info show-on-scroll">Ruszamy w trasę!</p>
-          </div>
-          <a href="#gallery" class="show-on-scroll bounce-in nav-links"><i class="fas fa-caret-right"></i></a>
+            <div class="action-div">
+                <hr class="show-on-scroll action-hr">
+                <div class="action-p-div show-on-scroll">
+                    <p class="action-info show-on-scroll">Ruszamy w trasę!</p>
+                </div>
+                <a href="#gallery" class="show-on-scroll bounce-in nav-links"><i class="fas fa-caret-right"></i></a>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- GALLERY SECTION -->
 
     <section id="gallery" class="slide-section">
+        <div class="side-heading">
+            <h4><span>01</span> / Galeria</h4>
+        </div>
 
-      <div class="side-heading">
-          <h4><span>01</span> / Galeria</h4>
-      </div>
-
-      <div class="section-container">
-
-          <div class="top-heading">
-              <hr class="top-heading-hr">
-                  <h4><span>01</span> / Galeria</h4>
-              </div>
-
-      <!-- <h2>Góry & Rowery</h2> -->
-
-      <div id="gallery-info">
-
-          <div class="gallery-info-div">
-              <h1 class="gallery-number">01</h1>
-              <h4>Przygoda</h4>
-              <hr class="short-hr">
-              <p>Niezapomniane wrażenia z jazdy mało uczęszczanymi trasami. Pokonaj własne słabości w walce z górami.</p>
-          </div>
-          <div class="gallery-info-div">
-              <h1 class="gallery-number">02</h1>
-              <h4>Piękno</h4>
-              <hr class="short-hr">
-              <p>Większość trasy obejmuje teren urokliwego Świętokrzyskiego Parku Narodowego.</p>
-          </div>
-          <div class="gallery-info-div">
-              <h1 class="gallery-number">03</h1>
-              <h4>Tajemnica</h4>
-              <hr class="short-hr">
-              <p>W Górach Świętokrzyskich panuje niezwykła atmosfera. Pełne są miejsc owianych tajemniczymi legendami.</p>
-          </div>
-          </div>
-        </div>    
-    
-      <div id="gallery-container">
-          <div class="slide backdoor">
-              <img src="img/gallery/0.jpg" alt="">
-              <hr class="slideHr">
-          </div>
-          <div class="slide left-left-left">
-              <img src="img/gallery/1.jpg" alt="">
-              <hr class="slideHr">
-          </div>
-          <div class="slide left-left">
-              <img src="img/gallery/2.jpg" alt="">
-              <hr class="slideHr">
-          </div>
-          <div class="slide left">
-              <img src="img/gallery/3.jpg" alt="">
-              <hr class="slideHr">
-          </div>
-          <div class="slide center">
-              <img src="img/gallery/4.jpg" alt="">
-              <hr class="slideHr">
-          </div>
-          <div class="slide right">
-              <img src="img/gallery/5.jpg" alt="">
-              <hr class="slideHr">
-          </div>
-          <div class="slide right-right">
-              <img src="img/gallery/6.jpg" alt="">
-              <hr class="slideHr">
-          </div>
-          <div class="slide right-right-right">
-              <img src="img/gallery/7.jpg" alt="">
-              <hr class="slideHr">
-          </div>
-      </div>
-
-    
-  </section>
-
-  <!-- CHOICE SECTION -->
-
-  <section id="choice" class="slide-section">
-
-    <div class="side-heading">
-        <h4><span>02</span> / Wyprawy</h4>
-    </div>
-
-    
-
-
-<div class="section-container">
-
-        <div class="top-heading">
-            <hr class="top-heading-hr">
-                <h4><span>02</span> / Wyprawy</h4>
+        <div class="section-container">
+            <div class="top-heading">
+                <hr class="top-heading-hr">
+                <h4><span>01</span> / Galeria</h4>
             </div>
 
-<div id="choice-container">
-        <div id="choice-container-part1">
-            <div id="choice-container-info">
-                <h2>Poziom trudności</h2>
-                <h3>Czas</h3>
-                <h3>Długość</h3>
-                <h3>Cena</h3>
+            <div id="gallery-info">
+                <div class="gallery-info-div">
+                    <h1 class="gallery-number">01</h1>
+                    <h4>Przygoda</h4>
+                    <hr class="short-hr">
+                    <p>Niezapomniane wrażenia z jazdy mało uczęszczanymi trasami. Pokonaj własne słabości w walce z górami.</p>
+                </div>
+                <div class="gallery-info-div">
+                    <h1 class="gallery-number">02</h1>
+                    <h4>Piękno</h4>
+                    <hr class="short-hr">
+                    <p>Większość trasy obejmuje teren urokliwego Świętokrzyskiego Parku Narodowego.</p>
+                </div>
+                <div class="gallery-info-div">
+                    <h1 class="gallery-number">03</h1>
+                    <h4>Tajemnica</h4>
+                    <hr class="short-hr">
+                    <p>W Górach Świętokrzyskich panuje niezwykła atmosfera. Pełne są miejsc owianych tajemniczymi legendami.</p>
+                </div>
+            </div>
+        </div>    
+    
+        <div id="gallery-container">
+            <div class="slide backdoor">
+                <img src="img/gallery/0.jpg" alt="">
+                <hr class="slideHr">
+            </div>
+            <div class="slide left-left-left">
+                <img src="img/gallery/1.jpg" alt="">
+                <hr class="slideHr">
+            </div>
+            <div class="slide left-left">
+                <img src="img/gallery/2.jpg" alt="">
+                <hr class="slideHr">
+            </div>
+            <div class="slide left">
+                <img src="img/gallery/3.jpg" alt="">
+                <hr class="slideHr">
+            </div>
+            <div class="slide center">
+                <img src="img/gallery/4.jpg" alt="">
+                <hr class="slideHr">
+            </div>
+            <div class="slide right">
+                <img src="img/gallery/5.jpg" alt="">
+                <hr class="slideHr">
+            </div>
+            <div class="slide right-right">
+                <img src="img/gallery/6.jpg" alt="">
+                <hr class="slideHr">
+            </div>
+            <div class="slide right-right-right">
+                <img src="img/gallery/7.jpg" alt="">
+                <hr class="slideHr">
             </div>
         </div>
 
-        <div id="choice-container-part2">
-                <hr id="choice-middle-hr">
+        <div class="slider-btns">
+            <button id="prev"><i class="fas fa-arrow-left"></i></button>
+            <button id="next"><i class="fas fa-arrow-right"></i></button>
+        </div>
 
-            <div id="choices-container">
-                <div class="choice-div choice-1-slide">
+    </section>
 
-                    <div class="choice-card">
-                        <div class="choice-card-info">
-                            <h2>Początkujący</h2>
-                            <h3>1 dzień + nocleg.</h3>
-                            <h3>4 kolejne punkty na mapie.</h3>
-                            <h3>200 zł / os.</h3>
-                        </div>
-                        <img src="img/icons/baby-face.png">
-                    </div>
+  <!-- CHOICE SECTION -->
 
-                    <div class="bg"></div>
+    <section id="choice" class="slide-section">
+        <div class="side-heading">
+            <h4><span>02</span> / Wyprawy</h4>
+        </div>
 
-                    <div class="choice-btns">
-                        <button class="green-btn"></button>
-                        <button class="yellow-btn"></button>
-                        <button class="red-btn"></button>
-                    </div>
+        <div class="section-container">
+            <div class="top-heading">
+                <hr class="top-heading-hr">
+                <h4><span>02</span> / Wyprawy</h4>
+            </div>
 
-                    <div id="choice-1-flag" class="choice-flag choice-1-slide">
-                        <hr id="choice-1-flag-hr" class="choice-flag-hr">
+            <div id="choice-container">
+                <div id="choice-container-part1">
+                    <div id="choice-container-info">
+                        <h2>Poziom trudności</h2>
+                        <h3>Czas</h3>
+                        <h3>Długość</h3>
+                        <h3>Cena</h3>
                     </div>
                 </div>
 
-                <div class="choice-div choice-2-slide">
+                <div id="choice-container-part2">
+                    <hr id="choice-middle-hr">
+                    <div id="choices-container">
+                        <div class="choice-div choice-1-slide">
+                            <div class="choice-card">
+                                <div class="choice-card-info">
+                                    <h2>Początkujący</h2>
+                                    <h3>1 dzień + nocleg.</h3>
+                                    <h3>4 kolejne punkty na mapie.</h3>
+                                    <h3>200 zł / os.</h3>
+                                </div>
+                                <img src="img/icons/baby-face.png">
+                            </div>
 
-                        <div class="choice-card">
+                            <div class="bg"></div>
+
+                            <div class="choice-btns">
+                                <button class="green-btn"></button>
+                                <button class="yellow-btn"></button>
+                                <button class="red-btn"></button>
+                            </div>
+                            <div id="choice-1-flag" class="choice-flag choice-1-slide">
+                                <hr id="choice-1-flag-hr" class="choice-flag-hr">
+                            </div>
+                        </div>
+
+                        <div class="choice-div choice-2-slide">
+                            <div class="choice-card">
                                 <div class="choice-card-info">
                                     <h2>Zaawansowany</h2>
                                     <h3>1 dzień + nocleg.</h3>
@@ -208,22 +192,20 @@
                                 <img src="img/icons/biceps.png">
                             </div>
 
-                    <div class="bg"></div>
+                            <div class="bg"></div>
 
-                    <div class="choice-btns">
-                        <button class="green-btn"></button>
-                        <button class="yellow-btn"></button>
-                        <button class="red-btn"></button>
-                    </div>
-
-                    <div id="choice-2-flag" class="choice-flag choice-2-slide">
-                        <hr id="choice-2-flag-hr" class="choice-flag-hr">
-                    </div>
-                </div>
+                            <div class="choice-btns">
+                                <button class="green-btn"></button>
+                                <button class="yellow-btn"></button>
+                                <button class="red-btn"></button>
+                            </div>
+                            <div id="choice-2-flag" class="choice-flag choice-2-slide">
+                                <hr id="choice-2-flag-hr" class="choice-flag-hr">
+                            </div>
+                        </div>
                 
-                <div class="choice-div choice-3-slide">
-
-                        <div class="choice-card">
+                        <div class="choice-div choice-3-slide">
+                            <div class="choice-card">
                                 <div class="choice-card-info">
                                     <h2>Ekspert</h2>
                                     <h3>1 dzień + nocleg.</h3>
@@ -233,74 +215,55 @@
                                 <img src="img/icons/mighty-force.png">
                             </div>
 
-                    <div class="bg"></div>
+                            <div class="bg"></div>
 
-                    <div class="choice-btns">
-                        <button class="green-btn"></button>
-                        <button class="yellow-btn"></button>
-                        <button class="red-btn"></button>
-                    </div>
-
-                    <div id="choice-3-flag" class="choice-flag choice-3-slide">
-                        <hr id="choice-3-flag-hr" class="choice-flag-hr">
+                            <div class="choice-btns">
+                                <button class="green-btn"></button>
+                                <button class="yellow-btn"></button>
+                                <button class="red-btn"></button>
+                            </div>
+                            <div id="choice-3-flag" class="choice-flag choice-3-slide">
+                                <hr id="choice-3-flag-hr" class="choice-flag-hr">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                
+            </div>
+
+            <div id="choice-info">
+                <hr class="short-hr">
+                <h2>Wybierz<br> swoją<br> przygodę</h2>
+                <p>Dobierz trasę zgodnie ze swoimi możliwościami. Przed podjęciem decyzji uważnie przyjrzyj się naszej mapie. Długość trasy zależy od Twoich preferencji (maksymalnie 256 kilometrów). Podróżujesz zawsze pod opieką licencjonowanego przewodnika.</p>
+                <button id="choice-btn">Sprawdź</button>
             </div>
         </div>
-        
-    </div>
-
-<div id="choice-info">
-    <hr class="short-hr">
-
-    <h2>Wybierz<br> swoją<br> przygodę</h2>
+    </section>
     
-    <p>Dobierz trasę zgodnie ze swoimi możliwościami. Przed podjęciem decyzji uważnie przyjrzyj się naszej mapie. Długość trasy zależy od Twoich preferencji (maksymalnie 256 kilometrów). Podróżujesz zawsze pod opieką licencjonowanego przewodnika.</p>
-    <button id="choice-btn">Sprawdź</button>
-    
-</div>
-
-</div>
-
-</section>
-    
-      
     <!-- MAP SECTION -->
-      <section id="map" class="slide-section">
-          <div class="side-heading">
-              <h4><span>03</span> / Trasa</h4>
-          </div>
-          
-          <div class="section-container">
-
-            <div id="iw-container"></div>
-
-              <div class="top-heading">
-                  <hr class="top-heading-hr">
-                      <h4><span>03</span> / Trasa</h4>
-                  </div>
-            <div id="map-container"></div>
-
-            <button id="start" class="show-on-scroll"><i class="fas fa-biking"></i></button>
-
-            <!-- <button id="start">START!</button> -->
-            <!-- <button id="refresh-map"><i class="fas fa-sync-alt"></i></button> -->
+    <section id="map" class="slide-section">
+        <div class="side-heading">
+            <h4><span>03</span> / Trasa</h4>
         </div>
-      </section>
-    
+          
+        <div class="section-container">
+            <div id="iw-container"></div>
+            <div class="top-heading">
+                <hr class="top-heading-hr">
+                <h4><span>03</span> / Trasa</h4>
+            </div>
+            <div id="map-container"></div>
+            <button id="start" class="show-on-scroll"><i class="fas fa-biking"></i></button>
+        </div>
+    </section>
     
     <!-- FOOTER -->
 
     <footer id="footer" class="slide-section">
-
         <div class="side-heading">
             <h4><span>04</span> / Kontakt</h4>
         </div>
 
-    <div class="section-container">
-    
+        <div class="section-container">
             <div class="top-heading">
                 <hr class="top-heading-hr">
                 <h4><span>04</span> / Kontakt</h4>
@@ -320,83 +283,64 @@
                 </div>
                 <div id="footer-top-heading">
                     <h2>Współpracujemy ze znanymi firmami i organizacjami</h2>
-                    
-
-                    <div id="footer-counter">
+                    <div id="footer-counter" class="show-on-scroll">
                         <div class="counter-container">
                             <h3 id="number-one" class="numbers"></h3>
                             <span id="counter-text">k</span>
                             <p>Przejechanych<br>kilometrów</p>
                         </div>
-
                         <div class="counter-container">
                             <h3 id="number-two" class="numbers"></h3>
                             <p>Niezwykłych<br>wypraw</p>
                         </div>
-
                         <div class="counter-container">
                             <h3 id="number-three" class="numbers"></h3>
                             <p>Zadowolonych<br>uczestników</p>
                         </div>
-
                         <h2><span>/</span> rok</h2>
-                
                     </div>
                 </div>
-                
+            </div> 
+        </div>
+
+        <div id="footer-bottom-container">
+            <div id="footer-bottom-heading">
+                <hr class="short-hr">
+                <h2>Skontaktuj się<br>z nami już dziś!</h2>
             </div>
-
-            
-    </div>
-
-    <div id="footer-bottom-container">
-
-        <div id="footer-bottom-heading">
-            <hr class="short-hr">
-            <h2>Skontaktuj się<br>z nami już dziś!</h2>
+            <div id="footer-media">
+                <a href="#" target="_blank"><i class="fab fa-twitter-square media-icons"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook-square media-icons"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram media-icons"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube-square media-icons"></i></a>
+            </div>
+            <div id="footer-nav">
+                <ul>
+                    <li>
+                        <a href="#gallery" class="nav-links">Galeria</a>
+                    </li>
+                    <li>
+                        <a href="#choice" class="nav-links">Wyprawy</a>
+                    </li>
+                    <li>
+                        <a href="#map" class="nav-links">Mapa</a>
+                    </li>
+                    <li>
+                        <a href="#footer" class="nav-links">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <div id="footer-media">
-            <a href="#" target="_blank"><i class="fab fa-twitter-square media-icons"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-facebook-square media-icons"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram media-icons"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-youtube-square media-icons"></i></a>
+        <hr id="footer-hr">
+        <div id="copyrights">
+            <p>&copy; Marcin Kuna 2019 | Wszelkie prawa zastrzeżone</p>
         </div>
-
-        <div id="footer-nav">
-            <ul>
-                <li>
-                    <a href="#gallery" class="nav-links">Galeria</a>
-                </li>
-                <li>
-                    <a href="#choice" class="nav-links">Wyprawy</a>
-                </li>
-                <li>
-                    <a href="#map" class="nav-links">Mapa</a>
-                </li>
-                <li>
-                    <a href="#footer" class="nav-links">Kontakt</a>
-                </li>
-            </ul>
-        </div>
-
-    </div>
-
-    <hr id="footer-hr">
-    <div id="copyrights">
-        <p>&copy; Marcin Kuna 2019 | Wszelkie prawa zastrzeżone</p>
-    </div>
-</footer>
+    </footer>
     
     <a id="back-to-top-btn" class="nav-links" href="#header"><i class="fas fa-angle-double-up"></i></a>
 
-    <!-- GOOGLE MAP API + JS -->
     <script src="/js/main.js"></script>
-
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrqOko7OU41qdzvGDBjySYL4YQA3iJmc&libraries=geometry&callback=initMap"
-    async defer></script>
-      
-      <!-- <script src="js/fullpagescroll.js"></script> -->
-      <script src="js/animation.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrrqOko7OU41qdzvGDBjySYL4YQA3iJmc&libraries=geometry&callback=initMap" async defer></script>
+    <script src="js/animation.js"></script>
 </body>
 </html>

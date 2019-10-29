@@ -1,25 +1,3 @@
-// FOOTER COUNTER
-
-function animateValue(id, start, end, duration) {
-  let range = end - start;
-  let current = start;
-  let increment = end > start ? 1 : -1;
-  let stepTime = Math.abs(Math.floor(duration / range));
-  let obj = document.getElementById(id);
-  let timer = setInterval(function() {
-      current += increment;
-      obj.innerHTML = current;
-      if (current == end) {
-          clearInterval(timer);
-      }
-  }, stepTime);
-}
-
-animateValue("number-one", 0, 20, 1200);
-animateValue("number-two", 0, 99, 1200);
-animateValue("number-three", 0, 450, 1200);
-
-
 // FULLPAGE SCROLL
 
 let slideElems = document.querySelectorAll('.slide-section');
@@ -255,46 +233,71 @@ function nextSlide(){
     });
 }
 
+
+// Scrolling gallery /w arrow keys
 document.addEventListener('keydown', function(e) {
     if(sliding==false){
     switch(e.which) {
         case 37: // left
         prevSlide()
-        if (auto) {
-            clearInterval(slideInterval);
-            slideInterval = setInterval(nextSlide, intervalTime);
-          }; 
+        autoScrollLeft();
         break;
         case 39: // right
         nextSlide();
-        if (auto) {
-            clearInterval(slideInterval);
-            slideInterval = setInterval(nextSlide, intervalTime);
-          }
+        autoScrollRight()
         break;
         default: return;
     }
 }
 });
 
-if (auto) {
-    // Run next slide at interval time
+// Button events
+next.addEventListener('click', e => {
+  nextSlide();
+  autoScrollRight()
+});
+
+prev.addEventListener('click', e => {
+  prevSlide();
+  autoScrollLeft();
+});
+
+function autoScrollLeft(){
+  if (auto) {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(prevSlide, intervalTime);
+  }
+}
+
+function autoScrollRight(){
+  if (auto) {
+    clearInterval(slideInterval);
     slideInterval = setInterval(nextSlide, intervalTime);
   }
+}
+
+// autoScroll off on slide click
+Array.from(slides).forEach((slide)=>{
+  if(auto == true){
+  slide.addEventListener('click', function(){
+    clearInterval(slideInterval);
+    slideInterval = 0;
+  })}
+});
 
 // połączyć sliding ze scrolling z fullpagescrolla? (antiSpam)
 
 
 // RESPONSIVE MENU
 
-const navbarToggler = document.querySelector(".navbar-toggler");
+const navbarToggler = document.querySelector(".navbar__toggler");
 const navbarMenu = document.querySelector(".navbar ul");
 const navbarLinks = document.querySelectorAll(".navbar a");
 
 navbarToggler.addEventListener("click", navbarTogglerClick);
 
 function navbarTogglerClick() {
-  navbarToggler.classList.toggle("open-navbar-toggler");
+  navbarToggler.classList.toggle("navbar__toggler--open");
   navbarMenu.classList.toggle("open");
 }
 
@@ -305,17 +308,6 @@ function navLinkClick() {
     navbarToggler.click();
   }
 }
-
-// const mainNav = document.getElementById("js-menu");
-// const navBarToggle = document.getElementById("js-navbar-toggle");
-
-// navBarToggle.addEventListener('click', () =>
-//     mainNav.classList.toggle('active')
-// );
-
-
-
-
 
 // MAP
 

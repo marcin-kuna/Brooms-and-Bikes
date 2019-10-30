@@ -1,0 +1,200 @@
+@import 'base';
+
+#map{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1F4857;
+}
+
+#map-container{
+    position: absolute;
+    height: 75%;
+    width: 70%;
+    // margin: 0 auto;
+    top: 12.5%;
+    right: 0;
+    
+    // right: 8px;
+    /* top: 5%;
+    left: 4.2%;
+    height: 90%;
+    width: 90%; */
+    /* margin: 0 auto; */
+    /* border: 2px solid #FD7400; */
+    /* border-radius: 5px; */
+}
+
+#start{
+    cursor: pointer;
+    height: 75%;
+    width: 70%;
+    background-color: #fd7400;
+    border: none;
+    outline: none;
+    color: #fd7400;
+    font-size: 25px;
+    position: absolute;
+    bottom: 12.5%;
+    left: 30%;
+    z-index: 3;
+    transition: all 1.5s, color .2s 1.3s;
+
+        &.is-visible{
+            width: 70px;
+            height: 70px;
+            bottom: calc(12.5% - 35px);
+            left: calc(30% - 35px);
+            color: #fff;
+        }
+}
+
+
+
+/* Infowindow */
+
+#iw-container{
+    width: 25%;
+    height: 30%;
+    background-color: #1F4857;
+    position: relative;
+    top: 30%;
+    left: 0;
+    // overflow: hidden;
+    // opacity: 1;
+    transition: opacity .4s;
+}
+
+.iw-place{
+    font-size: 40px;
+    margin: 30px 0 10px 0;
+    // display: inline-block;
+}
+
+.iw-info{
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.iw-heading{
+    position: relative;
+}
+
+// .gm-style-iw{
+//     width: 400px !important;
+//     // top necessary to overlay arrow
+// 	top: 15px !important;
+//     left: 200px !important;
+// 	background-color: #1F4857 !important;
+// 	box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+// 	// border: 1px solid #2D677C;
+//     // border-radius: 2px 2px 10px 10px;
+//     border-radius: 0px !important;
+//     z-index: 1;
+// }
+
+// HACK do likwidacji białych marginów IW
+
+// .gm-style div div div div div div div {
+//     visibility: hidden;
+    
+//   }
+//   .gm-style-iw + div {
+//     display: none;
+    
+//   }
+//   .gm-style div div div div div div.gm-style-iw div div {
+//     visibility: visible;
+//     background-color: #1F4857;
+//   }
+
+// #iw-container{
+//     margin-bottom: 10px;
+//     position: relative;
+// }
+// .iw-title1, .iw-title2{
+// 	font-size: 22px;
+//     padding: 10px;
+// 	background-color: #1F4857;
+// 	color: #fff;
+//     margin: 0;
+// 	// border-radius: 2px 2px 0 0;
+// }
+
+// .iw-title1{
+//     padding-bottom: 0px;
+//     font-weight: 700;
+// }
+
+// .iw-title2{
+//     padding-top: 0px;
+//     position: relative;
+// }
+
+/* IW bottom borderline */
+// .iw-title2:before{
+//     content: "";
+//     position: absolute;
+//     left: 10px;
+//     bottom: 0;
+//     height: 1px;
+//     width: 70%;
+//     border-bottom: 1px solid #17c1bc;
+//     margin-bottom: 10px;
+// }
+
+// #iw-container .iw-content{
+// 	font-size: 13px;
+// 	line-height: 18px;
+// 	font-weight: 400;
+// 	margin-right: 1px;
+// 	padding: 15px 5px 20px 15px;
+// 	max-height: 140px;
+// 	overflow-y: auto;
+// 	overflow-x: hidden;
+// }
+.iw-img{
+    width: 100%;
+    height: 100%;
+    // border-radius: 5px;
+    // box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    margin: 10px 0;
+    border: solid 2px #fd7400;
+}
+// .iw-subTitle{
+// 	font-size: 16px;
+//     font-weight: 700;
+//     color: #17c1bc;
+//     padding-bottom: 10px;
+// }
+// .iw-bottom-gradient{
+// 	position: absolute;
+// 	width: 326px;
+// 	height: 25px;
+// 	bottom: 0;
+// 	right: 18px;
+// 	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+// 	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+// 	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+// 	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+// }
+
+.iw-link{
+    color: #fd7400;
+    text-decoration: none;
+}
+
+.iw-distance-span{
+    color: #fd7400;
+}
+
+// #iw-container p{
+//     margin-bottom: 10px;
+//     font-size: 16px;
+// }
+
+
+

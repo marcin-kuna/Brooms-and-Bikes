@@ -38,7 +38,7 @@
         position: absolute;
         left: 5%;
         top: 22%;
-        color: #fff;
+        color: $text-color;
     
         h1 {
             font-family: 'Raleway', sans-serif;
@@ -86,7 +86,7 @@
 
     &__hr{
         width: 3px;
-        background-color: #fd7400;
+        background-color: $accent-color;
         height: 50px;
         border: none;
         opacity: 0;
@@ -100,7 +100,7 @@
     &__para-container{
         min-height: 50px;
         width: 0;
-        background-color: #fff;
+        background-color: $text-color;
         visibility: hidden;
         display: flex;
         align-items: center;
@@ -123,15 +123,15 @@
     &__btn.bounce-in{
         width: 50px;
         height: 50px;
-        background-color: #fd7400;
-        color: #fff;
+        background-color: $accent-color;
+        color: $text-color;
         opacity: 0;
         transition: opacity .5s .9s ease-out,
                     color 1s ease-in-out;
 
         &:hover{
-            background-color: #fff;
-            color: #fd7400;
+            background-color: $text-color;
+            color: $accent-color;
         }
 
         i{

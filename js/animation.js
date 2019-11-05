@@ -50,14 +50,14 @@ function animateValue(id, start, end, duration) {
 
 // Footer numbers counter
 
-const footerCounter = document.getElementById('footer-counter');
+const footerCounter = document.querySelector('.footer__counters');
 let numbers = document.getElementsByClassName('numbers');
 
 let numbersCalled = false;
 
 function callNumbers(){
   if(footerCounter.classList.contains('is-visible')){
-    if(numbersCalled == false){
+    if(numbersCalled === false){
       numbersCalled = true;
       animateValue("number-one", 0, 20, 1200);
       animateValue("number-two", 0, 99, 1200);

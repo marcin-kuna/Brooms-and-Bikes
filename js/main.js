@@ -84,7 +84,7 @@ function smoothScroll(event){
       break;
       case "#gallery": slideIndex = 2;
       break;
-      case "#choice": slideIndex = 3;
+      case "#choices": slideIndex = 3;
       break;
       case "#map": slideIndex = 4;
       break;
@@ -120,7 +120,7 @@ function easeInOutQuad(t, b, c, d) {
 
 // BACK TO TOP BUTTON
 
-const backToTopButton = document.querySelector("#back-to-top-btn");
+const backToTopButton = document.querySelector(".back-to-top-btn");
 
 window.addEventListener("scroll", scrollFunction);
 
@@ -145,11 +145,11 @@ function scrollFunction() {
 
 // NEW CHOICE
 
-const choiceBtn = document.getElementById('choice-btn');
+const choiceBtn = document.querySelector('.choices-btn');
 
-const choice1Slide = document.querySelectorAll('.choice-1-slide'); 
-const choice2Slide = document.querySelectorAll('.choice-2-slide'); 
-const choice3Slide = document.querySelectorAll('.choice-3-slide'); 
+const choice1Slide = document.querySelectorAll('.level-1-slide'); 
+const choice2Slide = document.querySelectorAll('.level-2-slide'); 
+const choice3Slide = document.querySelectorAll('.level-3-slide'); 
 
 function showChoice(){ 
   choice1Slide.forEach(element => {element.classList.add('slider');})
@@ -158,9 +158,9 @@ function showChoice(){
 
 choiceBtn.addEventListener('click', showChoice);
 
-let greenBtns = document.querySelectorAll('.green-btn');
-let yellowBtns = document.querySelectorAll('.yellow-btn');
-let redBtns = document.querySelectorAll('.red-btn');
+let greenBtns = document.querySelectorAll('.levels__btns--green');
+let yellowBtns = document.querySelectorAll('.levels__btns--yellow');
+let redBtns = document.querySelectorAll('.levels__btns--red');
 
 greenBtns.forEach(element => {
   element.addEventListener('click', ()=>{
@@ -312,7 +312,7 @@ function navLinkClick() {
 // MAP
 
 var map, markers = [], pointsDone = [], myInterval, startPoint, endPoint, progress, bounds; // bounds do wywalenia?
-const iwContainer = document.getElementById('iw-container');
+const iwContainer = document.querySelector('.infowindow');
 
         //Settings
         var stepSize = 100; //Size of every animation increment
@@ -322,89 +322,89 @@ const iwContainer = document.getElementById('iw-container');
                 {lat:50.9574758, lng:20.4740367, ico:'img/icons/quill-ink.png'},
                 {lat:50.9574758, lng:20.4740367, ico:'img/icons/quill-ink.png', content:
                 '<hr class="short-hr">'+
-                '<h2 class="iw-place">Oblęgorek</h2>' +
-                '<div class="iw-heading"><h2>Muzeum H. Sienkiewicza</h2><a href="https://pl.wikipedia.org/wiki/Muzeum_Henryka_Sienkiewicza_w_Obl%C4%99gorku" target="_blank" class="iw-info"><i class="fas fa-info-circle"></i></a></div>' +
-                '<img src=img/attractions/Oblęgorek.jpg class="iw-img">' +
-                '<p><span class="iw-distance-span">1.</span> kilometr trasy</p>'
+                '<h2 class="infowindow__heading">Oblęgorek</h2>' +
+                '<div class="infowindow__sights"><h2>Muzeum H. Sienkiewicza</h2><a href="https://pl.wikipedia.org/wiki/Muzeum_Henryka_Sienkiewicza_w_Obl%C4%99gorku" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
+                '<img src=img/sights/Oblęgorek.jpg class="infowindow__image">' +
+                '<p><span class="infowindow__distance-span">1.</span> kilometr trasy</p>'
                 },
                 {lat:50.9874838, lng:20.6478957, ico:'img/icons/oak.png', content:
                 '<hr class="short-hr">'+
-                '<h2 class="iw-place">Zagnańsk</h2>' +
-                '<div class="iw-heading"><h2>Dąb Bartek</h2><a href="https://pl.wikipedia.org/wiki/D%C4%85b_Bartek" target="_blank" class="iw-info"><i class="fas fa-info-circle"></i></a></div>' +
-                '<img src=img/attractions/Zagnańsk.jpg class="iw-img">' +
-                '<p><span class="iw-distance-span">18.</span> kilometr trasy</p>'
+                '<h2 class="infowindow__heading">Zagnańsk</h2>' +
+                '<div class="infowindow__sights"><h2>Dąb Bartek</h2><a href="https://pl.wikipedia.org/wiki/D%C4%85b_Bartek" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
+                '<img src=img/sights/Zagnańsk.jpg class="infowindow__image">' +
+                '<p><span class="infowindow__distance-span">18.</span> kilometr trasy</p>'
                 },
                 {lat:50.904747, lng:20.7601087, ico:'img/icons/imp.png', content:
                 '<hr class="short-hr">'+
-                '<h2 class="iw-place">Klonówka</h2>' +
-                '<div class="iw-heading"><h2>Diabelski Kamień</h2><a href="https://pl.wikipedia.org/wiki/Diabelski_Kamie%C5%84_(G%C3%B3ry_%C5%9Awi%C4%99tokrzyskie)" target="_blank" class="iw-info"><i class="fas fa-info-circle"></i></a></div>' +
-                '<img src=img/attractions/Klonówka.jpg class="iw-img">' +
-                '<p><span class="iw-distance-span">38.</span> kilometr trasy</p>'
+                '<h2 class="infowindow__heading">Klonówka</h2>' +
+                '<div class="infowindow__sights"><h2>Diabelski Kamień</h2><a href="https://pl.wikipedia.org/wiki/Diabelski_Kamie%C5%84_(G%C3%B3ry_%C5%9Awi%C4%99tokrzyskie)" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
+                '<img src=img/sights/Klonówka.jpg class="infowindow__image">' +
+                '<p><span class="infowindow__distance-span">38.</span> kilometr trasy</p>'
                 },
                 {lat:51.075185, lng:21.0130638, ico:'img/icons/monk-face.png', content:
                 '<hr class="short-hr">'+
-                '<h2 class="iw-place">Wąchock</h2>' +
-                '<div class="iw-heading"><h2>Opactwo Cystersów</h2><a href="https://pl.wikipedia.org/wiki/Opactwo_Cysters%C3%B3w_w_W%C4%85chocku" target="_blank" class="iw-info"><i class="fas fa-info-circle"></i></a></div>' +
-                '<img src=img/attractions/Wąchock.jpg class="iw-img">' +
-                '<p><span class="iw-distance-span">70.</span> kilometr trasy</p>'
+                '<h2 class="infowindow__heading">Wąchock</h2>' +
+                '<div class="infowindow__sights"><h2>Opactwo Cystersów</h2><a href="https://pl.wikipedia.org/wiki/Opactwo_Cysters%C3%B3w_w_W%C4%85chocku" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
+                '<img src=img/sights/Wąchock.jpg class="infowindow__image">' +
+                '<p><span class="infowindow__distance-span">70.</span> kilometr trasy</p>'
                 },
                 // {lat:51.0493753, lng:21.0660387, ico:'img/chimney6.png', content:'<h1>Starachowice – Wielki Piec</h1>'+'<img src=img/Wielkipiec.jpg class="info-image">'},
                 {lat:50.9585754, lng:21.2473663, ico:'img/icons/bell.png', content:
                 '<hr class="short-hr">'+
-                '<h2 class="iw-place">Kunów</h2>' +
-                '<div class="iw-heading"><h2>Dzwonnica</h2><a href="http://www.kunow.pl/art,362,historia.html" target="_blank" class="iw-info"><i class="fas fa-info-circle"></i></a></div>' +
-                '<img src=img/attractions/Kunów.jpg class="iw-img">' +
-                '<p><span class="iw-distance-span">85.</span> kilometr trasy</p>'
+                '<h2 class="infowindow__heading">Kunów</h2>' +
+                '<div class="infowindow__sights"><h2>Dzwonnica</h2><a href="http://www.kunow.pl/art,362,historia.html" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
+                '<img src=img/sights/Kunów.jpg class="infowindow__image">' +
+                '<p><span class="infowindow__distance-span">85.</span> kilometr trasy</p>'
                 },
                 {lat:51.0170261, lng:21.5465691, ico:'img/icons/diplodocus.png', content:
                 '<hr class="short-hr">'+
-                '<h2 class="iw-place">Bałtów</h2>' +
-                '<div class="iw-heading"><h2>JuraPark</h2><a href="https://pl.wikipedia.org/wiki/JuraPark_Ba%C5%82t%C3%B3w" target="_blank" class="iw-info"><i class="fas fa-info-circle"></i></a></div>' +
-                '<img src=img/attractions/Bałtów.jpg class="iw-img">' +
-                '<p><span class="iw-distance-span">108.</span> kilometr trasy</p>'
+                '<h2 class="infowindow__heading">Bałtów</h2>' +
+                '<div class="infowindow__sights"><h2>JuraPark</h2><a href="https://pl.wikipedia.org/wiki/JuraPark_Ba%C5%82t%C3%B3w" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
+                '<img src=img/sights/Bałtów.jpg class="infowindow__image">' +
+                '<p><span class="infowindow__distance-span">108.</span> kilometr trasy</p>'
                 },
                 {lat:50.886216, lng:21.5306813, ico:'img/icons/vase.png', content:
                 '<hr class="short-hr">'+
-                '<h2 class="iw-place">Ćmielów</h2>' +
-                '<div class="iw-heading"><h2>Żywe Muzeum Porcelany</h2><a href="https://pl.wikipedia.org/wiki/%C5%BBywe_Muzeum_Porcelany_w_%C4%86mielowie" target="_blank" class="iw-info"><i class="fas fa-info-circle"></i></a></div>' +
-                '<img src=img/attractions/Ćmielów.jpg class="iw-img">' +
-                '<p><span class="iw-distance-span">130.</span> kilometr trasy</p>'
+                '<h2 class="infowindow__heading">Ćmielów</h2>' +
+                '<div class="infowindow__sights"><h2>Żywe Muzeum Porcelany</h2><a href="https://pl.wikipedia.org/wiki/%C5%BBywe_Muzeum_Porcelany_w_%C4%86mielowie" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
+                '<img src=img/sights/Ćmielów.jpg class="infowindow__image">' +
+                '<p><span class="infowindow__distance-span">130.</span> kilometr trasy</p>'
                 },
                 {lat:50.8026259, lng:21.4188986, ico:'img/icons/church.png', content:
                 '<hr class="short-hr">'+
-                '<h2 class="iw-place">Opatów</h2>' +
-                '<div class="iw-heading"><h2>Kolegiata św. Marcina</h2><a href="https://pl.wikipedia.org/wiki/Opat%C3%B3w" target="_blank" class="iw-info"><i class="fas fa-info-circle"></i></a></div>' +
-                '<img src=img/attractions/Opatów.jpg class="iw-img">' +
-                '<p><span class="iw-distance-span">146.</span> kilometr trasy</p>'
+                '<h2 class="infowindow__heading">Opatów</h2>' +
+                '<div class="infowindow__sights"><h2>Kolegiata św. Marcina</h2><a href="https://pl.wikipedia.org/wiki/Opat%C3%B3w" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
+                '<img src=img/sights/Opatów.jpg class="infowindow__image">' +
+                '<p><span class="infowindow__distance-span">146.</span> kilometr trasy</p>'
                 },
                 {lat:50.8590574, lng:21.0441959, ico:'img/icons/crucifix.png', content:
                 '<hr class="short-hr">'+
-                '<h2 class="iw-place">Święty Krzyż</h2>' +
-                '<div class="iw-heading"><h2>Sanktuarium Relikwii Drzewa Krzyża Świętego</h2><a href="https://pl.wikipedia.org/wiki/Bazylika_na_%C5%9Awi%C4%99tym_Krzy%C5%BCu" target="_blank" class="iw-info"><i class="fas fa-info-circle"></i></a></div>' +
-                '<img src=img/attractions/ŚwiętyKrzyż.jpg class="iw-img">' +
-                '<p><span class="iw-distance-span">186.</span> kilometr trasy</p>'
+                '<h2 class="infowindow__heading">Święty Krzyż</h2>' +
+                '<div class="infowindow__sights"><h2>Sanktuarium Relikwii Drzewa Krzyża Świętego</h2><a href="https://pl.wikipedia.org/wiki/Bazylika_na_%C5%9Awi%C4%99tym_Krzy%C5%BCu" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
+                '<img src=img/sights/ŚwiętyKrzyż.jpg class="infowindow__image">' +
+                '<p><span class="infowindow__distance-span">186.</span> kilometr trasy</p>'
                 },
                 {lat:50.8939812, lng:20.8757823, ico:'img/icons/witch-face.png', content:
                 '<hr class="short-hr">'+
-                '<h2 class="iw-place">Łysica</h2>' +
-                '<div class="iw-heading"><h2>Najwyższy szczyt Gór Świętokrzyskich</h2><a href="https://pl.wikipedia.org/wiki/%C5%81ysica_(G%C3%B3ry_%C5%9Awi%C4%99tokrzyskie)" target="_blank" class="iw-info"><i class="fas fa-info-circle"></i></a></div>' +
-                '<img src=img/attractions/Łysica.jpg class="iw-img">' +
-                '<p><span class="iw-distance-span">206.</span> kilometr trasy</p>'
+                '<h2 class="infowindow__heading">Łysica</h2>' +
+                '<div class="infowindow__sights"><h2>Najwyższy szczyt Gór Świętokrzyskich</h2><a href="https://pl.wikipedia.org/wiki/%C5%81ysica_(G%C3%B3ry_%C5%9Awi%C4%99tokrzyskie)" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
+                '<img src=img/sights/Łysica.jpg class="infowindow__image">' +
+                '<p><span class="infowindow__distance-span">206.</span> kilometr trasy</p>'
                 },
                 {lat:50.8611445, lng:20.6153419, ico:'img/icons/minerals.png', content:
                 '<hr class="short-hr">'+
-                '<h2 class="iw-place">Kielce</h2>'+
-                '<div class="iw-heading"><h2>Rezerwat Przyrody Kadzielnia</h2><a href="https://pl.wikipedia.org/wiki/Rezerwat_przyrody_Kadzielnia" target="_blank" class="iw-info"><i class="fas fa-info-circle"></i></a></div>' +
-                '<img src=img/attractions/Kadzielnia.jpg class="iw-img">' +
-                '<p><span class="iw-distance-span">244.</span> kilometr trasy</p>'
+                '<h2 class="infowindow__heading">Kielce</h2>'+
+                '<div class="infowindow__sights"><h2>Rezerwat Przyrody Kadzielnia</h2><a href="https://pl.wikipedia.org/wiki/Rezerwat_przyrody_Kadzielnia" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
+                '<img src=img/sights/Kadzielnia.jpg class="infowindow__image">' +
+                '<p><span class="infowindow__distance-span">244.</span> kilometr trasy</p>'
                 },
                 // {lat:50.8253422, lng:20.4969425, ico:'img/cave-entrance6.png', content:'<h1>Jaskinia Raj</h1>'+'<img src=img/Jaskiniaraj.jpg class="info-image">'},
                 {lat:50.7975983, lng:20.4574498, ico:'img/icons/castle.png', content:
                 '<hr class="short-hr">'+
-                '<h2 class="iw-place">Chęciny</h2>'+
-                '<div class="iw-heading"><h2>Zamek Królewski</h2><a href="https://pl.wikipedia.org/wiki/Ch%C4%99ciny" target="_blank" class="iw-info"><i class="fas fa-info-circle"></i></a></div>' +
-                '<img src=img/attractions/Chęciny.jpg class="iw-img">' +
-                '<p><span class="iw-distance-span">256.</span> kilometr trasy</p>'
+                '<h2 class="infowindow__heading">Chęciny</h2>'+
+                '<div class="infowindow__sights"><h2>Zamek Królewski</h2><a href="https://pl.wikipedia.org/wiki/Ch%C4%99ciny" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
+                '<img src=img/sights/Chęciny.jpg class="infowindow__image">' +
+                '<p><span class="infowindow__distance-span">256.</span> kilometr trasy</p>'
                 },
             ];
 
@@ -475,7 +475,7 @@ const iwContainer = document.getElementById('iw-container');
         function initMap(){
 
           // New map
-          map = new google.maps.Map(document.getElementById('map-container'), options);
+          map = new google.maps.Map(document.querySelector('.map-container'), options);
           // bounds = new google.maps.LatLngBounds();
 
         //   var infoWindow = new google.maps.InfoWindow({
@@ -601,7 +601,7 @@ const iwContainer = document.getElementById('iw-container');
             
         }
 
-        const start = document.getElementById('start');
+        const start = document.querySelector('.map-start');
 
         function refreshActive(){
           // refreshMap.style.backgroundColor = "#fd7400";

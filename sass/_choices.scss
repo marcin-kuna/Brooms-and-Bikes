@@ -1,259 +1,240 @@
 @import 'base';
 
-#choice{
+.choices{
     height: 100vh;
     width: 100vw;
     margin: 0 auto;
     position: relative;
-    /* border: #fff 2px solid; */
+    /* border: $text-color 2px solid; */
     background-color: rgb(11, 22, 34);
-}
 
-/* GLOBAL */
-.section-container{
-    height: 100%;
-    width: 80%;
-    margin: 0 auto;
-    position: relative;
-    /* border: 2px solid red; */
-}
+    &-info{
+        width: 100%;
+        height: 55%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        /* border: 2px solid red; */
+        z-index: 0;
 
-/* HEADING & INFO */
+        hr{
+            position: absolute;
+            top: 50px;
+            right: 0;
+        }
 
-#choice-info{
-    /* margin-top: 20px; */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end; */
-    width: 100%;
-    height: 55%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    /* border: 2px solid red; */
-    z-index: 0;
-}
+        h2{
+            text-align: end;
+            color: $text-color;
+            font-size: 35px;
+            position: absolute;
+            top: 80px;
+            right: 0;
+        }
 
-#choice-info hr{
-    position: absolute;
-    top: 50px;
-    right: 0;
-}
-
-#choice-info h2{
-    /* padding: 20px 0 20px 0; */
-    text-align: end;
-    color: #fff;
-    font-size: 35px;
-    position: absolute;
-    top: 80px;
-    right: 0;
-}
-
-#choice-info p{
-    font-size: 17px;
-    padding-top: 20px;
-    line-height: 1.5;
-    width: 60%;
-    text-align: justify;
-    position: absolute;
-    top: 230px;
-    right: 210px;
-}
-
-#choice-info button{
-    background-color: transparent;
-    border: 1px solid #fd7400;
-    color: #fff;
-    outline: none;
-    padding: 20px;
-    width: 180px;
-    font-size: 14px;
-    margin-top: 10px;
-    cursor: pointer;
-    text-transform: uppercase;
-    position: absolute;
-    top: 245px;
-    right: 0;
+        p{
+            font-size: 17px;
+            padding-top: 20px;
+            line-height: 1.5;
+            width: 60%;
+            text-align: justify;
+            position: absolute;
+            top: 230px;
+            right: 210px;
+        }
+    }
+     
+    &-btn{
+        background-color: transparent;
+        border: 1px solid $accent-color;
+        color: $text-color;
+        outline: none;
+        padding: 20px;
+        width: 180px;
+        font-size: 20px;
+        margin-top: 10px;
+        cursor: pointer;
+        position: absolute;
+        top: 245px;
+        right: 0;
+    }
 }
 
 /* CHOICE CARDS */
 
-#choice-container{
+.choice-container{
     width: 60%;
     height: 60%;
     background-color: rgb(14, 126, 167);
-    /* margin-top: 5%; */
-    /* margin-left: 5%; */
     position: relative;
     top: 100px;
     display: flex;
+    // border: solid 1px wheat;
+
+    &__left{
+        background-color: rgb(14, 126, 167);
+        height: 100%;
+        width: 50%;
+        position: relative;
+        // border: solid 1px wheat;
+        z-index: 2;
+    }
+
+    &__hr{
+        width: 4px;
+        background-color: $accent-color;
+        border: none;
+        height: 90%;
+        position: absolute;
+        top: 5%;
+        left: -2px;
+        z-index: 2;
+    }
+
+    &__right{
+        position: relative;
+        width: 50%;
+        // border: solid 1px yellow;
+    }
+
+    &__text{
+        width: 100%;
+        height: 90%;
+        margin-top: 23px;
+        text-align: end;
+        padding: 50px 30px 0 0;
+        /* border: 2px solid red; */
+
+        h3{
+            padding-top: 50px;
+        }
+    }
+
+    h2{
+        font-size: 30px;
+    }
 }
 
-#choice-middle-hr{
-    width: 4px;
-    /* transform: rotate(90deg); */
-    background-color: #fd7400;
-    border: none;
-    height: 90%;
-    position: absolute;
-    top: 5%;
-    left: -2px;
-    z-index: 2;
-}
+/* DIFFICULTY LEVELS */
 
-#choice-container-part1{
-    background-color: rgb(14, 126, 167);
-    height: 100%;
-    width: 50%;
-    position: relative;
-    /* border: solid 1px wheat; */
-    z-index: 2;
-}
-#choice-container-part2{
-    position: relative;
-    width: 50%;
-    /* border: solid 1px yellow; */
-}
-
-#choice-container-info{
-    width: 100%;
-    /* position: absolute; */
-    height: 90%;
-    margin-top: 23px;
-    text-align: end;
-    padding: 50px 30px 0 0;
-    /* border: 2px solid red; */
-}
-
-#choice-container-info h3{
-    padding-top: 50px;
-}
-
-/* CHOICES */
-
-.choice-div{
-    position: absolute;
-    width: 600px;
-    height: 99%;
-    transform: translateX(-600px);
-    opacity: 0;
-    transition: transform 2s, opacity .1s .5s ease-out;
-    z-index: 1;
-}
-
-.bg{
-    background-color: rgb(34, 78, 94);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.choice-div.slider{
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.choice-flag{
-    width: 70px;
-    height: 70px;
-    background-color: rgb(14, 126, 167);
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    right: -70px;
-    transform: translateX(-670px);
-    opacity: 0;
-    transition: transform 2s .2s, opacity .1s .5s ease-out;
-}
-
-.choice-flag.slider{
-    transform: translateX(0);
-    opacity: 1;
-}
-
-#choices-container{
+.levels{
     position: relative;
     width: 670px;
     height: 90%;
     margin-top: 23px;
-}
+    // border: solid 1px wheat;
 
-.choice-flag-hr{
-    border: none;
-    position: absolute;
-    top: 0;
-    right: -4px ;
-    width: 4px;
-    height: 100%;
-}
+    &-container{
+        position: absolute;
+        width: 600px;
+        height: 99%;
+        transform: translateX(-600px);
+        opacity: 0;
+        transition: transform 2s, opacity .1s .5s ease-out;
+        z-index: 1;
 
-#choice-1-flag-hr{
-    background-color: green;
-}
-#choice-2-flag-hr{
-    background-color: yellow;
-}
-#choice-3-flag-hr{
-    background-color: red;
-}
+        &.slider{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
 
-.choice-btns{
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    z-index: 5;
-}
+    &-card{
+        height: 100%;
+        padding-left: 30px;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    
+        &__text{
+            height: 100%;
+            padding-top: 50px;
+        
+            h3{
+                padding-top: 50px;
+            }
+        }
+    
+        img{
+            width: 200px;
+            height: 200px;
+            margin-left: 100px;
+        }
+    }
 
-.choice-btns button{
-    width: 11px;
-    height: 11px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: background-color .3s;
-}
+    &__bg{
+        background-color: rgb(34, 78, 94);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 
-.green-btn:hover{
-   background-color: green;
-}
-.yellow-btn:hover{
-   background-color: yellow;
-}
-.red-btn:hover{
-   background-color: red;
-}
+    &__btns{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        z-index: 5;
 
-.choice-card{
-    height: 100%;
-    padding-left: 30px;
-    position: relative;
-    z-index: 2;
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: flex-start;
-    align-items: center;
-}
+        button{
+            width: 11px;
+            height: 11px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: background-color .3s;
+        }
 
-.choice-card img{
-    width: 200px;
-    height: 200px;
-    margin-left: 100px;
-}
+        &--green:hover{
+            background-color: green;
+        }
+        &--yellow:hover{
+            background-color: yellow;
+        }
+        &--red:hover{
+            background-color: red;
+        }
+    }
 
-.choice-card-info{
-    height: 100%;
-    padding-top: 50px;
-}
+    &-flag{
+        width: 70px;
+        height: 70px;
+        background-color: rgb(14, 126, 167);
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: -70px;
+        transform: translateX(-670px);
+        opacity: 0;
+        transition: transform 2s .2s, opacity .1s .5s ease-out;
+    
+        &.slider{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    
+        &__hr{
+            border: none;
+            position: absolute;
+            top: 0;
+            right: -4px ;
+            width: 4px;
+            height: 100%;
 
-#choice-container h2{
-    /* margin-top: 20%; */
-    font-size: 30px;
-}
+            &--1{
+                background-color: green;
+            }
 
-.choice-card-info h3{
-    padding-top: 50px;
+            &--2{
+                background-color: yellow;
+            }
+
+            &--3{
+                background-color: red;
+            }
+        }
+    }
 }

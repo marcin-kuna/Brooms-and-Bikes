@@ -1,7 +1,7 @@
 /* VARIABLES */
 
 $primary-color: #1F4857;
-$secondary-color-light: #2D677C;
+$secondary-color-light: #43849c;
 $secondary-color-dark: #0B1622;
 $accent-color: #FD7400;
 $text-color: #FFF;
@@ -41,9 +41,9 @@ $text-color: #FFF;
     }
 }
 
-@function rem($px){
-    @return ($px/16) * 1rem;
-}
+// @function rem($px){
+//     @return ($px/16) * 1rem;
+// }
 
 *{
     margin: 0;
@@ -75,14 +75,10 @@ body{
 }
 
 .side-heading{
-    width: 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     transform: rotate(-90deg);
     position: absolute; // do section-container
-    left: -2%;
-    top: 12%;
+    left: 0;
+    top: 100px;
     font-size: 14px;
 
     span{

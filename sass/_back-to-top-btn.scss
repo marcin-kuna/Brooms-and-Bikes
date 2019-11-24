@@ -5,12 +5,11 @@
     position: fixed;
     bottom: 15px;
     right: 15px;
-    // font-size: 26px;
     width: 50px;
     height: 50px;
-    background-color: $text-color;
-    color: $primary-color;
-    border: 3px solid $primary-color;
+    background: transparent;
+    color: $text-color;
+    border: 2px solid $text-color;
     border-radius: 50%;
     transition-duration: .2s;
     transition-timing-function: ease-in-out;
@@ -20,14 +19,13 @@
 
     i{
         // color: $text-color;
-        font-size: 25px;
-        margin: 20% 0 0 32%;
+        font-size: 24px;
+        margin: 20% 0 0 33%;
     }
 
     &:hover, &:focus{
-      background-color: $primary-color;
-      color: $text-color;
-      border: 3px solid $text-color;
+      background-color: $text-color;
+      color: $primary-color;
     }
 }
 

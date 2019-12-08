@@ -1461,8 +1461,8 @@ body {
   height: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1506,7 +1506,7 @@ body {
   z-index: 2;
 }
 
-.footer__counters h2 {
+.footer__counters h5 {
   color: #FFF;
   font-size: 20px;
   margin-bottom: 50px;
@@ -1514,7 +1514,7 @@ body {
           transform: translateY(50%);
 }
 
-.footer__counters h2 span {
+.footer__counters h5 span {
   color: #1F4857;
 }
 
@@ -1557,7 +1557,7 @@ body {
 
 .footer__heading--bottom {
   position: absolute;
-  top: 100px;
+  top: 102px;
   left: 10%;
   font-size: 25px;
 }
@@ -1970,6 +1970,34 @@ body {
   .map-container {
     zoom: 0.78;
   }
+  .footer__stats h2 {
+    font-size: 32px;
+  }
+  .footer__counters {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    bottom: -30px;
+  }
+  .footer__counters--counter {
+    width: 100%;
+  }
+  .footer__counters--counter h3, .footer__counters--counter p {
+    display: inline;
+  }
+  .footer__counters--counter p {
+    position: absolute;
+    left: 70px;
+    padding-top: 15px;
+    white-space: nowrap;
+  }
+  h5 {
+    margin-top: -10px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -2144,6 +2172,10 @@ body {
     top: 75%;
     left: 10%;
   }
+  .infowindow__heading {
+    font-size: 35px;
+    margin-top: 15px;
+  }
   .infowindow__image {
     position: absolute;
     top: -5%;
@@ -2152,15 +2184,26 @@ body {
     width: 160px;
   }
   .infowindow__distance-span {
-    position: absolute;
-    left: -20%;
+    margin-right: 3px;
   }
   .infowindow p {
     position: absolute;
-    left: 130%;
+    left: 120%;
     bottom: 35%;
     white-space: nowrap;
-    padding-left: 10px;
+    font-size: 14px;
+  }
+  .footer__stats h2 {
+    font-size: 28px;
+  }
+  .footer__brands img {
+    width: 90px;
+  }
+  .footer__media a {
+    padding-left: 30px;
+  }
+  .footer__nav ul li a {
+    padding-left: 30px;
   }
 }
 
@@ -2211,9 +2254,13 @@ body {
     font-size: 18px;
     margin: 20% 0 0 30%;
   }
+  .map-container {
+    zoom: .7;
+  }
   .infowindow__heading {
     font-size: 30px;
     margin: 30px 0 10px 0;
+    white-space: nowrap;
   }
   .infowindow__sights {
     font-size: 16px;
@@ -2221,8 +2268,24 @@ body {
   .infowindow__link {
     top: -80px;
   }
-  .map-container {
-    zoom: .7;
+  .footer__stats h3 {
+    font-size: 30px;
+  }
+  .footer p {
+    left: 60px;
+    padding-top: 12px;
+  }
+  .footer__media a {
+    padding-left: 12px;
+  }
+  .footer__nav ul li a {
+    padding-left: 10px;
+  }
+  .footer__container--bottom h2 {
+    font-size: 30px;
+  }
+  .footer__heading--bottom {
+    top: 118px;
   }
 }
 
@@ -2284,6 +2347,78 @@ body {
     height: 50px;
     bottom: calc(27.5% - 25px);
     left: -25px;
+  }
+  .infowindow__heading {
+    font-size: 25px;
+  }
+  .infowindow__sights {
+    font-size: 14px;
+  }
+  .infowindow__image {
+    left: 150%;
+  }
+  .infowindow p {
+    left: 150%;
+  }
+  .footer__container--top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__brands {
+    width: 100%;
+    height: 60%;
+    margin-top: -20px;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+  .footer__brands img {
+    width: 75px;
+  }
+  .footer__brands--shimano {
+    display: none;
+  }
+  .footer__stats {
+    width: 100%;
+    margin-left: 0;
+  }
+  .footer__stats h2 {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25px;
+  }
+  .footer__counters {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    bottom: -120px;
+  }
+  .footer__counters--counter {
+    width: 100%;
+  }
+  .footer__counters--counter p {
+    display: block;
+    position: relative;
+    white-space: normal;
+    left: 0;
+  }
+  .footer h5 {
+    margin-left: -20px;
+  }
+  .footer h5 span {
+    margin-left: -20px;
+  }
+  .footer__heading--bottom {
+    top: 80px;
+  }
+  .footer__media {
+    top: 150px;
+  }
+  .footer__nav {
+    top: 205px;
   }
 }
 /*# sourceMappingURL=main.css.map */

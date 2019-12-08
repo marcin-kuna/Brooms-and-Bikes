@@ -1,38 +1,25 @@
 @import 'base';
 
 @media(max-width: 1499px){
+
   // MAP
-
-  .map{
-
-    &-container{
+  .map-container{
       zoom: .95;
-    }
   }
 }
 
 @media(max-width: 1399px){
+
   // CHOICES
-
-  .levels{
-
-    &-container{
+  .levels-container{
       width: 550px;
       transform: translateX(-550px);
-    }
   }
-
+  
   // MAP
-  // img[src*='img/map-icons/']{
-  //   transform: scale(.8);
-  // }
-  .map{
-
-    &-container{
-      zoom: .85;
-    }
+  .map-container{
+    zoom: .85;
   }
-
 }
 
 @media(max-width: 1199px){
@@ -46,63 +33,82 @@
   }
   
   // CHOICES
+  .choices__info{
+    h2{
+      top: 130px;
+      font-size: 28px;
+    }
 
-  .choices{
-    &__info{
-  
-      h2{
-        top: 130px;
-        font-size: 28px;
-      }
-
-      hr{
-        top: 110px;
-      }
+    hr{
+      top: 110px;
     }
   }
-
+  
   .choice-container{
     width: 65%;
     top: 80px;
   }
 
-  .levels{
-
-    &-container{
-      width: 450px;
-      transform: translateX(-450px);
-    }
-
-    &-card{
-
-      img{
-        width: 120px;
-        height: 120px;
-      }
-    }
+  .levels-container{
+    width: 450px;
+    transform: translateX(-450px);
   }
 
+  .levels-card{
+    img{
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
   // MAP
-
-  // img[src*='img/map-icons/']{
-  //   // transform: scale(1.1);
-  // }
 
   .infowindow{
     top: 12.5%;
   }
 
-  .map{
+  .map-container{
+    zoom: 0.78;
+  }
+  
+  // FOOTER
 
-    &-container{
-      zoom: 0.78;
+  .footer__stats{
+    h2{
+      font-size: 32px;
     }
+  }
+
+  .footer__counters{
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: -30px;
+
+    &--counter{
+      width: 100%;
+
+      h3, p{
+        display: inline;
+      }
+
+      p{
+        position: absolute;
+        left: 70px;
+        padding-top: 15px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  h5{
+    margin-top: -10px;
   }
 }
 
 @media(max-width: 991px){
 
   // GALLERY
+
   .slides-container{
     bottom: -30px;
 
@@ -124,7 +130,7 @@
         text-align: right;
         font-size: 16px;
       }
-  
+
       h2{
         text-align: left;
         top: 50px;
@@ -291,33 +297,35 @@
 
   // MAP
 
-  .map{
+  .map-container{
+    height: 60%;
+    width: 100%;
+    zoom: .8;
+  }
 
-    &-container{
-      height: 60%;
-      width: 100%;
-      zoom: .8;
-    }
+  .map-start{
+    height: 60%;
+    width: 100%;
+    font-size: 25px;
+    bottom: 27.5%;
+    left: 0;
 
-    &-start{
-      height: 60%;
-      width: 100%;
-      font-size: 25px;
-      bottom: 27.5%;
-      left: 0;
-  
-      &.is-visible{
-          width: 60px;
-          height: 60px;
-          bottom: calc(27.5% - 30px);
-          left: - 30px;
-      }
+    &.is-visible{
+      width: 60px;
+      height: 60px;
+      bottom: calc(27.5% - 30px);
+      left: - 30px;
     }
   }
 
   .infowindow{
     top: 75%;
     left: 10%;
+
+    &__heading{
+      font-size: 35px;
+      margin-top: 15px;
+    }
 
     &__image{
       position: absolute;
@@ -328,21 +336,46 @@
     }
 
     &__distance-span{
-      position: absolute;
-      left: -20%;
+      margin-right: 3px;
     }
 
     p{
       position: absolute;
-      left: 130%;
+      left: 120%;
       bottom: 35%;
       white-space: nowrap;
-      padding-left: 10px;
+      font-size: 14px;
+    }
+  }
+
+  // FOOTER
+  .footer{
+
+    &__stats{
+      h2{
+        font-size: 28px;
+      }
+    }
+
+    &__brands{
+      img{
+          width: 90px;
+      }
+    }
+
+    &__media{
+      a{
+        padding-left: 30px;
+      }
+    }
+
+    &__nav ul li a{
+      padding-left: 30px;
     }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px){
 
   // SIDE-HEADING
   .side-heading{
@@ -378,7 +411,6 @@
 
   .choices{
     &__info{
-
       p{
         font-size: 14px;
       }
@@ -393,7 +425,6 @@
     }
 
     &-card{
-
       img{
         width: 100px;
         height: 100px;
@@ -417,11 +448,17 @@
 
   // MAP
 
+  .map-container{
+    zoom: .7;
+  }
+
   .infowindow{
 
     &__heading{
       font-size: 30px;
       margin: 30px 0 10px 0;
+      white-space: nowrap;
+
     }
 
     &__sights{
@@ -433,10 +470,39 @@
     }
   }
 
-  .map{
+  // FOOTER
 
-    &-container{
-      zoom: .7;
+  .footer{
+
+    &__stats{
+      h3{
+        font-size: 30px;
+      }
+    }
+
+    p{
+      left: 60px;
+      padding-top: 12px;
+    }
+
+    &__media{
+      a{
+        padding-left: 12px;
+      }
+    }
+
+    &__nav ul li a{
+      padding-left: 10px;
+    }
+
+    &__container--bottom{
+      h2{
+        font-size: 30px;
+      }
+    }
+
+    &__heading--bottom{
+      top: 118px;
     }
   }
 }
@@ -446,7 +512,6 @@
   // HERO
 
   .hero{
-
     h1{
       font-size: 180px;
     }
@@ -506,9 +571,8 @@
     &-card{
 
       &__text{
-        
-        h3{
 
+        h3{
           &:first-of-type{
             margin-top: 26px;
           }
@@ -523,27 +587,117 @@
   }
 
   .choice-container{
-
     h2{
       font-size: 25px;
     }
   }
 
   // MAP
-  .map{
+ 
+  .map-container{
+    zoom: .45;
+  }
 
-    &-container{
-      zoom: .45;
+  .map-start{
+
+    &.is-visible{
+        width: 50px;
+        height: 50px;
+        bottom: calc(27.5% - 25px);
+        left: - 25px;
+    }
+  }
+  
+
+  .infowindow{
+
+    &__heading{
+      font-size: 25px;
     }
 
-    &-start{
-  
-      &.is-visible{
-          width: 50px;
-          height: 50px;
-          bottom: calc(27.5% - 25px);
-          left: - 25px;
+    &__sights{
+      font-size: 14px;
+    }
+
+    &__image{
+      left: 150%;
+    }
+
+    p{
+      left: 150%;
+    }
+  }
+
+  // FOOTER
+
+  .footer{
+
+    &__container--top{
+      flex-direction: column;
+    }
+
+    &__brands{
+      width: 100%;
+      height: 60%;
+      margin-top: -20px;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+      
+      img{
+        width: 75px;
       }
+
+      &--shimano{
+        display: none;
+      }
+    }
+
+    &__stats{
+
+      width: 100%;
+      margin-left: 0;
+
+      h2{
+          text-align: center;
+          padding-top: 20px;
+          font-size: 25px;
+      }
+  }
+
+    &__counters{
+      flex-direction: row;
+      bottom: -120px;
+
+      &--counter{
+        width: 100%;
+
+        p{
+          display: block;
+          position: relative;
+          white-space: normal;
+          left: 0;
+        }
+      }
+    }
+
+    h5{
+      margin-left: -20px;
+
+      span{
+        margin-left: -20px;
+      }
+    }
+
+    &__heading--bottom{
+      top: 80px;
+    }
+
+    &__media{
+      top: 150px;
+    }
+
+    &__nav{
+      top: 205px;
     }
   }
 }

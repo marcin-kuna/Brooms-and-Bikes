@@ -323,7 +323,7 @@ const iwContainer = document.querySelector('.infowindow');
                 {lat:50.9574758, lng:20.4740367, ico:'img/map-icons/quill-ink.png', content:
                 '<hr class="short-hr">'+
                 '<h2 class="infowindow__heading">Oblęgorek</h2>' +
-                '<div class="infowindow__sights"><h2>Muzeum H. Sienkiewicza</h2><a href="https://pl.wikipedia.org/wiki/Muzeum_Henryka_Sienkiewicza_w_Obl%C4%99gorku" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
+                '<div class="infowindow__sights"><h2>Muzeum Sienkiewicza</h2><a href="https://pl.wikipedia.org/wiki/Muzeum_Henryka_Sienkiewicza_w_Obl%C4%99gorku" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
                 '<img src=img/sights/Oblęgorek.jpg class="infowindow__image">' +
                 '<p><span class="infowindow__distance-span">1.</span> kilometr trasy</p>'
                 },
@@ -379,22 +379,22 @@ const iwContainer = document.querySelector('.infowindow');
                 },
                 {lat:50.8590574, lng:21.0441959, ico:'img/map-icons/crucifix.png', content:
                 '<hr class="short-hr">'+
-                '<h2 class="infowindow__heading">Święty Krzyż</h2>' +
-                '<div class="infowindow__sights"><h2>Sanktuarium Relikwii Drzewa Krzyża Świętego</h2><a href="https://pl.wikipedia.org/wiki/Bazylika_na_%C5%9Awi%C4%99tym_Krzy%C5%BCu" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
+                '<h2 class="infowindow__heading">Św. Krzyż</h2>' +
+                '<div class="infowindow__sights"><h2>Sanktuarium</h2><a href="https://pl.wikipedia.org/wiki/Bazylika_na_%C5%9Awi%C4%99tym_Krzy%C5%BCu" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
                 '<img src=img/sights/ŚwiętyKrzyż.jpg class="infowindow__image">' +
                 '<p><span class="infowindow__distance-span">186.</span> kilometr trasy</p>'
                 },
                 {lat:50.8939812, lng:20.8757823, ico:'img/map-icons/witch-face.png', content:
                 '<hr class="short-hr">'+
                 '<h2 class="infowindow__heading">Łysica</h2>' +
-                '<div class="infowindow__sights"><h2>Najwyższy szczyt gór</h2><a href="https://pl.wikipedia.org/wiki/%C5%81ysica_(G%C3%B3ry_%C5%9Awi%C4%99tokrzyskie)" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
+                '<div class="infowindow__sights"><h2>Najwyższy szczyt</h2><a href="https://pl.wikipedia.org/wiki/%C5%81ysica_(G%C3%B3ry_%C5%9Awi%C4%99tokrzyskie)" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
                 '<img src=img/sights/Łysica.jpg class="infowindow__image">' +
                 '<p><span class="infowindow__distance-span">206.</span> kilometr trasy</p>'
                 },
                 {lat:50.8611445, lng:20.6153419, ico:'img/map-icons/minerals.png', content:
                 '<hr class="short-hr">'+
                 '<h2 class="infowindow__heading">Kielce</h2>'+
-                '<div class="infowindow__sights"><h2>Rezerwat Przyrody Kadzielnia</h2><a href="https://pl.wikipedia.org/wiki/Rezerwat_przyrody_Kadzielnia" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
+                '<div class="infowindow__sights"><h2>Rezerwat Kadzielnia</h2><a href="https://pl.wikipedia.org/wiki/Rezerwat_przyrody_Kadzielnia" target="_blank" class="infowindow__link"><i class="fas fa-info-circle"></i></a></div>' +
                 '<img src=img/sights/Kadzielnia.jpg class="infowindow__image">' +
                 '<p><span class="infowindow__distance-span">244.</span> kilometr trasy</p>'
                 },

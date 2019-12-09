@@ -72,7 +72,6 @@
   }
   
   // FOOTER
-
   .footer__stats{
     h2{
       font-size: 32px;
@@ -108,7 +107,6 @@
 @media(max-width: 991px){
 
   // GALLERY
-
   .slides-container{
     bottom: -30px;
 
@@ -119,7 +117,6 @@
   }
 
   // CHOICES
-
   .choices{
     &__info{
       height: 30%;
@@ -296,7 +293,6 @@
   }
 
   // MAP
-
   .map-container{
     height: 60%;
     width: 100%;
@@ -408,7 +404,6 @@
   }
 
   // CHOICES
-
   .choices{
     &__info{
       p{
@@ -447,7 +442,6 @@
   }
 
   // MAP
-
   .map-container{
     zoom: .7;
   }
@@ -471,7 +465,6 @@
   }
 
   // FOOTER
-
   .footer{
 
     &__stats{
@@ -510,7 +503,6 @@
 @media (max-width: 575px){
 
   // HERO
-
   .hero{
     h1{
       font-size: 180px;
@@ -560,7 +552,6 @@
   }
 
   // CHOICES
-
   .levels{
 
     &-container{
@@ -593,7 +584,6 @@
   }
 
   // MAP
- 
   .map-container{
     zoom: .45;
   }
@@ -608,7 +598,6 @@
     }
   }
   
-
   .infowindow{
 
     &__heading{
@@ -629,7 +618,6 @@
   }
 
   // FOOTER
-
   .footer{
 
     &__container--top{

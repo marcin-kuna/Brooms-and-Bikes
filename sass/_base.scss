@@ -51,13 +51,22 @@ $text-color: #FFF;
     box-sizing: border-box;
 }
 
+html{
+    // overflow: hidden;
+}
+
 body{
     font-family: 'Lato', sans-serif;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     overflow: hidden;   // TO FULLPAGE SCROLL
     background-color: $primary-color;
     color: $text-color;
 }
+
+// .wrapper{
+//     overflow-x: hidden;
+//     overflow: hidden;   // TO FULLPAGE SCROLL
+// }
 
 .section-container{
     height: 100%;
@@ -76,10 +85,11 @@ body{
 
 .side-heading{
     transform: rotate(-90deg);
-    position: absolute; // do section-container
+    position: absolute; // do section container
     left: 0;
     top: 100px;
     font-size: 14px;
+    width: 100px; // jednolity odstęp od krawędzi
 
     span{
         font-size: 12px;
@@ -89,7 +99,7 @@ body{
 
 .top-heading{
     position: absolute;
-    top: 30px;
+    top: 5vh;
     right: 0;
     text-align: end;
 
@@ -99,7 +109,7 @@ body{
     }
 
     &__hr{
-        background-color: #fff;
+        background-color: $text-color;
         height: 2px;
         border: none;
         width: 300px;

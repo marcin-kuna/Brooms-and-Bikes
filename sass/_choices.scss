@@ -9,38 +9,48 @@
     background-color: $secondary-color-dark;
 
     &__info{
+        // position: relative;
         width: 100%;
-        height: 55%;
+        height: 40%;
         position: absolute;
-        bottom: 0;
-        left: 0;
-        // border: 2px solid red;
+        // top: 0;
+        bottom: 20px;
+        // left: 0;
+        border: 2px solid red;
         z-index: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-evenly;
 
         hr{
-            position: absolute;
-            top: 50px;
-            right: 0;
+            // margin-left: 800px;
+            // position: absolute;
+            // // position: relative;
+            // top: 0;
+            // right: 0;
         }
 
         h2{
             text-align: end;
             color: $text-color;
             font-size: 35px;
-            position: absolute;
-            top: 80px;
-            right: 0;
+            // position: absolute;
+            // top: 5%;
+            // right: 0;
         }
 
         p{
-            font-size: 17px;
-            padding-top: 20px;
+            font-size: 18px;
+            // padding-top: 20px;
             line-height: 1.5;
-            width: 60%;
+            width: 50%;
+            // height: 60%;
             text-align: justify;
             position: absolute;
-            top: 230px;
-            right: 210px;
+            // top: 0;
+            bottom: 5%;
+            left: 0;
         }
     }
      
@@ -49,14 +59,15 @@
         border: 1px solid $accent-color;
         color: $text-color;
         outline: none;
-        padding: 20px;
-        width: 180px;
+        width: 15%;
+        min-width: 80px;
+        height: 25%;
         font-size: 20px;
-        margin-top: 10px;
+        // margin-top: 10px;
         cursor: pointer;
-        position: absolute;
-        top: 245px;
-        right: 0;
+        // position: absolute;
+        // top: 65%;
+        // right: 0;
         transition-duration: .2s;
         transition-timing-function: ease-in-out;
         transition-property: background-color, color;
@@ -70,11 +81,13 @@
 /* CHOICE CARDS */
 
 .choice-container{
+    // width: 750px;
+    // height: 450px;
     width: 60%;
     height: 60%;
     background-color: $secondary-color-light;
     position: relative;
-    top: 100px;
+    top: 10%;
     display: flex;
     // border: solid 1px wheat;
 
@@ -100,24 +113,36 @@
 
     &__right{
         position: relative;
+        height: 100%;
         width: 50%;
         // border: solid 1px yellow;
     }
 
     &__text{
         width: 100%;
-        height: 90%;
-        margin-top: 23px;
+        height: 66%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        white-space: nowrap;
+        // margin-top: 23px;
+        position: relative;
+        top: 17%;
         text-align: end;
-        padding: 50px 30px 0 0;
-        /* border: 2px solid red; */
-
-        h3{
-            padding-top: 50px;
-        }
+        padding-right: 5%;
+        // padding: 15% 8% 0 0;
+        // border: 1px solid red;
 
         h2{
-            font-size: 30px;
+            // position: relative;
+            // top: 10vh;
+            // font-size: 30px;
+        }
+
+        h3{
+            // position: relative;
+            // top: 20vh;
+            // padding-top: 50px;
         }
     }
 }
@@ -125,17 +150,20 @@
 /* DIFFICULTY LEVELS */
 
 .levels{
-    position: relative;
-    width: 670px;
+    position: absolute;
+    width: 60%;
     height: 90%;
-    margin-top: 23px;
+    top: 5%;
     // border: solid 1px wheat;
 
     &-container{
         position: absolute;
-        width: 600px;
-        height: 99%;
-        transform: translateX(-600px);
+        // width: 600px;
+        width: 40vw;
+        height: 98%;
+        top: 1%;
+        // transform: translateX(-600px);
+        transform: translateX(-40vw);
         opacity: 0;
         transition: transform 2s, opacity .1s .5s ease-out;
         z-index: 1;
@@ -148,19 +176,37 @@
 
     &-card{
         height: 100%;
-        padding-left: 30px;
+        // padding-left: 30px;
         position: relative;
         z-index: 2;
+        // border: 1px solid red;
     
         &__text{
-            height: 100%;
-            padding-top: 55px;
+            height: 75%;
+            // width: 50%;
+            padding-left: 5%;
+            position: relative;
+            top: 12.5%;
+            // padding-top: 55px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            // border: 1px solid green;
+
+            h2{
+                // font-size: 30px;
+                // position: relative;
+                // top: calc(10vh - 6%);
+                // padding-top: 7vh;
+            }
         
             h3{
-                padding-top: 50px;
+                // padding-top: 10vh;
+                // position: relative;
+                
 
                 &:first-of-type{
-                    margin-top: 38px;
+                    // top: calc(20vh - 6%);
                 }
             }
         }
@@ -218,7 +264,7 @@
         z-index: -1;
         top: 0;
         right: -70px;
-        transform: translateX(-670px);
+        transform: translateX(-40vw);
         opacity: 0;
         transition: transform 2s .2s, opacity .1s .5s ease-out;
     

@@ -9,12 +9,6 @@
 }
 
 @media(max-width: 1399px){
-
-  // CHOICES
-  .levels-container{
-      // width: 550px;
-      // transform: translateX(-550px);
-  }
   
   // MAP
   .map-container{
@@ -23,6 +17,7 @@
 }
 
 @media(max-width: 1281px){
+
   // GALLERY
   .slides-container{
     img{
@@ -36,13 +31,6 @@
       font-size: 10vh;
     }
   }
-
-  // CHOICE
-  .choice-container{
-    // width: 650px;
-    // height: 380px;
-  }
-  
 }
 
 @media(max-width: 1199px){
@@ -58,16 +46,6 @@
       top: 110px;
     }
   }
-  
-  .choice-container{
-    // width: 65%;
-    // top: 80px;
-  }
-
-  .levels-container{
-    // width: 450px;
-    // transform: translateX(-450px);
-  }
 
   .levels-card{
     img{
@@ -78,44 +56,24 @@
   
   // MAP
 
-  .infowindow{
-    top: 12.5%;
-  }
-
   .map-container{
     zoom: 0.78;
   }
   
   // FOOTER
-  .footer__stats{
+  .footer__container--top{
+    border: 1px solid green;
+
     h2{
-      font-size: 32px;
+      font-size: 30px;
     }
   }
 
-  .footer__counters{
-    flex-direction: column;
-    align-items: flex-start;
-    bottom: -30px;
+  .footer__brands{
 
-    &--counter{
-      width: 100%;
-
-      h3, p{
-        display: inline;
-      }
-
-      p{
-        position: absolute;
-        left: 70px;
-        padding-top: 15px;
-        white-space: nowrap;
-      }
+    img{
+      width: 120px;
     }
-  }
-
-  h5{
-    margin-top: -10px;
   }
 }
 
@@ -142,59 +100,50 @@
     display: none;
   }
 
-  .jumbotrons{
-    width: 90%;
-    margin: 0 auto;
-    padding-top: 8vh;
+  // HERO
 
-    .gallery-number{
-      // font-size: 60px;
-      padding-bottom: 0;
+  .hero__container{
+
+    h1{
+      font-size: 150px;
     }
+
+    p{
+      font-size: 15px;
+    }
+  }
+
+  // GALLERY
+
+  .jumbotrons{
 
     hr{
-      margin: 10px 0;
+      margin: 10% 0;
     }
+  }
+
+  .slides-container{
+    bottom: 45%;
   }
 
   // CHOICES
   .choices{
     &__info{
       height: 25%;
-      // bottom: -15%;
-      border: 1px solid green;
 
       p{
-        // right: 0;
-        // top: 20px;
-        // text-align: right;
-        // height: 100%;
         max-height: 100%;
         width: 60%;
         font-size: 16px;
-        // line-height: 1.2;
       }
 
       h2{
-        // text-align: left;
-        // top: 50px;
-        // left: 0;
         font-size: 22px;
-      }
-
-      hr{
-        // top: 15%;
-        // left: 0;
       }
     }
 
     &__btn{
-      // top: 130px;
-      // right: 100%;
-      // transform: translateX(100%);
-      // width: 120px;
       font-size: 16px;
-      // padding: 10px;
     }
   }
 
@@ -204,11 +153,6 @@
 
   .levels{
 
-    &-container{
-      // width: 450px;
-      // transform: translateX(-450px);
-    }
-
     &-card{
 
       img{
@@ -217,12 +161,6 @@
         top: 17%;
         right: 20px;
       }
-    }
-
-    &-flag{
-      // width: 30px;
-      // height: 60px;
-      // right: -30px;
     }
   } 
 
@@ -343,6 +281,7 @@
   .map-container{
     height: 60%;
     width: 100%;
+    top: 10%;
     zoom: .8;
   }
 
@@ -362,81 +301,68 @@
   }
 
   .infowindow{
-    top: 75%;
-    left: 10%;
+    top: 72.5%;
+    height: 25%;
+    width: 50%;
+    transform: translateY(0);
+    left: 50%;
+    justify-content: space-around;
+
+    hr{
+      display: none;
+    }
 
     &__heading{
-      font-size: 35px;
-      margin-top: 15px;
+      font-size: 30px;
     }
 
     &__image{
       position: absolute;
-      top: -5%;
-      left: 120%;
-      height: 120px;
-      width: 160px;
+      bottom: 0;
+      right: 102%;
+      width: 220px;
+      max-width: 100%;
+      height: 100%;
     }
 
-    &__distance-span{
-      margin-right: 3px;
-    }
-
-    p{
-      position: absolute;
-      left: 120%;
-      bottom: 35%;
-      white-space: nowrap;
-      font-size: 14px;
+    &__link{
+      right: 25%;
     }
   }
 
   // FOOTER
-  .footer{
 
-    &__stats{
-      h2{
-        font-size: 28px;
-      }
-    }
+  .footer__container--top{
 
-    &__brands{
-      img{
-          width: 90px;
-      }
-    }
+    border: 1px solid red;
 
-    &__media{
-      a{
-        padding-left: 30px;
-      }
-    }
-
-    &__nav ul li a{
-      padding-left: 30px;
+    h2{
+      font-size: 26px;
     }
   }
+  
+  .footer__brands{
+
+    img{
+      width: 100px;
+    }
+  }
+
+  .footer__counters p, .footer__nav ul li a{
+    font-size: 16px;
+  }
+
+  .footer__counters h2, .footer__contact h2{
+    font-size: 30px;
+  }
+
 }
 
 @media (max-width: 768px){
 
-  // SIDE-HEADING
-  .side-heading{
-    // left: -10px;
-  }
-
   // GALLERY
 
-  .slides-container{
-    img{
-        width: 200px;
-        height: 200px;
-    }
-  }
-
   .jumbotrons{
-
-    padding-top: 10%;
     
     h4{
       font-size: 15px;
@@ -447,21 +373,24 @@
     }
   }
 
+  .slides-container{
+
+    img{
+        width: 200px;
+        height: 200px;
+    }
+  }
+
   .left{
     left: 0;
     transform: translateX(0%);
   }
 
   .right{
-    left: calc(100% - 110px);
+    left: calc(100% - 100px);
   }
 
   // CHOICES
-
-  .choice-container{
-    // width: 90%;
-  }
-
 
   .choices{
     &__info{
@@ -475,8 +404,6 @@
 
     &-container{
       width: 45vw;
-      // width: 350px;
-      // transform: translateX(-350px);
     }
 
     &-card{
@@ -516,53 +443,18 @@
 
     &__heading{
       font-size: 30px;
-      margin: 30px 0 10px 0;
-      white-space: nowrap;
-
     }
 
     &__sights{
       font-size: 16px;
     }
-
-    &__link{
-      top: -80px;
-    }
   }
 
   // FOOTER
-  .footer{
 
-    &__stats{
-      h3{
-        font-size: 30px;
-      }
-    }
+  .footer__container--top{
 
-    p{
-      left: 60px;
-      padding-top: 12px;
-    }
-
-    &__media{
-      a{
-        padding-left: 12px;
-      }
-    }
-
-    &__nav ul li a{
-      padding-left: 10px;
-    }
-
-    &__container--bottom{
-      h2{
-        font-size: 30px;
-      }
-    }
-
-    &__heading--bottom{
-      top: 118px;
-    }
+    border: 1px solid white;
   }
 }
 
@@ -577,29 +469,29 @@
 
   // HERO
   .hero__container{
-    width: 80vw;
-    // top: 30%;
     height: 40%;
 
       h1{
-        font-size: 140px;
-        margin-bottom: -10px;
+        font-size: 130px;
       }
 
       p{
-        font-size: 13px;
+        font-size: 14px;
+        max-width: 80vw;
       }
   }
 
   .action{
-    p{
-      font-size: 14px;
-    }
+    max-width: 80vw;
   }
 
   // GALLERY
   .slider-btns{
-    
+
+    button{
+      top: 50%;
+    }
+  
     button#next{
       right: 10px;
     }
@@ -614,21 +506,18 @@
   }
 
   .slides-container{
-    bottom: -5vh;
 
     img{
-      width: 180px;
-      height: 180px;
-  }
+      width: 190px;
+      height: 190px;
+    }
   }
 
   .jumbotrons{
-    width: 80%;
-    padding-top: 12vh;
+    width: 95%;
 
     .gallery-number{
       font-size: 8vh;
-      // display: none;
     }
 
     h4{
@@ -636,7 +525,7 @@
     }
 
     p{
-      font-size: 11px;
+      font-size: 12px;
     }
   }
 
@@ -670,37 +559,26 @@
   .choices{
 
     &__info{
-      p{
+
+      bottom: 15px;
+
+      p {
         display: none;
       }
     }
 
     &__btn{
-      top: 45%;
-      right: 0;
-      transform: translateX(0);
+      position: absolute;
+      bottom: 20%;
+      left: 0;
+      height: 35%;
+      width: 40%;
     }
   }
 
-  
-
   .levels{
 
-    &-container{
-      // width: 250px;
-      // transform: translateX(-250px);
-    }
-
     &-card{
-
-      &__text{
-
-        h3{
-          &:first-of-type{
-            // margin-top: 26px;
-          }
-        }
-      }
 
       img{
         width: 70px;
@@ -714,7 +592,9 @@
   }
 
   .choice-container{
-    h2{
+    top: 12vh;
+
+      h2{
       font-size: 20px;
     }
   }
@@ -744,94 +624,29 @@
       font-size: 14px;
     }
 
-    &__image{
-      left: 150%;
-    }
-
-    p{
-      left: 150%;
+    &__link{
+      right: 0;
     }
   }
 
   // FOOTER
   .footer{
 
-    &__container--top{
-      flex-direction: column;
-    }
-
     &__brands{
       width: 100%;
       height: 60%;
-      margin-top: -20px;
-      grid-template-columns: repeat(4, 1fr);
       justify-items: center;
       
       img{
         width: 75px;
       }
-
-      &--shimano{
-        display: none;
-      }
     }
 
-    &__stats{
-
-      width: 100%;
-      margin-left: 0;
-
-      h2{
-          text-align: center;
-          padding-top: 20px;
-          font-size: 25px;
-      }
-  }
-
     &__counters{
-      flex-direction: row;
-      bottom: -120px;
 
       &--counter{
         width: 100%;
-
-        p{
-          display: block;
-          position: relative;
-          white-space: normal;
-          left: 0;
-        }
       }
-    }
-
-    h5{
-      margin-left: -20px;
-
-      span{
-        margin-left: -20px;
-      }
-    }
-
-    &__heading--bottom{
-      top: 80px;
-    }
-
-    &__media{
-      top: 150px;
-    }
-
-    &__nav{
-      top: 205px;
-    }
-  }
-}
-
-@media (max-width: 575px){
-
-  .hero__container{
-
-    h1{
-      font-size: 120px;
     }
   }
 }
@@ -839,11 +654,27 @@
 @media (max-width: 991px) and (max-height: 575px) and (orientation: landscape){
 
   .landscape{
-    height: 200vh;
-    // border: 2PX SOLID RED;
+    height: 180vh;
+    border: 2PX SOLID RED;
   }
 
+  // HERO
+
   .hero__bg{
-    height: 200vh;
+    height: 180vh;
+  }
+
+  // GALLERY
+
+  .jumbotrons{
+    top: 15vh;
+
+    .gallery-number{
+      font-size: 15vh;
+    }
+  }
+
+  .slides-container{
+    bottom: 50%;
   }
 }

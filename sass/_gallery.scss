@@ -9,70 +9,36 @@
 }
 
 .jumbotrons{
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    height: 45%;
     display: flex;
     justify-content: space-between;
-    padding-top: 5%;
+    position: relative;
+    top: 10vh;
 
     &__div{
         color: $text-color;
         width: 25%;
-        // min-height: 30vh;
     }
 
     .gallery-number{
         font-size: 12vh;
         color: rgba(255, 255, 255, .1);
-        // padding-bottom: 10px;
     }
 
     hr{
-        margin: 20px 0;
+        margin: 7% 0;
     }   
-}
-
-// Slider buttons
-
-.slider-btns{
-    button#next{
-        position: absolute;
-        top: 40%;
-        right: 15px;
-    }
-
-    button#prev{
-        position: absolute;
-        top: 40%;
-        left: 15px;
-    }
-
-    button{
-        border: 2px solid $text-color;
-        background: transparent;
-        color: $text-color;
-        cursor: pointer;
-        padding: 13px 15px;
-        border-radius: 50%;
-        outline: none;
-        transition-duration: .2s;
-        transition-timing-function: ease-in-out;
-        transition-property: background-color, color;
-
-        &:hover {
-            background-color: $text-color;
-            color: $primary-color;
-        }        
-    }
 }
 
 // Gallery images
 
 .slides-container{
-    position: absolute;
-    left: 0;
-    bottom: 4%;
+    position: relative;
+    bottom: 55%;
     width: 100vw;
-    height: 50vh;
+    height: 50%;
 
     img{
         width: 280px;
@@ -140,4 +106,41 @@
 
 .right-right-right{
     left: 120%;
+}
+
+
+// Slider buttons
+
+.slider-btns{
+
+    button{
+        position: absolute;
+        top: 40%;
+    }
+    
+    button#next{
+        right: 15px;
+    }
+
+    button#prev{
+        left: 15px;
+    }
+
+    button{
+        border: 2px solid $text-color;
+        background: transparent;
+        color: $text-color;
+        cursor: pointer;
+        padding: 13px 15px;
+        border-radius: 50%;
+        outline: none;
+        transition-duration: .2s;
+        transition-timing-function: ease-in-out;
+        transition-property: background-color, color;
+
+        &:hover {
+            background-color: $text-color;
+            color: $primary-color;
+        }        
+    }
 }

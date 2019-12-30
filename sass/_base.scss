@@ -1,18 +1,9 @@
-/* VARIABLES */
-
 $primary-color: #1F4857;
 $secondary-color-light: #43849C;
 $secondary-color-dark: #0B1622;
 $accent-color: #FD7400;
 $text-color: #FFF;
-// gory #194656
-// jasny nad gorami #2D677C
-// tło mapy #1F4857
-// ciemne tło choice #0B1622
-// karta wyboru #224E5E
-// jasne tło karty wyboru #0E7EA7
-// tło galerii i hero #1F4857
-// pomarancz #FD7400
+
 
 @keyframes pop{
     0% {opacity: 1;}
@@ -28,12 +19,6 @@ $text-color: #FFF;
 @keyframes show-and-widen {
     50% {visibility: visible;
     }
-    // 25% {width: 70px;
-    // margin-right: -70px;}
-    // 50% {width: 140px;
-    //     margin-right: -140px;}
-    // 75% {width: 210px;
-    //     margin-right: -210px;}
    
     100% {visibility: visible;
         width: 277px;
@@ -41,39 +26,26 @@ $text-color: #FFF;
     }
 }
 
-// @function rem($px){
-//     @return ($px/16) * 1rem;
-// }
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
-    // overflow: hidden;
-}
 
 body{
     font-family: 'Lato', sans-serif;
-    // overflow-x: hidden;
-    overflow: hidden;   // TO FULLPAGE SCROLL
+    overflow: hidden;   // for fullpage scroll
     background-color: $primary-color;
     color: $text-color;
 }
 
-// .wrapper{
-//     overflow-x: hidden;
-//     overflow: hidden;   // TO FULLPAGE SCROLL
-// }
 
 .section-container{
     height: 100%;
     width: 80%;
     margin: 0 auto;
     position: relative;
-    /* border: 2px solid red; */
 }
 
 .short-hr{
@@ -85,11 +57,11 @@ body{
 
 .side-heading{
     transform: rotate(-90deg);
-    position: absolute; // do section container
+    position: absolute;
     left: 0;
     top: 100px;
     font-size: 14px;
-    width: 100px; // jednolity odstęp od krawędzi
+    width: 100px;
 
     span{
         font-size: 12px;
@@ -115,4 +87,8 @@ body{
         width: 300px;
         margin-bottom: 5px;
     }
+}
+
+button, a{
+    -webkit-tap-highlight-color: transparent;
 }

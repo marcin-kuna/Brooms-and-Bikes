@@ -45,7 +45,7 @@ function animateValue(id, start, end, duration) {
     }, stepTime);
 }
 
-// Footer numbers counter
+// FOOTER NUMBERS COUNTER
 
 const footerCounter = document.querySelector('.footer__counters');
 const numbers = document.getElementsByClassName('numbers');

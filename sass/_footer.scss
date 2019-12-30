@@ -12,7 +12,6 @@
         display: flex;
         justify-content: space-between;
         padding-top: 10vh;
-        // border: $accent-color solid 1px;
 
         h2{
             font-size: 40px;
@@ -25,12 +24,17 @@
     &__brands{
         width: 65%;
         height: 100%;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        align-items: center;
-        justify-items: right;
-        z-index: 2;
-        // border: 1px solid $text-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        &-div{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
         img{
             width: 140px;
@@ -38,41 +42,23 @@
     }
 
     &__container--bottom{
-        width: 100vw;
-        height: 45%;
+        width: 100%;
+        height: 40%;
         position: absolute;
-        bottom: 0;
         left: 0;
-        background-color: $secondary-color-light;
+        bottom: 40px;
         z-index: 1;
-        // border: 1px solid yellow;
-
-        &:before{
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100vw;
-            height: 100%;
-            background: url(../img/mountains-blue.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     &__counters{
-        // border: 1px solid $accent-color;
-        font-size: 25px;
-        width: 40%;
-        height: calc(80% - 40px);
-        position: absolute;
-        top: 10%;
-        left: 10%;
+        height: 80%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-around;
-        z-index: 15;
         white-space: nowrap;
 
         h2{
@@ -82,7 +68,7 @@
     
         h5{
             color: $text-color;
-            font-size: 20px;
+            font-size: 25px;
             padding-left: 20px;
             display: inline-block;
     
@@ -93,7 +79,6 @@
         }
 
         &--counter{
-            // border: $text-color 1px solid;
             width: 100%;
             position: relative;
             color: $accent-color;
@@ -116,19 +101,30 @@
         }
     }
 
+    &__contact{
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+
+        h2{
+            font-size: 34px;
+        }
+    }
+
     &__media{
 
         width: 30%;
         min-width: 300px;
         display: flex;
         justify-content: space-between;
-        // border: 1px solid yellowgreen;
         
         a{
             font-size: 30px;
             color: $text-color;
             transition: color .2s ease-in-out;
-            // border: 1px solid red;
+            -webkit-tap-highlight-color: transparent;
 
             &:hover{
                 color: $accent-color;
@@ -165,21 +161,24 @@
         z-index: 2;
     }
 
-    &__contact{
-        height: calc(80% - 40px);
-        width: 80%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-end;
-        // border: 1px solid red;
-        position: relative;
-        top: 10%;
-        z-index: 2;
+    &__container--bottom-bg{
+        width: 100vw;
+        height: 45%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: $secondary-color-light;
 
-        h2{
-            font-size: 34px;
+        &:before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            height: 100%;
+            background: url(../img/mountains-blue.png);
+            background-size: cover;
+            background-repeat: no-repeat;
         }
     }
 }

@@ -134,6 +134,7 @@
         padding: 13px 15px;
         border-radius: 50%;
         outline: none;
+        -webkit-tap-highlight-color: transparent;
         transition-duration: .2s;
         transition-timing-function: ease-in-out;
         transition-property: background-color, color;

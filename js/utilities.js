@@ -5,18 +5,33 @@ let slideIndex = 0;
 let scrolling = false;
 const waitTimeinMS = 1000;
 
+function scrollingUp(){
+  slideIndex--;
+  restrictSlideIndex();
+  showslide(slideIndex);
+}
+
+function scrollingDown(){
+  slideIndex++;
+  restrictSlideIndex();
+  showslide(slideIndex);
+}
 
 window.addEventListener("wheel", event => {
     if (event.deltaY > 0 && scrolling == false) {
-      slideIndex++;
-      restrictSlideIndex();
-      showslide(slideIndex);
+      scrollingUp()
     } else if (event.deltaY < 0 && scrolling == false) {
-      slideIndex--;
-      restrictSlideIndex();
-      showslide(slideIndex);
+      scrollingDown()
     }
 });
+
+document.addEventListener('keydown', event => {
+  if(event.code === 'ArrowDown'){
+    scrollingDown()
+  } else if (event.code === 'ArrowUp'){
+    scrollingUp();
+  }
+})
 
 function restrictSlideIndex() {
     if (slideIndex >= slideElems.length) {

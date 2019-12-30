@@ -85,23 +85,16 @@ function nextSlide() {
   });
 }
 
-
 // Scrolling gallery /w arrow keys
-document.addEventListener('keydown', function(e) {
-    if(sliding == false) {
-      switch(e.which) {
-        case 37: // left
-        prevSlide()
-        autoScrollLeft();
-        break;
-        case 39: // right
-        nextSlide();
-        autoScrollRight()
-        break;
-        default: return;
-      }
-    }
-});
+document.addEventListener('keydown', event => {
+  if(event.code === 'ArrowLeft'){
+    prevSlide()
+    autoScrollLeft();
+  } else if(event.code === 'ArrowRight'){
+    nextSlide();
+    autoScrollRight()
+  }
+})
 
 // Button events
 next.addEventListener('click', e => {
@@ -136,6 +129,41 @@ Array.from(slides).forEach((slide) => {
       slideInterval = 0;
     })}
 });
+
+// Scroll on touch
+
+// const centerSlide = document.querySelector('.center');
+// let startingX = 0;
+
+// centerSlide.addEventListener('touchstart', function(event){
+//   startingX = event.touches[0].clientX;
+// });
+// // centerSlide.addEventListener('touchstart', touchStart(event));
+// centerSlide.addEventListener('touchmove', function(event){
+//   const touch = event.touches[0];
+//   let change = startingX - touch.clientX;
+//   if(change < 0){
+//     nextSlide();
+//     // autoScrollRight()
+//   } else if(change > 0){
+//     prevSlide()
+//     // autoScrollLeft();
+//   }
+//   // event.preventDefault();
+// });
+
+function touchMove(event){
+  const touch = event.touches[0];
+  let change = startingX - touch.clientX;
+  if(change < 0){
+    nextSlide();
+    autoScrollRight()
+  } else{
+    prevSlide()
+    autoScrollLeft();
+  }
+  event.preventDefault();
+}
 
 // MAP
 

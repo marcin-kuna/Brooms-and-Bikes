@@ -19,9 +19,9 @@ function scrollingDown(){
 
 window.addEventListener("wheel", event => {
     if (event.deltaY > 0 && scrolling == false) {
-      scrollingUp()
-    } else if (event.deltaY < 0 && scrolling == false) {
       scrollingDown()
+    } else if (event.deltaY < 0 && scrolling == false) {
+      scrollingUp();
     }
 });
 
